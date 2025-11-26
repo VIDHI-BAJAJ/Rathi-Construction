@@ -2,58 +2,58 @@ const projects = [
     {
         id: 1,
         title: "Sri Tirumala Golden Gate,Shamsheer Gunj, Near Falukunuma Palace, Hyderabad",
-        image: "../Images/On Going/Golden Gate (1).jpg",
+        image: "./Images/On Going/Golden Gate (1).jpg",
         category: "upcoming",
-        link: "/projects/goldengate.html"
+        link: "./projects/goldengate.html"
     },
     {
         id: 2,
         title: "Sri Tirumala Pranmoksha Pride,Mallapur, Near NOMA Convention Centre, Nacharam, Hyderabad",
-        image: "../Images/On Going/Golden Gate pride.jpg",
+        image: "./Images/On Going/Golden Gate pride.jpg",
         category: "upcoming",
-        link: "/projects/goldenpride.html"
+        link: "./projects/goldenpride.html"
     },
     {
         id: 3,
         title: "Sri Tirumala Bliss,Raghavendra Colony, Aramghar Circle, Hyderabad",
-        image: "../Images/On Going/Tirumala Bliss.jpg",
+        image: "./Images/On Going/Tirumala Bliss.jpg",
         category: "upcoming",
-        link: "/projects/tirumalabliss.html"
+        link: "./projects/tirumalabliss.html"
     },
     {
         id: 4,
         title: "Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Elite.jpg",
+        image: "./Images/Homepage/Ongoing projects/Elite.jpg",
         category: "completed"
     },
     {
         id: 5,
         title: "Sri Tirumala Lotus, Shivarampally, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Lotus.jpg",
+        image: "./Images/Homepage/Ongoing projects/Lotus.jpg",
         category: "completed"
     },
     {
         id: 6,
         title: "Sri Tirumala Elite, Shivarampally, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Elite.jpg",
+        image: "./Images/Homepage/Ongoing projects/Elite.jpg",
         category: "completed"
     },
     {
         id: 7,
         title: "Sri Tirumala Hamilton A&B, Musheerabad, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Hamilton.jpg",
+        image: "./Images/Homepage/Ongoing projects/Hamilton.jpg",
         category: "completed"
     },
     {
         id: 8,
         title: "Sri Tirumala Anmol, Esamia Bazar, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Anmol.jpg",
+        image: "./Images/Homepage/Ongoing projects/Anmol.jpg",
         category: "completed"
     },
     {
         id: 9,
         title: "Sri Tirumala Almond, Shivarampally, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Almond.jpg",
+        image: "./Images/Homepage/Ongoing projects/Almond.jpg",
         category: "completed"
     },
     {
@@ -65,7 +65,7 @@ const projects = [
     {
         id: 11,
         title: "Sri Tirumala Crest, Karmanghat, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Crest.jpg",
+        image: "./Images/Homepage/Ongoing projects/Crest.jpg",
         category: "completed"
     },
     {
@@ -83,43 +83,43 @@ const projects = [
     {
         id: 14,
         title: "Sri Tirumala harmony, Kapra, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Harmony.jpg",
+        image: "./Images/Homepage/Ongoing projects/Harmony.jpg",
         category: "completed"
     },
     {
         id: 15,
         title: "Sri Tirumala Millennium, Mallapur, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Millennium.jpg",
+        image: "./Images/Homepage/Ongoing projects/Millennium.jpg",
         category: "completed"
     },
     {
         id: 16,
         title: "Sri Tirumala Prestige, Erram Manzi, Kahirtabad.",
-        image: "../Images/Homepage/Ongoing projects/Prestige.jpg",
+        image: "./Images/Homepage/Ongoing projects/Prestige.jpg",
         category: "completed"
     },
     {
         id: 17,
         title: "Tirumala Jewels, Gandhinagar, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Jewels.jpg",
+        image: "./Images/Homepage/Ongoing projects/Jewels.jpg",
         category: "completed"
     },
     {
         id: 18,
         title: "Gopal Dham, Ashok Nagar, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Gopal Dham.jpg",
+        image: "./Images/Homepage/Ongoing projects/Gopal Dham.jpg",
         category: "completed"
     },
     {
         id: 19,
         title: "Tirumala Orchid, GandhiNagar, Hyderabad",
-        image: "../Images/Homepage/Ongoing projects/Orchid.jpg",
+        image: "./Images/Homepage/Ongoing projects/Orchid.jpg",
         category: "completed"
     },
     {
         id: 20,
         title: "Sri Tirumala Riverside Plaza",
-        image: "../Images/Homepage/Ongoing projects/Riverside Plaza.jpg",
+        image: "./Images/Homepage/Ongoing projects/Riverside Plaza.jpg",
         category: "completed"
     }
 ];
