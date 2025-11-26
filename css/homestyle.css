@@ -1,4 +1,5 @@
 /* Hero Banner Styles */
+/* Updated for GitHub Pages deployment - v1.2 */
 .hero-banner {
     position: relative;
     width: 100%;
@@ -20,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* background: linear-gradient(135deg, rgba(30, 30, 60, 0.85) 100%); */
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 100%);
     z-index: 1;
 }
 
