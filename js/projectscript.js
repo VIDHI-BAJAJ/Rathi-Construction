@@ -187,9 +187,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (currentFilter === 'upcoming') {
                 limitedProjects = filteredProjects.slice(0, 3);
             } else if (currentFilter === 'completed') {
-                limitedProjects = filteredProjects.slice(0, 19);
+                limitedProjects = filteredProjects.slice(0, 18);
             } else if (currentFilter === 'all') {
-                limitedProjects = filteredProjects.slice(0, 22);
+                limitedProjects = filteredProjects.slice(0, 20);
             }
                 
             const totalPages = Math.ceil(limitedProjects.length / projectsPerPage);
@@ -213,9 +213,9 @@ function renderProjects() {
         
     // Apply limits based on category
     if (currentFilter === 'upcoming') {
-        filteredProjects = filteredProjects.slice(0, 3); // Limit to 3 upcoming projects
+        filteredProjects = filteredProjects.slice(0, 6); // Limit to 6 upcoming projects (2 rows of 3)
     } else if (currentFilter === 'completed') {
-        filteredProjects = filteredProjects.slice(0, 18); // Limit to 20 completed projects
+        filteredProjects = filteredProjects.slice(0, 18); // Limit to 18 completed projects
     } else if (currentFilter === 'all') {
         filteredProjects = filteredProjects.slice(0, 20); // Limit to 20 total projects
     }
