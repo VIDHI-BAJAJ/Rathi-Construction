@@ -134,7 +134,7 @@
 
 @media screen and (max-width: 480px) {
     .hero-banner {
-        min-height: 300px;
+        min-height: 400px;
         height: 100%;
         background-size: cover;
         background-position: center center;
