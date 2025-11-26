@@ -298,7 +298,7 @@
 
         .newsletter-form button {
             padding: 12px 24px;
-            background-color: #000000;
+            background-color: #6C1A79;
             color: #ffffff;
             border: none;
             border-radius: 6px;
@@ -359,7 +359,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #000000;
+            color: #6C1A79;
             transition: color 0.3s ease;
         }
 
