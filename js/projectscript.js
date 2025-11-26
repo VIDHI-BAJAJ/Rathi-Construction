@@ -2,21 +2,21 @@ const projects = [
     {
         id: 1,
         title: "Sri Tirumala Golden Gate,Shamsheer Gunj, Near Falukunuma Palace, Hyderabad",
-        image: "../Images/golden gate/Golden Gate.jpg",
+        image: "./Images/golden gate/Golden Gate.jpg",
         category: "upcoming",
         link: "./projects/goldengate.html"
     },
     {
         id: 2,
         title: "Sri Tirumala Pranmoksha Pride,Mallapur, Near NOMA Convention Centre, Nacharam, Hyderabad",
-        image: "../Images/Golden Pride/Golden-pride.jpg",
+        image: "./Images/Golden Pride/Golden-pride.jpg",
         category: "upcoming",
         link: "./projects/goldenpride.html"
     },
     {
         id: 3,
         title: "Sri Tirumala Bliss,Raghavendra Colony, Aramghar Circle, Hyderabad",
-        image: "../Images/Bliss/Home Elevation.jpg",
+        image: "./Images/Bliss/Home Elevation.jpg",
         category: "upcoming",
         link: "./projects/tirumalabliss.html"
     },
