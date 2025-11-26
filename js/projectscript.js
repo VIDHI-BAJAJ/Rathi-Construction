@@ -41,19 +41,19 @@ const projects = [
     {
         id: 7,
         title: "Sri Tirumala Hamilton A&B, Musheerabad, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Hamilton.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 8,
         title: "Sri Tirumala Anmol, Esamia Bazar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Anmol.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 9,
         title: "Sri Tirumala Almond, Shivarampally, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Almond.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
@@ -65,7 +65,7 @@ const projects = [
     {
         id: 11,
         title: "Sri Tirumala Crest, Karmanghat, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Crest.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
@@ -83,43 +83,43 @@ const projects = [
     {
         id: 14,
         title: "Sri Tirumala harmony, Kapra, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Harmony.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 15,
         title: "Sri Tirumala Millennium, Mallapur, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Millennium.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 16,
         title: "Sri Tirumala Prestige, Erram Manzi, Kahirtabad.",
-        image: "./Images/Homepage/Ongoing projects/Prestige.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 17,
         title: "Tirumala Jewels, Gandhinagar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Jewels.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 18,
         title: "Gopal Dham, Ashok Nagar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Gopal Dham.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 19,
         title: "Tirumala Orchid, GandhiNagar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Orchid.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     },
     {
         id: 20,
         title: "Sri Tirumala Riverside Plaza",
-        image: "./Images/Homepage/Ongoing projects/Riverside Plaza.jpg",
+        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
         category: "completed"
     }
 ];
@@ -230,7 +230,7 @@ function renderProjects() {
         projectsGrid.innerHTML = currentProjects.map(project => `
             <div class="project-card ${project.category === 'upcoming' ? 'clickable' : 'not-clickable'}" 
                  onclick="${project.category === 'upcoming' && project.link ? `redirectToProject('${project.link}')` : ''}">
-                <img src="${project.image}" alt="${project.title}" class="project-image">
+                <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';">
                 <div class="project-info">
                     <h3 class="project-title">${project.title}</h3>
                 </div>
@@ -254,7 +254,16 @@ function renderProjects() {
 
 // Redirect function - REAL NAVIGATION ENABLED
 function redirectToProject(link) {
-    window.location.href = link;
+    // For GitHub Pages, we need to ensure the link is relative to the root
+    if (link.startsWith('./')) {
+        window.location.href = link;
+    } else if (link.startsWith('/')) {
+        // Handle absolute paths for GitHub Pages
+        window.location.href = '.' + link;
+    } else {
+        // Handle relative paths without ./ prefix
+        window.location.href = './' + link;
+    }
 }
 
 // Update navigation button styles
