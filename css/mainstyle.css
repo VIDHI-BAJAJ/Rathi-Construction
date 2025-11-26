@@ -96,10 +96,16 @@
             .home-icon {
                 width: 60px;
                 height: 60px;
+                animation: drawIcon 3s ease-in-out forwards; /* Faster animation on mobile */
             }
             
             .preloader-logo {
                 width: 150px;
+                animation: fadeInLogo 3s ease-in-out forwards; /* Faster animation on mobile */
+            }
+            
+            .preloader-overlay {
+                transition: transform 0.8s ease-in-out; /* Faster transition on mobile */
             }
         }
 
@@ -107,10 +113,31 @@
             .home-icon {
                 width: 50px;
                 height: 50px;
+                animation: drawIcon 2.5s ease-in-out forwards; /* Even faster animation on small screens */
             }
             
             .preloader-logo {
                 width: 120px;
+                animation: fadeInLogo 2.5s ease-in-out forwards; /* Even faster animation on small screens */
+            }
+            
+            .preloader-overlay {
+                transition: transform 0.6s ease-in-out; /* Faster transition on small screens */
+            }
+        }
+
+        /* Faster animations for users who prefer reduced motion */
+        @media (prefers-reduced-motion: reduce) {
+            .home-icon {
+                animation: drawIcon 1.5s ease-in-out forwards;
+            }
+            
+            .preloader-logo {
+                animation: fadeInLogo 1.5s ease-in-out forwards;
+            }
+            
+            .preloader-overlay {
+                transition: transform 0.5s ease-in-out;
             }
         }
 
