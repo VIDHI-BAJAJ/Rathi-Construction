@@ -9,7 +9,8 @@ function hidePreloader() {
             
             // Remove preloader from DOM after animation completes
             setTimeout(function() {
-                if (preloader.parentNode) {
+                const preloader = document.getElementById('preloader');
+                if (preloader && preloader.parentNode) {
                     preloader.parentNode.removeChild(preloader);
                     console.log('Preloader removed from DOM');
                 }
@@ -19,6 +20,16 @@ function hidePreloader() {
         }
     } catch (error) {
         console.error('Error hiding preloader:', error);
+        // Fallback: try to remove preloader directly
+        try {
+            const preloader = document.getElementById('preloader');
+            if (preloader && preloader.parentNode) {
+                preloader.parentNode.removeChild(preloader);
+                console.log('Preloader forcefully removed from DOM');
+            }
+        } catch (fallbackError) {
+            console.error('Error in fallback preloader removal:', fallbackError);
+        }
     }
 }
 
@@ -42,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Hide preloader after 10 seconds in case of errors
 setTimeout(function() {
-    console.log('Fallback timer triggered');
+    console.log('Main fallback timer triggered');
     hidePreloader();
 }, 10000);
 
@@ -59,11 +70,31 @@ function handleMobilePreloader() {
             console.log('Mobile-specific preloader timeout triggered');
             hidePreloader();
         }, 5000);
+        
+        // Extra check for mobile devices
+        setTimeout(function() {
+            console.log('Mobile extra check preloader timeout triggered');
+            hidePreloader();
+        }, 8000);
     }
 }
 
 // Run mobile preloader handling
 handleMobilePreloader();
+
+// Additional check for when the page is visible
+document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'visible') {
+        console.log('Page became visible, checking preloader status');
+        setTimeout(hidePreloader, 2000);
+    }
+});
+
+// Check if page is already visible
+if (document.visibilityState === 'visible') {
+    console.log('Page is already visible, setting preloader check');
+    setTimeout(hidePreloader, 2000);
+}
 
 // Mobile Navbar Toggle
 function initMobileNavbar() {
