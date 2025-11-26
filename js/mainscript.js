@@ -57,3 +57,26 @@ if (hamburger && navMenu) {
         });
     });
 }
+
+
+
+document.getElementById("newsletterForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    const response = await fetch("https://formspree.io/f/xblevjrq", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+    });
+
+    if (response.ok) {
+        form.style.display = "none";
+        document.getElementById("thankYouMsg").style.display = "block";
+    } else {
+        alert("Something went wrong. Please try again!");
+    }
+});
+
