@@ -2,7 +2,7 @@
 .contact-hero {
     position: relative;
     height: 400px;
-    background-image: url('../Images/projectbanner.jpg');
+    background-image: url('../Images/Projectpage/projectbanner.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
