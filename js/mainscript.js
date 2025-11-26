@@ -1,19 +1,34 @@
 // Preloader functionality
+function hidePreloader() {
+    try {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            console.log('Hiding preloader');
+            preloader.classList.add('preloader-hidden');
+            
+            // Remove preloader from DOM after animation completes
+            setTimeout(function() {
+                if (preloader.parentNode) {
+                    preloader.parentNode.removeChild(preloader);
+                    console.log('Preloader removed from DOM');
+                }
+            }, 1000);
+        } else {
+            console.log('Preloader element not found');
+        }
+    } catch (error) {
+        console.error('Error hiding preloader:', error);
+    }
+}
+
+// Hide preloader when page is fully loaded
 window.addEventListener('load', function() {
-    const preloader = document.getElementById('preloader');
-    
-    // Add a delay to ensure the drawing animation completes
-    setTimeout(function() {
-        preloader.classList.add('preloader-hidden');
-        
-        // Remove preloader from DOM after animation completes
-        setTimeout(function() {
-            if (preloader.parentNode) {
-                preloader.parentNode.removeChild(preloader);
-            }
-        }, 1000); // Match this to the CSS transition duration
-    }, 4500); // Match this to the drawing animation duration (4s + 0.5s buffer)
+    console.log('Window loaded, starting preloader hide timer');
+    setTimeout(hidePreloader, 4500); // Wait for drawing animation to complete
 });
+
+// Fallback: Remove preloader after 10 seconds in case of errors
+setTimeout(hidePreloader, 10000);
 
 // Mobile Navbar Toggle
 const hamburger = document.querySelector('.hamburger');
