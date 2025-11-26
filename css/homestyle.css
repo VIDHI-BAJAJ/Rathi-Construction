@@ -30,7 +30,7 @@
     z-index: 2;
     text-align: left;
     padding: 0 50px;
-    max-width: 1400px;
+    max-width: 1600px;
     width: 100%;
     margin: 0 auto;
 }
@@ -181,7 +181,7 @@
 }
 
 .about-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -399,7 +399,7 @@
 
 .projects-slider-container {
     position: relative;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 0;
 }
@@ -503,7 +503,7 @@
 }
 
 .project-button:hover {
-    background-color: #9D4EDD;
+    background-color: #6C1A78;
     transform: translateX(5px);
 }
 
@@ -678,37 +678,22 @@
 
 /* Stats/Counter Section Styles */
 .stats-section {
-    padding:50px;
+    padding: 50px 0;
     background-color: #ffffff;
 }
 
 .stats-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     gap: 80px;
     align-items: flex-start;
-}
-
-.stats-left {
-    flex: 1;
-    animation: slideFromLeft 1s ease-out;
-}
-
-.stats-right {
-    flex: 1;
-    animation: slideFromLeft 1s ease-out;
-    animation-delay: 0.2s;
-    animation-fill-mode: both;
+    padding: 0 50px;
 }
 
 .stats-text-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     margin-bottom: 40px;
-    gap: 20px
 }
 
 .stats-title {
@@ -716,19 +701,19 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
-    max-width: 500px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .stats-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    max-width: 450px;
-    font-size: 16px;
     line-height: 1.6;
     color: #333;
+    margin-top: 0;
+    margin-bottom: 0;
 }
-
         
 .stats-grid {
     display: grid;
@@ -848,6 +833,7 @@
 @media screen and (max-width: 1200px) {
     .stats-container {
         gap: 60px;
+        padding: 0 30px;
     }
 
     .stats-title {
@@ -861,12 +847,13 @@
 
 @media screen and (max-width: 968px) {
     .stats-section {
-        padding: 80px 30px;
+        padding: 80px 0;
     }
 
     .stats-container {
         flex-direction: column;
         gap: 50px;
+        padding: 0 20px;
     }
 
     .stats-right {
@@ -961,7 +948,7 @@
 }
 
 .why-choose-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     text-align: center;
 }
@@ -1180,7 +1167,7 @@
 }
 
 .featured-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -1476,9 +1463,9 @@
     }
 
     #mobileViewMore:hover {
-        background-color: #9D4EDD;
+        background-color: #6C1A78;
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(123, 44, 191, 0.5);
+        box-shadow: 0 4px 15px rgba(123, 44, 191, 0.3);
     }
 
     #mobileViewMore.hidden {
@@ -1513,7 +1500,7 @@
 }
 
 .testimonials-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -1739,7 +1726,7 @@
 }
 
 .cta-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
