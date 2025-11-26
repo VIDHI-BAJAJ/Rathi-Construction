@@ -27,8 +27,17 @@ window.addEventListener('load', function() {
     setTimeout(hidePreloader, 4500); // Wait for drawing animation to complete
 });
 
+// Additional fallback for DOM ready state
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM content loaded, starting preloader hide timer');
+    setTimeout(hidePreloader, 4500); // Wait for drawing animation to complete
+});
+
 // Fallback: Remove preloader after 10 seconds in case of errors
-setTimeout(hidePreloader, 10000);
+setTimeout(function() {
+    console.log('Fallback timer triggered');
+    hidePreloader();
+}, 10000);
 
 // Mobile Navbar Toggle
 const hamburger = document.querySelector('.hamburger');

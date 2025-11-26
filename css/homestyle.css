@@ -292,14 +292,16 @@
     .about-container {
         grid-template-columns: 1fr;
         gap: 30px;
+        display: flex;
+        flex-direction: column;
     }
 
     .about-image-wrapper {
-        order: 1;
+        order: 2;
     }
 
     .about-content {
-        order: 2;
+        order: 1;
         text-align: center;
     }
 
@@ -1892,22 +1894,24 @@
 }
 
 /* About Us Section Animations */
-.about-image-wrapper {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
+@media screen and (max-width: 968px) {
+    .about-image-wrapper {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
 
-.about-content {
-    opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    .about-content {
+        opacity: 0;
+        transform: translateY(-100px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
 }
 
 .about-image-wrapper.animate-visible,
 .about-content.animate-visible {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0) translateX(0);
 }
 
 /* Ongoing Projects Section Animations */
