@@ -946,6 +946,9 @@
    .stats-container{
     align-items: normal;
    }
+   .stats-image {
+    margin-top: 20px;
+}
 }
 
 /* Stats Section End */
