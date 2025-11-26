@@ -39,6 +39,7 @@ setTimeout(function() {
     hidePreloader();
 }, 10000);
 
+
 // Mobile Navbar Toggle
 function initMobileNavbar() {
     console.log('Initializing mobile navbar');
