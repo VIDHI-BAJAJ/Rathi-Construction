@@ -187,6 +187,8 @@
             cursor: pointer;
             gap: 5px;
             margin-top: 15px;
+            z-index: 1001; /* Ensure hamburger is clickable */
+            position: relative; /* Ensure z-index works */
         }
 
         .hamburger span {
@@ -231,6 +233,7 @@
                 overflow: hidden;
                 transition: max-height 0.3s ease;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000; /* Ensure menu appears above other content */
             }
 
             .nav-menu.active {
