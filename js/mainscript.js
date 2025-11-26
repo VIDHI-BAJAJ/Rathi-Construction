@@ -33,12 +33,36 @@ function hidePreloader() {
     }
 }
 
+// Force hide preloader function for critical situations
+function forceHidePreloader() {
+    try {
+        console.log('Force hiding preloader');
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+            preloader.style.display = 'none';
+            preloader.style.visibility = 'hidden';
+            preloader.style.pointerEvents = 'none'; // Disable pointer events
+            console.log('Preloader forced to hide');
+            
+            // Also try to remove it completely
+            setTimeout(() => {
+                if (preloader && preloader.parentNode) {
+                    preloader.parentNode.removeChild(preloader);
+                    console.log('Preloader forcibly removed from DOM');
+                }
+            }, 100);
+        }
+    } catch (error) {
+        console.error('Error force hiding preloader:', error);
+    }
+}
+
 // Hide preloader when page is fully loaded
 window.addEventListener('load', function() {
     console.log('Window loaded, starting preloader hide timer');
     // Use shorter timeout for mobile devices
     const isMobile = window.innerWidth <= 768;
-    const timeout = isMobile ? 3500 : 4500; // Shorter timeout for mobile
+    const timeout = isMobile ? 2500 : 4500; // Shorter timeout for mobile
     setTimeout(hidePreloader, timeout);
 });
 
@@ -47,15 +71,15 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM content loaded, starting preloader hide timer');
     // Use shorter timeout for mobile devices
     const isMobile = window.innerWidth <= 768;
-    const timeout = isMobile ? 3500 : 4500; // Shorter timeout for mobile
+    const timeout = isMobile ? 2500 : 4500; // Shorter timeout for mobile
     setTimeout(hidePreloader, timeout);
 });
 
-// Hide preloader after 10 seconds in case of errors
+// Hide preloader after 8 seconds in case of errors
 setTimeout(function() {
     console.log('Main fallback timer triggered');
     hidePreloader();
-}, 10000);
+}, 8000);
 
 // Additional mobile-specific preloader handling
 function handleMobilePreloader() {
@@ -69,13 +93,19 @@ function handleMobilePreloader() {
         setTimeout(function() {
             console.log('Mobile-specific preloader timeout triggered');
             hidePreloader();
-        }, 5000);
+        }, 3000);
         
         // Extra check for mobile devices
         setTimeout(function() {
             console.log('Mobile extra check preloader timeout triggered');
             hidePreloader();
-        }, 8000);
+        }, 5000);
+        
+        // Final force hide for mobile
+        setTimeout(function() {
+            console.log('Mobile force hide preloader timeout triggered');
+            forceHidePreloader();
+        }, 7000);
     }
 }
 
@@ -86,15 +116,61 @@ handleMobilePreloader();
 document.addEventListener('visibilitychange', function() {
     if (document.visibilityState === 'visible') {
         console.log('Page became visible, checking preloader status');
-        setTimeout(hidePreloader, 2000);
+        setTimeout(hidePreloader, 1500);
     }
 });
 
 // Check if page is already visible
 if (document.visibilityState === 'visible') {
     console.log('Page is already visible, setting preloader check');
-    setTimeout(hidePreloader, 2000);
+    setTimeout(hidePreloader, 1500);
 }
+
+// Orientation change handling for mobile devices
+window.addEventListener('orientationchange', function() {
+    console.log('Orientation changed, checking preloader status');
+    setTimeout(hidePreloader, 1000);
+});
+
+// Touch start event for mobile devices
+document.addEventListener('touchstart', function() {
+    console.log('Touch detected, checking preloader status');
+    setTimeout(hidePreloader, 500);
+}, { once: true });
+
+// Window resize event for responsive adjustments
+let resizeTimeout;
+window.addEventListener('resize', function() {
+    console.log('Window resized, checking preloader status');
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+        // Check if preloader should be hidden after resize
+        if (window.innerWidth <= 768) {
+            // On mobile, hide preloader faster
+            setTimeout(hidePreloader, 1000);
+        }
+    }, 500);
+});
+
+// Ultimate fallback - check every 2 seconds if preloader should be hidden
+const ultimateFallbackInterval = setInterval(function() {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        console.log('Ultimate fallback check - preloader still visible');
+        // If we've been running for more than 15 seconds, force hide
+        if (Date.now() - window.pageLoadTime > 15000) {
+            console.log('Ultimate fallback - force hiding preloader');
+            forceHidePreloader();
+            clearInterval(ultimateFallbackInterval);
+        }
+    } else {
+        console.log('Ultimate fallback - preloader no longer exists');
+        clearInterval(ultimateFallbackInterval);
+    }
+}, 2000);
+
+// Store page load time for ultimate fallback
+window.pageLoadTime = Date.now();
 
 // Mobile Navbar Toggle
 function initMobileNavbar() {

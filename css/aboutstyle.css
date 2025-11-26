@@ -1,9 +1,8 @@
 /* Hero Section */
-/* Updated for GitHub Pages deployment - v1.1 */
 .contact-hero {
     position: relative;
     height: 400px;
-    background-image: url('../Images/Contactpage/Contactus-Banner.jpg');
+    background-image: url('../Images/Aboutusbanner.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
