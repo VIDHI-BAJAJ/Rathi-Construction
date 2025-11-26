@@ -97,7 +97,7 @@
             justify-content: space-between;
             align-items: right;
             width: 100%;
-            max-width: 1400px;
+            max-width: 1600px;
         }
 
         .nav-logo img {
@@ -259,7 +259,7 @@
             display: grid;
             grid-template-columns: 1.5fr 1fr 1fr 1.2fr 1.5fr;
             gap: 40px;
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             padding-bottom: 40px;
         }
@@ -390,7 +390,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             flex-wrap: wrap;
             gap: 20px;

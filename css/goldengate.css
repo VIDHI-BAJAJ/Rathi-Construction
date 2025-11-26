@@ -170,7 +170,7 @@
 }
 
 .about-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -353,7 +353,7 @@
 
 /* Amenities Section Styles */
         .amenities-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             padding: 50px;
         }
@@ -555,7 +555,7 @@
     /* Amenities Section End  */
     /* Floor Plans Section Styles  */
 .floor-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 50px 20px; /* Added some horizontal padding by default */
 }
@@ -867,7 +867,7 @@
 
          /* Map Section Start*/
         .map-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             padding : 50px;
         }
@@ -959,7 +959,7 @@
 
         /* Related Projects Section Styles  */
         .related-projects-container{
-            max-width: 1400px;
+            max-width: 1600px;
             padding: 50px;
         }
 
@@ -1159,7 +1159,7 @@
 }
 
 .cta-container {
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
