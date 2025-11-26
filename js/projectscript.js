@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Apply limits based on category
             let limitedProjects = filteredProjects;
             if (currentFilter === 'upcoming') {
-                limitedProjects = filteredProjects.slice(0, 3);
+                limitedProjects = filteredProjects.slice(0, 6); // Limit to 6 upcoming projects (2 rows of 3)
             } else if (currentFilter === 'completed') {
                 limitedProjects = filteredProjects.slice(0, 18);
             } else if (currentFilter === 'all') {

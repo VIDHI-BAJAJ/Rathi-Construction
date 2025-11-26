@@ -678,7 +678,7 @@
 
 /* Stats/Counter Section Styles */
 .stats-section {
-    padding: 50px 0;
+    padding: 50px;
     background-color: #ffffff;
 }
 
@@ -689,7 +689,18 @@
     flex-direction: row;
     gap: 80px;
     align-items: flex-start;
-    padding: 0 50px;
+}
+
+.stats-left {
+    flex: 1;
+    animation: slideFromLeft 1s ease-out;
+}
+
+.stats-right {
+    flex: 1;
+    animation: slideFromLeft 1s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
 }
 
 .stats-text-content {
@@ -803,7 +814,7 @@
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     animation: slideUp 1s ease-out;
-    margin-top: 160px;
+    margin-top: 20px;
 }
 
 .stats-image img {
@@ -833,7 +844,6 @@
 @media screen and (max-width: 1200px) {
     .stats-container {
         gap: 60px;
-        padding: 0 30px;
     }
 
     .stats-title {
@@ -847,13 +857,12 @@
 
 @media screen and (max-width: 968px) {
     .stats-section {
-        padding: 80px 0;
+        padding: 80px 30px;
     }
 
     .stats-container {
         flex-direction: column;
         gap: 50px;
-        padding: 0 20px;
     }
 
     .stats-right {
@@ -1921,8 +1930,6 @@
     transform: translateX(-50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-
-
 
 .stats-subtitle {
     opacity: 0;

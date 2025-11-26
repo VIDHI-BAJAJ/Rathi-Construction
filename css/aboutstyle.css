@@ -67,7 +67,7 @@
 }
 
 .about-container {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -253,22 +253,37 @@
 
 /* Stats/Counter Section Styles */
 .stats-section {
-    padding: 50px 0;
-    background-color: #f8f8f8;
+    padding:50px;
+    background-color:#f8f8f8;
 }
 
 .stats-container {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     gap: 80px;
     align-items: flex-start;
-    padding: 0 50px;
+}
+
+.stats-left {
+    flex: 1;
+    animation: slideFromLeft 1s ease-out;
+}
+
+.stats-right {
+    flex: 1;
+    animation: slideFromLeft 1s ease-out;
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
 }
 
 .stats-text-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 40px;
+    gap: 20px
 }
 
 .stats-title {
@@ -276,18 +291,17 @@
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: 20px;
+    max-width: 500px;
 }
 
 .stats-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    max-width: 450px;
+    font-size: 16px;
     line-height: 1.6;
     color: #333;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 .stats-grid {
@@ -378,7 +392,7 @@
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     animation: slideUp 1s ease-out;
-    margin-top: 160px;
+    margin-top: 20px;
 }
 
 .stats-image img {
@@ -408,7 +422,6 @@
 @media screen and (max-width: 1200px) {
     .stats-container {
         gap: 60px;
-        padding: 0 30px;
     }
 
     .stats-title {
@@ -422,13 +435,12 @@
 
 @media screen and (max-width: 968px) {
     .stats-section {
-        padding: 80px 0;
+        padding: 80px 30px;
     }
 
     .stats-container {
         flex-direction: column;
         gap: 50px;
-        padding: 0 20px;
     }
 
     .stats-right {
@@ -437,6 +449,15 @@
 
     .stats-left {
         order: 1;
+    }
+
+    .stats-title {
+        font-size: 38px;
+        margin-bottom: 30px;
+    }
+
+    .stat-number {
+        font-size: 48px;
     }
 }
 
@@ -512,7 +533,7 @@
 }
 
 .leadership-container {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     height: 500px;
@@ -795,7 +816,7 @@
 }
 
 .why-choose-container {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
 }
@@ -1020,7 +1041,7 @@
 }
 
 .cta-container {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
