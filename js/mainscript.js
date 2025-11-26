@@ -1,9 +1,10 @@
 // Preloader functionality
 function hidePreloader() {
     try {
+        console.log('Attempting to hide preloader');
         const preloader = document.getElementById('preloader');
         if (preloader) {
-            console.log('Hiding preloader');
+            console.log('Preloader found, hiding it');
             preloader.classList.add('preloader-hidden');
             
             // Remove preloader from DOM after animation completes
@@ -24,13 +25,19 @@ function hidePreloader() {
 // Hide preloader when page is fully loaded
 window.addEventListener('load', function() {
     console.log('Window loaded, starting preloader hide timer');
-    setTimeout(hidePreloader, 4500); // Wait for drawing animation to complete
+    // Use shorter timeout for mobile devices
+    const isMobile = window.innerWidth <= 768;
+    const timeout = isMobile ? 3500 : 4500; // Shorter timeout for mobile
+    setTimeout(hidePreloader, timeout);
 });
 
 // Additional fallback for DOM ready state
 document.addEventListener('DOMContentLoaded', function() {
     console.log('DOM content loaded, starting preloader hide timer');
-    setTimeout(hidePreloader, 4500); // Wait for drawing animation to complete
+    // Use shorter timeout for mobile devices
+    const isMobile = window.innerWidth <= 768;
+    const timeout = isMobile ? 3500 : 4500; // Shorter timeout for mobile
+    setTimeout(hidePreloader, timeout);
 });
 
 // Hide preloader after 10 seconds in case of errors
@@ -39,6 +46,24 @@ setTimeout(function() {
     hidePreloader();
 }, 10000);
 
+// Additional mobile-specific preloader handling
+function handleMobilePreloader() {
+    console.log('Checking if we need mobile-specific preloader handling');
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        console.log('Mobile device detected, setting up mobile preloader handling');
+        
+        // Additional timeout for mobile devices
+        setTimeout(function() {
+            console.log('Mobile-specific preloader timeout triggered');
+            hidePreloader();
+        }, 5000);
+    }
+}
+
+// Run mobile preloader handling
+handleMobilePreloader();
 
 // Mobile Navbar Toggle
 function initMobileNavbar() {
