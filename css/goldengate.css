@@ -177,6 +177,8 @@ html, body {
 .about-section {
     padding: 50px;
     background-color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .about-container {
@@ -366,6 +368,8 @@ html, body {
             max-width: 1600px;
             margin: 0 auto;
             padding: 50px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .amenities-header-section {
@@ -591,6 +595,8 @@ html, body {
     max-width: 1600px;
     margin: 0 auto;
     padding: 50px 20px; /* Added some horizontal padding by default */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .floor-header-section {
@@ -903,6 +909,8 @@ html, body {
             max-width: 1600px;
             margin: 0 auto;
             padding : 50px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .map-header-section {
@@ -994,6 +1002,9 @@ html, body {
         .related-projects-container{
             max-width: 1600px;
             padding: 50px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
         }
 
         .header-section {
@@ -1197,6 +1208,8 @@ html, body {
     background: #6C1A78;
     padding: 80px 50px;
     margin: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .cta-container {
