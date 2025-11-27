@@ -629,6 +629,8 @@ html, body {
     height: 600px;
     margin-top: 50px;
     perspective: 1200px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .carousel-container {
@@ -941,6 +943,8 @@ html, body {
         .maps {
     width: 100%;
     height: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .maps iframe {
@@ -1271,12 +1275,14 @@ html, body {
 @media screen and (max-width: 968px) {
     .cta-section {
         padding: 60px 30px;
+        box-sizing: border-box;
     }
 
     .cta-container {
         flex-direction: column;
         text-align: center;
         gap: 30px;
+        width: 100%;
     }
 
     .cta-content {
@@ -1301,6 +1307,7 @@ html, body {
 @media screen and (max-width: 640px) {
     .cta-section {
         padding: 50px 20px;
+        box-sizing: border-box;
     }
 
     .cta-title {
@@ -1316,13 +1323,14 @@ html, body {
         padding: 14px 35px;
         font-size: 15px;
         width: 100%;
-        max-width: 300px;
+        max-width: 100%;
     }
 }
 
 @media screen and (max-width: 480px) {
     .cta-section {
         padding: 40px 20px;
+        box-sizing: border-box;
     }
 
     .cta-title {
@@ -1336,6 +1344,7 @@ html, body {
     .cta-button {
         padding: 12px 30px;
         font-size: 14px;
+        max-width: 100%;
     }
 }
 
