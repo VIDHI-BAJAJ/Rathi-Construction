@@ -1559,6 +1559,8 @@
     padding: 40px 30px;
     flex-shrink: 0;
     transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-card:hover {
@@ -1582,17 +1584,19 @@
     font-size: 16px;
     font-weight: 400;
     color: #333333;
-   text-align: justify;
-   hyphens: auto;
-   word-spacing: normal;
-  text-justify: inter-word;
+    text-align: justify;
+    hyphens: auto;
+    word-spacing: normal;
+    text-justify: inter-word;
     margin-bottom: 25px;
+    flex-grow: 1;
 }
 
 .testimonial-author {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-top: auto;
 }
 
 .author-image {
@@ -1600,6 +1604,7 @@
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0;
 }
 
 .author-name {
