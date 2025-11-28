@@ -15,19 +15,28 @@ html, body {
     position: relative;
     width: 100%;
     height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
 }
 
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Specific background for Golden Gate project */
+.golden-gate-bg {
+    background-image: url('../Images/golden\ gate/Golden\ Gate.jpg');
+}
+
+/* Specific background for Golden Pride project */
+.golden-pride-bg {
+    background-image: url('../Images/Golden\ Pride/Golden-pride.jpg');
+}
+
+/* Specific background for Tirumala Bliss project */
+.tirumala-bliss-bg {
+    background-image: url('../Images/Bliss/Home\ Elevation.jpg');
 }
 
 .hero-overlay {
@@ -99,11 +108,8 @@ html, body {
 @media (max-width: 768px) {
     .hero-section {
         height: 400px;
-    }
-    
-    .hero-image {
-        height: 100%;
-        object-fit: contain;
+        background-size: cover;
+        background-position: center;
     }
     
     .hero-title {
@@ -120,11 +126,8 @@ html, body {
 @media (max-width: 576px) {
     .hero-section {
         height: 300px;
-    }
-    
-    .hero-image {
-        height: 100%;
-        object-fit: contain;
+        background-size: cover;
+        background-position: center;
     }
     
     .hero-title {
