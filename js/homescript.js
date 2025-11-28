@@ -233,9 +233,12 @@ window.addEventListener('resize', updateMobileButton);
 const testimonialPrev = document.getElementById('testimonialPrev');
 const testimonialNext = document.getElementById('testimonialNext');
 const testimonialsSlider = document.getElementById('testimonialsSlider');
-const totalTestimonials = 5;
+const totalTestimonials = 5; // Actual number of unique testimonials
 let testimonialIndex = 0;
 let testimonialsPerView = 4;
+
+// For infinite loop, we now have duplicated testimonials
+const totalTestimonialCards = 10; 
 
 function updateTestimonialsPerView() {
     if (window.innerWidth <= 640) {
@@ -250,17 +253,48 @@ function updateTestimonialsPerView() {
 }
 
 function slideTestimonialNext() {
-    // Move one testimonial at a time
-    testimonialIndex = (testimonialIndex + 1) % totalTestimonials;
+    testimonialIndex++;
     // Calculate the percentage to move based on one testimonial width
     const oneTestimonialWidth = 100 / testimonialsPerView;
     const slideAmount = testimonialIndex * oneTestimonialWidth;
     testimonialsSlider.style.transform = `translateX(-${slideAmount}%)`;
+    
+    // Reset to beginning when reaching the duplicate set
+    if (testimonialIndex >= totalTestimonials) {
+        setTimeout(() => {
+            testimonialsSlider.style.transition = 'none';
+            testimonialIndex = 0;
+            const slideAmount = testimonialIndex * oneTestimonialWidth;
+            testimonialsSlider.style.transform = `translateX(-${slideAmount}%)`;
+            // Force reflow
+            testimonialsSlider.offsetHeight;
+            testimonialsSlider.style.transition = 'transform 0.5s ease';
+        }, 500);
+    }
 }
 
 function slideTestimonialPrev() {
-    // Move one testimonial at a time
-    testimonialIndex = (testimonialIndex - 1 + totalTestimonials) % totalTestimonials;
+    if (testimonialIndex > 0) {
+        testimonialIndex--;
+    } else {
+        // Jump to the end of the original set when going backwards from start
+        testimonialIndex = totalTestimonials - 1;
+        const oneTestimonialWidth = 100 / testimonialsPerView;
+        testimonialsSlider.style.transition = 'none';
+        const slideAmount = (testimonialIndex + 1) * oneTestimonialWidth;
+        testimonialsSlider.style.transform = `translateX(-${slideAmount}%)`;
+        // Force reflow
+        testimonialsSlider.offsetHeight;
+        testimonialsSlider.style.transition = 'transform 0.5s ease';
+        // Then move to the correct position
+        setTimeout(() => {
+            testimonialIndex--;
+            const slideAmount = testimonialIndex * oneTestimonialWidth;
+            testimonialsSlider.style.transform = `translateX(-${slideAmount}%)`;
+        }, 10);
+        return;
+    }
+    
     // Calculate the percentage to move based on one testimonial width
     const oneTestimonialWidth = 100 / testimonialsPerView;
     const slideAmount = testimonialIndex * oneTestimonialWidth;
@@ -280,7 +314,11 @@ window.addEventListener('resize', () => {
     updateTestimonialsPerView();
     testimonialIndex = 0;
     if (testimonialsSlider) {
+        testimonialsSlider.style.transition = 'none';
         testimonialsSlider.style.transform = 'translateX(0)';
+        // Force reflow
+        testimonialsSlider.offsetHeight;
+        testimonialsSlider.style.transition = 'transform 0.5s ease';
     }
 });
 

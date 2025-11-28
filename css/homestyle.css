@@ -814,12 +814,14 @@
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     animation: slideUp 1s ease-out;
-    margin-top: 260px;
+    margin-top: 50px;
+    height: 700px;
 }
 
 .stats-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: transform 0.5s ease;
 }
@@ -948,6 +950,7 @@
    }
    .stats-image {
     margin-top: 20px;
+    height: 400px;
 }
 }
 
