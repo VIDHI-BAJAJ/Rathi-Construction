@@ -194,7 +194,7 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    animation: slideFromLeft 1s ease-out;
+    animation: slideFromLeft 3s ease-out;
     animation-delay: 0.3s;
     animation-fill-mode: both;
 }
@@ -212,7 +212,7 @@
 }
 
 .about-content {
-    animation: slideFromRight 1s ease-out;
+    animation: slideFromRight 3s ease-out;
     animation-delay: 0.3s;
     animation-fill-mode: both;
 }
