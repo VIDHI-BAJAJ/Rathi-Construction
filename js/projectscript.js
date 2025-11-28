@@ -227,15 +227,32 @@ function renderProjects() {
 
     const projectsGrid = document.getElementById('projectsGrid');
     if (projectsGrid) {
-        projectsGrid.innerHTML = currentProjects.map(project => `
+        projectsGrid.innerHTML = currentProjects.map(project => {
+            // Split the title to extract project name and location
+            // Assuming the format is "Project Name,Location Details"
+            const titleParts = project.title.split(',');
+            const projectName = titleParts[0];
+            const location = titleParts.slice(1).join(', ');
+            
+            return `
             <div class="project-card ${project.category === 'upcoming' ? 'clickable' : 'not-clickable'}" 
                  onclick="${project.category === 'upcoming' && project.link ? `redirectToProject('${project.link}')` : ''}">
                 <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';">
                 <div class="project-info">
-                    <h3 class="project-title">${project.title}</h3>
+                    <h3 class="project-name">${projectName}</h3>
+                    ${location ? `
+                    <div class="project-location">
+                        <svg class="location-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span class="location-text">${location}</span>
+                    </div>
+                    ` : ''}
                 </div>
             </div>
-        `).join('');
+        `;
+        }).join('');
     }
 
     const prevBtn = document.getElementById('prevBtn');
