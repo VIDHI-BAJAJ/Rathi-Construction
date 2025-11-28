@@ -1322,7 +1322,7 @@
 }
 
 .arrow-btn:hover {
-    background-color: #9D4EDD;
+    background-color: #6C1A78;
     transform: scale(1.1);
     box-shadow: 0 6px 20px rgba(123, 44, 191, 0.5);
 }
@@ -1355,7 +1355,7 @@
 }
 
 .view-project-btn:hover {
-    background-color: #9D4EDD;
+    background-color: #6C1A78;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(123, 44, 191, 0.5);
 }
