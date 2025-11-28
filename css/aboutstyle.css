@@ -521,8 +521,9 @@
    .stats-container{
     align-items: normal;
    }
-     .stats-image {
+    .stats-image {
     margin-top: 20px;
+    height: 400px;
 }
 }
 
