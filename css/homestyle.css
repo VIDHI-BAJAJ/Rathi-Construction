@@ -194,7 +194,9 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    animation: slideUp 2s ease-out;
+    animation: slideFromLeft 1s ease-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
 }
 
 .about-image {
@@ -210,7 +212,9 @@
 }
 
 .about-content {
-    animation: slideFromRight 3s ease-out;
+    animation: slideFromRight 1s ease-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
 }
 
 .about-title {
@@ -263,6 +267,17 @@
     }
 }
 
+@keyframes slideFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @keyframes slideUp {
     0% {
         opacity: 0;
@@ -299,11 +314,17 @@
 
     .about-image-wrapper {
         order: 2;
+        animation: slideFromLeft 1s ease-out;
+        animation-delay: 0.3s;
+        animation-fill-mode: both;
     }
 
     .about-content {
         order: 1;
         text-align: center;
+        animation: slideFromRight 1s ease-out;
+        animation-delay: 0.3s;
+        animation-fill-mode: both;
     }
 
     .about-title {

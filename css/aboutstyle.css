@@ -388,7 +388,8 @@
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     animation: slideUp 1s ease-out;
-    margin-top: 240px;
+    margin-top: 50px;
+    height: 700px;
 }
 
 .stats-image img {
