@@ -132,6 +132,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // Ongoing Projects Slider
 const ongoingSlider = document.querySelector('.projects-slider');
 if (ongoingSlider) {
+    // Preload all images in the slider for better performance
+    const projectImages = ongoingSlider.querySelectorAll('img');
+    projectImages.forEach(img => {
+        const preloadImg = new Image();
+        preloadImg.src = img.src;
+    });
+    
     let isDown = false;
     let startX;
     let scrollLeft;

@@ -1,22 +1,16 @@
 // Preloader functionality
 function preloadCriticalImages() {
-    // Define critical images that should be preloaded for faster display
-    const criticalImages = [
-        './Images/Logo.png',
-        './Images/Homepage/HeroBanner.png',
-        './Images/Homepage/aboutus.png',
-        './Images/On Going/Golden Gate.png',
-        './Images/On Going/Goldenpride.png',
-        './Images/On Going/SriTirumalaBliss.png'
-    ];
-    
-    // Preload each image
-    criticalImages.forEach(imageSrc => {
-        const img = new Image();
-        img.src = imageSrc;
+    // Preload all images on the page for immediate display
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        // Skip if already loaded
+        if (!img.complete) {
+            const preloadImg = new Image();
+            preloadImg.src = img.src;
+        }
     });
     
-    console.log('Critical images preloading initiated');
+    console.log('All images preloading initiated');
 }
 
 // Call preload function when script loads
@@ -195,28 +189,34 @@ const ultimateFallbackInterval = setInterval(function() {
 // Store page load time for ultimate fallback
 window.pageLoadTime = Date.now();
 
-// Mark images as loaded when they finish loading
-function markImagesAsLoaded() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
+// Preload all images on the page for faster display
+function preloadAllImages() {
+    // Preload all images on the page for immediate display
+    const images = document.querySelectorAll('img');
     images.forEach(img => {
-        if (img.complete) {
-            img.setAttribute('data-loaded', 'true');
-        } else {
-            img.addEventListener('load', function() {
-                this.setAttribute('data-loaded', 'true');
-            });
+        // Skip if already loaded
+        if (!img.complete) {
+            const preloadImg = new Image();
+            preloadImg.src = img.src;
             
-            img.addEventListener('error', function() {
-                this.setAttribute('data-loaded', 'true');
+            // Set image as loaded when preloading completes
+            preloadImg.onload = function() {
+                img.setAttribute('data-loaded', 'true');
+            };
+            
+            preloadImg.onerror = function() {
+                img.setAttribute('data-loaded', 'true');
                 // Set a placeholder if needed
-                this.src = 'https://via.placeholder.com/500x400?text=Image+Not+Found';
-            });
+                img.src = 'https://via.placeholder.com/500x400?text=Image+Not+Found';
+            };
+        } else {
+            img.setAttribute('data-loaded', 'true');
         }
     });
 }
 
 // Call the function when DOM is loaded
-document.addEventListener('DOMContentLoaded', markImagesAsLoaded);
+document.addEventListener('DOMContentLoaded', preloadAllImages);
 
 // Mobile Navbar Toggle
 function initMobileNavbar() {

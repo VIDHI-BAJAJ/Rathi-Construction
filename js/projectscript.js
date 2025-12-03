@@ -161,33 +161,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const dropdownMenu = document.getElementById('dropdownMenu');
     
     if (dropdownBtn && dropdownMenu) {
-        dropdownBtn.addEventListener('click', () => {
+        // Remove any existing event listeners to prevent duplicates
+        const newBtn = dropdownBtn.cloneNode(true);
+        dropdownBtn.parentNode.replaceChild(newBtn, dropdownBtn);
+        
+        newBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
             dropdownMenu.classList.toggle('active');
         });
-    }
+        
+        // Update reference to the new button
+        const updatedDropdownBtn = newBtn;
 
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (dropdownMenu && !e.target.closest('.filter-dropdown')) {
-            dropdownMenu.classList.remove('active');
-        }
-    });
-
-    // Filter projects
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            currentFilter = e.target.dataset.filter;
-            if (dropdownBtn) {
-                dropdownBtn.textContent = e.target.textContent;
-            }
-            if (dropdownMenu) {
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            if (dropdownMenu && !e.target.closest('.filter-dropdown')) {
                 dropdownMenu.classList.remove('active');
             }
-            currentPage = 1;
-            renderProjects();
         });
-    });
+
+        // Filter projects
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+        dropdownItems.forEach(function(item) {
+            // Remove any existing event listeners to prevent duplicates
+            const newItem = item.cloneNode(true);
+            item.parentNode.replaceChild(newItem, item);
+            
+            newItem.addEventListener('click', function(e) {
+                e.stopPropagation();
+                currentFilter = e.target.dataset.filter;
+                updatedDropdownBtn.textContent = e.target.textContent;
+                dropdownMenu.classList.remove('active');
+                currentPage = 1;
+                renderProjects();
+            });
+        });
+    }
 
     // Navigation buttons
     const prevBtn = document.getElementById('prevBtn');
@@ -269,7 +278,10 @@ function renderProjects() {
             return `
             <div class="project-card ${project.category === 'upcoming' ? 'clickable' : 'not-clickable'}" 
                  onclick="${project.category === 'upcoming' && project.link ? `redirectToProject('${project.link}')` : ''}">
-                <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';" loading="lazy" width="500" height="400">
+                <div class="project-image-container">
+                    <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';" loading="eager" decoding="async" width="500" height="400">
+                    <div class="project-status ${project.category}">${project.category === 'upcoming' ? 'Ongoing' : 'Completed'}</div>
+                </div>
                 <div class="project-info">
                     <h3 class="project-name">${projectName}</h3>
                     ${location ? `

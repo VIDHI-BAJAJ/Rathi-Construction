@@ -322,6 +322,44 @@
     </footer>
     <script src="./js/mainscript.js"></script>
     <script>
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Create observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    // Create observer
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe hero section elements
+    const heroTitle = document.querySelector('.hero-title');
+    const breadcrumb = document.querySelector('.breadcrumb');
+    if (heroTitle) observer.observe(heroTitle);
+    if (breadcrumb) observer.observe(breadcrumb);
+
+    // Observe contact section elements
+    const header = document.querySelector('.header');
+    const headerText = document.querySelector('.header-text');
+    const contactLeft = document.querySelector('.contact-left');
+    const contactRight = document.querySelector('.contact-right');
+    
+    if (header) observer.observe(header);
+    if (headerText) observer.observe(headerText);
+    if (contactLeft) observer.observe(contactLeft);
+    if (contactRight) observer.observe(contactRight);
+
+    // Observe map section
+    const mapSection = document.querySelector('.map-section');
+    if (mapSection) observer.observe(mapSection);
+});
 document.getElementById("contactForm").addEventListener("submit", async function(e){
   e.preventDefault();
 

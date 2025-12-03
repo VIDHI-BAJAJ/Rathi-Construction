@@ -12,19 +12,8 @@
             /* Improve image rendering performance */
             image-rendering: -webkit-optimize-contrast;
             image-rendering: crisp-edges;
-            /* Add loading skeleton effect */
-            background-color: #f0f0f0;
-            transition: opacity 0.3s ease;
-        }
-
-        /* Add lazy loading support */
-        img[loading="lazy"] {
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        img[loading="lazy"][data-loaded="true"] {
-            opacity: 1;
+            /* Optimize for eager loading */
+            background-color: transparent;
         }
 
         /* Preloader Styles */
