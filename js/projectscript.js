@@ -59,7 +59,7 @@ const projects = [
     {
         id: 10,
         title: "Sri Tirumala Dreams, Shivarampally, Hyderabad",
-        image: "./Images/Completed/Tirumal Dreams.png",
+        image: "./Images/Completed/Tirumal Dreams.jpg",
         category: "completed"
     },
     {
