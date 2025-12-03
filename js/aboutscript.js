@@ -15,6 +15,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
 
+    // Hero Section
+    const heroTitle = document.querySelector('.hero-title');
+    const breadcrumb = document.querySelector('.breadcrumb');
+    if (heroTitle) observer.observe(heroTitle);
+    if (breadcrumb) observer.observe(breadcrumb);
+
     // About Us Section
     const aboutImage = document.querySelector('.about-image-wrapper');
     const aboutContent = document.querySelector('.about-content');
