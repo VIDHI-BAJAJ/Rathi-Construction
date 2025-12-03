@@ -1317,7 +1317,7 @@
 
 .featured-image {
     width: 100%;
-    height: 450px;
+    height: 350px;
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -1336,6 +1336,12 @@
     transform: scale(1.1);
 }
 
+.featured-project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .featured-project-name {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
@@ -1343,6 +1349,21 @@
     color: #000000;
     line-height: 1.4;
     margin: 0;
+}
+
+.featured-project-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.4;
+}
+
+.featured-project-location .location-icon {
+    flex-shrink: 0;
+    color: #6C1A78;
 }
 
 /* Featured Bottom - Progress Bar, Arrow and View Button */
@@ -1577,6 +1598,10 @@
 
     .featured-project-name {
         font-size: 16px;
+    }
+
+    .featured-project-location {
+        font-size: 12px;
     }
 }
 
