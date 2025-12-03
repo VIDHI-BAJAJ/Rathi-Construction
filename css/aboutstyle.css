@@ -632,6 +632,7 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 400px;
 }
 
 .leader-card:hover {
@@ -643,6 +644,7 @@
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
 .leader-image-wrapper img {
@@ -650,6 +652,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.leader-card:hover .leader-image-wrapper img {
+    transform: scale(1.05);
 }
 
 .leader-overlay {
@@ -725,11 +732,15 @@
     .leader-card {
         min-width: calc((100% - 30px) / 2);
         max-width: calc((100% - 30px) / 2);
-        height: 250px;
+        height: 300px;
     }
 
     .leader-card:first-child {
         margin-left: 0;
+    }
+
+    .leader-image-wrapper {
+        height: 70%;
     }
 }
 
@@ -777,8 +788,8 @@
     .leader-card {
         min-width: calc(100vw - 40px);
         max-width: calc(100vw - 40px);
-        height: 250px;
-        padding: 30px 20px;
+        height: 350px;
+        padding: 0;
     }
 
     .leader-card:last-child {
@@ -791,6 +802,14 @@
 
     .leader-designation {
         font-size: 12px;
+    }
+
+    .leader-image-wrapper {
+        height: 75%;
+    }
+
+    .leader-info {
+        padding: 10px;
     }
 }
 
@@ -815,6 +834,14 @@
     .leaders-grid {
         gap: 10px;
     }
+
+    .leader-card {
+        height: 320px;
+    }
+
+    .leader-image-wrapper {
+        height: 70%;
+    }   
 }
 
 /* Leadership Section End */

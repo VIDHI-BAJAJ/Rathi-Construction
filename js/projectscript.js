@@ -23,7 +23,7 @@ const projects = [
     {
         id: 4,
         title: "Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Elite.jpg",
+        image: "./Images/Completed/Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad.webp",
         category: "completed"
     },
     {
@@ -41,85 +41,79 @@ const projects = [
     {
         id: 7,
         title: "Sri Tirumala Hamilton A&B, Musheerabad, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Tirumal Hamilton A&B.png",
         category: "completed"
     },
     {
         id: 8,
         title: "Sri Tirumala Anmol, Esamia Bazar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Sri Tirumala Anmol.png",
         category: "completed"
     },
     {
         id: 9,
         title: "Sri Tirumala Almond, Shivarampally, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Sri Tirumala Almond.png",
         category: "completed"
     },
     {
         id: 10,
         title: "Sri Tirumala Dreams, Shivarampally, Hyderabad",
-        image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=500&h=400&fit=crop",
+        image: "./Images/Completed/Tirumal Dreams.jpg",
         category: "completed"
     },
     {
         id: 11,
         title: "Sri Tirumala Crest, Karmanghat, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Tirumal Crest.png",
         category: "completed"
     },
     {
         id: 12,
         title: "Sri Tirumala Sarovar, Hosur Road, Bangalore",
-        image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=500&h=400&fit=crop",
+        image: "./Images/Completed/Sarovar.png",
         category: "completed"
     },
     {
         id: 13,
         title: "Sri Tirumala splendar, Silk Board Bangalore.",
-        image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=500&h=400&fit=crop",
+        image: "./Images/Completed/Splendor.jpg",
         category: "completed"
     },
     {
         id: 14,
         title: "Sri Tirumala harmony, Kapra, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Harmony.png",
         category: "completed"
     },
     {
         id: 15,
         title: "Sri Tirumala Millennium, Mallapur, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Millennium.png",
         category: "completed"
     },
     {
         id: 16,
         title: "Sri Tirumala Prestige, Erram Manzi, Kahirtabad.",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Prestige.png",
         category: "completed"
     },
     {
         id: 17,
         title: "Tirumala Jewels, Gandhinagar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Tirumala Jewels.jpeg",
         category: "completed"
     },
     {
         id: 18,
         title: "Gopal Dham, Ashok Nagar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Gopal Dham.png",
         category: "completed"
     },
     {
         id: 19,
         title: "Tirumala Orchid, GandhiNagar, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
-        category: "completed"
-    },
-    {
-        id: 20,
-        title: "Sri Tirumala Riverside Plaza",
-        image: "./Images/Homepage/Ongoing projects/Final-image.jpg",
+        image: "./Images/Completed/Tirumala Orchid.png",
         category: "completed"
     }
 ];

@@ -97,6 +97,8 @@
         </div>
     </section>
 
+    
+    
   <!-- Stats/Counter Section -->
     <section class="stats-section">
         <div class="stats-container">
@@ -182,7 +184,7 @@
                     <!-- Original leader cards -->
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="John Doe - CEO & Founder">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">John Doe</h3>
@@ -193,7 +195,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Jane Smith - Chief Operating Officer">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Jane Smith</h3>
@@ -204,7 +206,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Robert Johnson - Head of Projects">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Robert Johnson</h3>
@@ -215,7 +217,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Emily Davis - Marketing Director">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Emily Davis</h3>
@@ -226,7 +228,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Michael Wilson - Finance Manager">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Michael Wilson</h3>
@@ -239,7 +241,7 @@
                     <!-- Duplicate leader cards for infinite loop -->
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="John Doe - CEO & Founder">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">John Doe</h3>
@@ -250,7 +252,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Jane Smith - Chief Operating Officer">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Jane Smith</h3>
@@ -261,7 +263,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Robert Johnson - Head of Projects">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Robert Johnson</h3>
@@ -272,7 +274,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Emily Davis - Marketing Director">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Emily Davis</h3>
@@ -283,7 +285,7 @@
                     </div>
                     <div class="leader-card">
                         <div class="leader-image-wrapper">
-                            <img src="./Images/AboutusPage/team1.jpg" alt="Team Member">
+                            <img src="./Images/AboutusPage/team1.jpg" alt="Michael Wilson - Finance Manager">
                             <div class="leader-overlay">
                                 <div class="leader-info">
                                     <h3 class="leader-name">Michael Wilson</h3>
@@ -502,98 +504,100 @@
 <script src="./js/aboutscript.js"></script>
 <script>
     // Leadership Carousel Functionality
-    const leaderPrev = document.querySelector('.prev-btn');
-    const leaderNext = document.querySelector('.next-btn');
-    const leadersSlider = document.querySelector('.leaders-grid');
-    const totalLeaders = 5; // Actual number of unique leaders
-    let leaderIndex = 0;
-    let leadersPerView = 3;
-    
-    // For infinite loop, we now have duplicated leaders
-    const totalLeaderCards = 10; 
-    
-    function updateLeadersPerView() {
-        if (window.innerWidth <= 640) {
-            leadersPerView = 1;
-        } else if (window.innerWidth <= 968) {
-            leadersPerView = 2;
-        } else {
-            leadersPerView = 3;
-        }
-    }
-    
-    function slideLeaderNext() {
-        leaderIndex++;
-        // Calculate the percentage to move based on one leader width
-        const oneLeaderWidth = 100 / leadersPerView;
-        const slideAmount = leaderIndex * oneLeaderWidth;
-        leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
+    document.addEventListener('DOMContentLoaded', function() {
+        const leaderPrev = document.querySelector('.prev-btn');
+        const leaderNext = document.querySelector('.next-btn');
+        const leadersSlider = document.querySelector('.leaders-grid');
+        const totalLeaders = 5; // Actual number of unique leaders
+        let leaderIndex = 0;
+        let leadersPerView = 3;
         
-        // Reset to beginning when reaching the duplicate set
-        if (leaderIndex >= totalLeaders) {
-            setTimeout(() => {
+        // For infinite loop, we now have duplicated leaders
+        const totalLeaderCards = 10; 
+        
+        function updateLeadersPerView() {
+            if (window.innerWidth <= 640) {
+                leadersPerView = 1;
+            } else if (window.innerWidth <= 968) {
+                leadersPerView = 2;
+            } else {
+                leadersPerView = 3;
+            }
+        }
+        
+        function slideLeaderNext() {
+            leaderIndex++;
+            // Calculate the percentage to move based on one leader width
+            const oneLeaderWidth = 100 / leadersPerView;
+            const slideAmount = leaderIndex * oneLeaderWidth;
+            leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
+            
+            // Reset to beginning when reaching the duplicate set
+            if (leaderIndex >= totalLeaders) {
+                setTimeout(() => {
+                    leadersSlider.style.transition = 'none';
+                    leaderIndex = 0;
+                    const slideAmount = leaderIndex * oneLeaderWidth;
+                    leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
+                    // Force reflow
+                    leadersSlider.offsetHeight;
+                    leadersSlider.style.transition = 'transform 0.5s ease';
+                }, 500);
+            }
+        }
+        
+        function slideLeaderPrev() {
+            if (leaderIndex > 0) {
+                leaderIndex--;
+            } else {
+                // Jump to the end of the original set when going backwards from start
+                leaderIndex = totalLeaders - 1;
+                const oneLeaderWidth = 100 / leadersPerView;
                 leadersSlider.style.transition = 'none';
-                leaderIndex = 0;
-                const slideAmount = leaderIndex * oneLeaderWidth;
+                const slideAmount = (leaderIndex + 1) * oneLeaderWidth;
                 leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
                 // Force reflow
                 leadersSlider.offsetHeight;
                 leadersSlider.style.transition = 'transform 0.5s ease';
-            }, 500);
-        }
-    }
-    
-    function slideLeaderPrev() {
-        if (leaderIndex > 0) {
-            leaderIndex--;
-        } else {
-            // Jump to the end of the original set when going backwards from start
-            leaderIndex = totalLeaders - 1;
+                // Then move to the correct position
+                setTimeout(() => {
+                    leaderIndex--;
+                    const slideAmount = leaderIndex * oneLeaderWidth;
+                    leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
+                }, 10);
+                return;
+            }
+            
+            // Calculate the percentage to move based on one leader width
             const oneLeaderWidth = 100 / leadersPerView;
-            leadersSlider.style.transition = 'none';
-            const slideAmount = (leaderIndex + 1) * oneLeaderWidth;
+            const slideAmount = leaderIndex * oneLeaderWidth;
             leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
-            // Force reflow
-            leadersSlider.offsetHeight;
-            leadersSlider.style.transition = 'transform 0.5s ease';
-            // Then move to the correct position
-            setTimeout(() => {
-                leaderIndex--;
-                const slideAmount = leaderIndex * oneLeaderWidth;
-                leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
-            }, 10);
-            return;
         }
         
-        // Calculate the percentage to move based on one leader width
-        const oneLeaderWidth = 100 / leadersPerView;
-        const slideAmount = leaderIndex * oneLeaderWidth;
-        leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
-    }
-    
-    if (leaderNext && leadersSlider) {
-        leaderNext.addEventListener('click', slideLeaderNext);
-    }
-    
-    if (leaderPrev && leadersSlider) {
-        leaderPrev.addEventListener('click', slideLeaderPrev);
-    }
-    
-    // Update leaders per view on resize
-    window.addEventListener('resize', () => {
-        updateLeadersPerView();
-        leaderIndex = 0;
-        if (leadersSlider) {
-            leadersSlider.style.transition = 'none';
-            leadersSlider.style.transform = 'translateX(0)';
-            // Force reflow
-            leadersSlider.offsetHeight;
-            leadersSlider.style.transition = 'transform 0.5s ease';
+        if (leaderNext && leadersSlider) {
+            leaderNext.addEventListener('click', slideLeaderNext);
         }
+        
+        if (leaderPrev && leadersSlider) {
+            leaderPrev.addEventListener('click', slideLeaderPrev);
+        }
+        
+        // Update leaders per view on resize
+        window.addEventListener('resize', () => {
+            updateLeadersPerView();
+            leaderIndex = 0;
+            if (leadersSlider) {
+                leadersSlider.style.transition = 'none';
+                leadersSlider.style.transform = 'translateX(0)';
+                // Force reflow
+                leadersSlider.offsetHeight;
+                leadersSlider.style.transition = 'transform 0.5s ease';
+            }
+        });
+        
+        // Initialize leaders
+        updateLeadersPerView();
     });
-    
-    // Initialize leaders
-    updateLeadersPerView();
 </script>
 </body>
 </html>
