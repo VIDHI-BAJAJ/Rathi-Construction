@@ -1,4 +1,27 @@
 // Preloader functionality
+function preloadCriticalImages() {
+    // Define critical images that should be preloaded for faster display
+    const criticalImages = [
+        './Images/Logo.png',
+        './Images/Homepage/HeroBanner.png',
+        './Images/Homepage/aboutus.png',
+        './Images/On Going/Golden Gate.png',
+        './Images/On Going/Goldenpride.png',
+        './Images/On Going/SriTirumalaBliss.png'
+    ];
+    
+    // Preload each image
+    criticalImages.forEach(imageSrc => {
+        const img = new Image();
+        img.src = imageSrc;
+    });
+    
+    console.log('Critical images preloading initiated');
+}
+
+// Call preload function when script loads
+preloadCriticalImages();
+
 function hidePreloader() {
     try {
         console.log('Attempting to hide preloader');
@@ -171,6 +194,29 @@ const ultimateFallbackInterval = setInterval(function() {
 
 // Store page load time for ultimate fallback
 window.pageLoadTime = Date.now();
+
+// Mark images as loaded when they finish loading
+function markImagesAsLoaded() {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+        if (img.complete) {
+            img.setAttribute('data-loaded', 'true');
+        } else {
+            img.addEventListener('load', function() {
+                this.setAttribute('data-loaded', 'true');
+            });
+            
+            img.addEventListener('error', function() {
+                this.setAttribute('data-loaded', 'true');
+                // Set a placeholder if needed
+                this.src = 'https://via.placeholder.com/500x400?text=Image+Not+Found';
+            });
+        }
+    });
+}
+
+// Call the function when DOM is loaded
+document.addEventListener('DOMContentLoaded', markImagesAsLoaded);
 
 // Mobile Navbar Toggle
 function initMobileNavbar() {

@@ -262,10 +262,14 @@ function renderProjects() {
             const projectName = titleParts[0];
             const location = titleParts.slice(1).join(', ');
             
+            // Preload image to improve loading speed
+            const img = new Image();
+            img.src = project.image;
+            
             return `
             <div class="project-card ${project.category === 'upcoming' ? 'clickable' : 'not-clickable'}" 
                  onclick="${project.category === 'upcoming' && project.link ? `redirectToProject('${project.link}')` : ''}">
-                <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';">
+                <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';" loading="lazy" width="500" height="400">
                 <div class="project-info">
                     <h3 class="project-name">${projectName}</h3>
                     ${location ? `
