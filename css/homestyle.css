@@ -194,9 +194,9 @@
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-    animation: slideFromLeft 3s ease-out;
-    animation-delay: 0.3s;
-    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .about-image {
@@ -212,9 +212,9 @@
 }
 
 .about-content {
-    animation: slideFromRight 3s ease-out;
-    animation-delay: 0.3s;
-    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .about-title {
@@ -314,17 +314,11 @@
 
     .about-image-wrapper {
         order: 2;
-        animation: slideFromLeft 1s ease-out;
-        animation-delay: 0.3s;
-        animation-fill-mode: both;
     }
 
     .about-content {
         order: 1;
         text-align: center;
-        animation: slideFromRight 1s ease-out;
-        animation-delay: 0.3s;
-        animation-fill-mode: both;
     }
 
     .about-title {
@@ -385,6 +379,15 @@
     }
 }
 
+.about-image-wrapper.animate-visible,
+.about-content.animate-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.about-image-wrapper.animate-visible { transition-delay: 0.1s; }
+.about-content.animate-visible { transition-delay: 0.3s; }
+
 /* About Us Section End */
 
 /* Ongoing Projects Section Styles */
@@ -397,7 +400,14 @@
 .projects-header {
     text-align: center;
     margin-bottom: 30px;
-    animation: fadeInDown 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.projects-header.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .projects-title {
@@ -448,32 +458,23 @@
     transition: all 0.4s ease;
     opacity: 0;
     transform: translateX(100px);
-    animation: slideInRight 2s ease-out forwards;
 }
 
-.project-card:nth-child(1) { 
-    animation-delay: 0.1s; 
-}
-.project-card:nth-child(2) { 
-    animation-delay: 0.3s; 
-}
-.project-card:nth-child(3) { 
-    animation-delay: 0.5s; 
-}
-.project-card:nth-child(4) { 
-    animation-delay: 0.7s; 
-}
-.project-card:nth-child(5) { 
-    animation-delay: 0.9s; 
-}
-.project-card:nth-child(6) { 
-    animation-delay: 1.1s; 
-}
+
 
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
+
+.project-card.animate-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.project-card:nth-child(1).animate-visible { transition-delay: 0.1s; }
+.project-card:nth-child(2).animate-visible { transition-delay: 0.2s; }
+.project-card:nth-child(3).animate-visible { transition-delay: 0.3s; }
 
 .project-image {
     width: 100%;
@@ -727,14 +728,10 @@
 
 .stats-left {
     flex: 1;
-    animation: slideFromLeft 1s ease-out;
 }
 
 .stats-right {
     flex: 1;
-    animation: slideFromLeft 1s ease-out;
-    animation-delay: 0.2s;
-    animation-fill-mode: both;
 }
 
 .stats-text-content {
@@ -771,15 +768,21 @@
     border-radius: 16px;
     text-align: center;
     transition: all 0.4s ease;
-    animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: both;
     cursor: pointer;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
-.stat-card:nth-child(1) { animation-delay: 0.1s; }
-.stat-card:nth-child(2) { animation-delay: 0.2s; }
-.stat-card:nth-child(3) { animation-delay: 0.3s; }
-.stat-card:nth-child(4) { animation-delay: 0.4s; }
+.stat-card.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-card:nth-child(1).animate-visible { transition-delay: 0.3s; }
+.stat-card:nth-child(2).animate-visible { transition-delay: 0.4s; }
+.stat-card:nth-child(3).animate-visible { transition-delay: 0.5s; }
+.stat-card:nth-child(4).animate-visible { transition-delay: 0.6s; }
+
 
 .stat-white {
     background-color: #ffffff;
@@ -996,6 +999,15 @@
     background-color: #f8f8f8;
 }
 
+.why-choose-title.animate-visible,
+.why-choose-subtitle.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.why-choose-title.animate-visible { transition-delay: 0.1s; }
+.why-choose-subtitle.animate-visible { transition-delay: 0.2s; }
+
 .why-choose-container {
     max-width: 1600px;
     margin: 0 auto;
@@ -1008,7 +1020,9 @@
     font-weight: 500;
     color: #000000;
     margin-bottom: 20px;
-    animation: fadeInDown 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .why-choose-subtitle {
@@ -1019,9 +1033,9 @@
     line-height: 1.6;
     max-width: 900px;
     margin: 0 auto 60px;
-    animation: fadeInDown 0.8s ease-out;
-    animation-delay: 0.2s;
-    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .features-grid {
@@ -1035,13 +1049,11 @@
     border-radius: 16px;
     text-align: center;
     transition: all 0.4s ease;
-    animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
-.feature-card:nth-child(1) { animation-delay: 0.3s; }
-.feature-card:nth-child(2) { animation-delay: 0.4s; }
-.feature-card:nth-child(3) { animation-delay: 0.5s; }
+
 
 .feature-white {
     background-color: #ffffff;
@@ -1056,6 +1068,11 @@
 .feature-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .feature-purple:hover {
@@ -1215,6 +1232,17 @@
     background-color: #ffffff;
 }
 
+.featured-title.animate-visible,
+.featured-subtitle.animate-visible,
+.featured-slider-wrapper.animate-visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
+
+.featured-title.animate-visible { transition-delay: 0.1s; }
+.featured-subtitle.animate-visible { transition-delay: 0.2s; }
+.featured-slider-wrapper.animate-visible { transition-delay: 0.3s; }
+
 .featured-container {
     max-width: 1600px;
     margin: 0 auto;
@@ -1227,7 +1255,9 @@
     color: #000000;
     text-align: center;
     margin-bottom: 20px;
-    animation: fadeInDown 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .featured-subtitle {
@@ -1239,14 +1269,17 @@
     text-align: center;
     max-width: 900px;
     margin: 0 auto 60px;
-    animation: fadeInDown 0.8s ease-out;
-    animation-delay: 0.2s;
-    animation-fill-mode: both;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .featured-slider-wrapper {
     overflow: hidden;
     margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .featured-grid {
@@ -1259,21 +1292,28 @@
     min-width: calc((100% - 60px) / 3);
     max-width: calc((100% - 60px) / 3);
     flex-shrink: 0;
-    animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: both;
     transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
-.featured-item:nth-child(1) { animation-delay: 0.3s; }
-.featured-item:nth-child(2) { animation-delay: 0.4s; }
-.featured-item:nth-child(3) { animation-delay: 0.5s; }
-.featured-item:nth-child(4) { animation-delay: 0.6s; }
-.featured-item:nth-child(5) { animation-delay: 0.7s; }
-.featured-item:nth-child(6) { animation-delay: 0.8s; }
+
 
 .featured-item:hover {
     transform: translateY(-10px);
 }
+
+.featured-item.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.featured-item:nth-child(1).animate-visible { transition-delay: 0.1s; }
+.featured-item:nth-child(2).animate-visible { transition-delay: 0.2s; }
+.featured-item:nth-child(3).animate-visible { transition-delay: 0.3s; }
+.featured-item:nth-child(4).animate-visible { transition-delay: 0.4s; }
+.featured-item:nth-child(5).animate-visible { transition-delay: 0.5s; }
+.featured-item:nth-child(6).animate-visible { transition-delay: 0.6s; }
 
 .featured-image {
     width: 100%;
@@ -1546,7 +1586,21 @@
 .testimonials-section {
     padding: 50px;
     background-color: #f8f8f8;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+.testimonials-section.animate-visible,
+.testimonials-title.animate-visible,
+.testimonials-subtitle.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonials-section.animate-visible { transition-delay: 0.1s; }
+.testimonials-title.animate-visible { transition-delay: 0.2s; }
+.testimonials-subtitle.animate-visible { transition-delay: 0.3s; }
 
 .testimonials-container {
     max-width: 1600px;
@@ -1560,6 +1614,9 @@
     color: #000000;
     text-align: center;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .testimonials-subtitle {
@@ -1571,6 +1628,9 @@
     text-align: center;
     max-width: 900px;
     margin: 0 auto 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .testimonials-slider-wrapper {
@@ -1595,12 +1655,30 @@
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    transform: translateY(30px);
 }
 
 .testimonial-card:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-color: #6C1A78;
 }
+
+.testimonial-card.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.testimonial-card:nth-child(1).animate-visible { transition-delay: 0.1s; }
+.testimonial-card:nth-child(2).animate-visible { transition-delay: 0.2s; }
+.testimonial-card:nth-child(3).animate-visible { transition-delay: 0.3s; }
+.testimonial-card:nth-child(4).animate-visible { transition-delay: 0.4s; }
+.testimonial-card:nth-child(5).animate-visible { transition-delay: 0.5s; }
+.testimonial-card:nth-child(6).animate-visible { transition-delay: 0.6s; }
+.testimonial-card:nth-child(7).animate-visible { transition-delay: 0.7s; }
+.testimonial-card:nth-child(8).animate-visible { transition-delay: 0.8s; }
+.testimonial-card:nth-child(9).animate-visible { transition-delay: 0.9s; }
+.testimonial-card:nth-child(10).animate-visible { transition-delay: 1.0s; }
 
 .stars {
     display: flex;
@@ -1779,6 +1857,17 @@
     margin: 0;
 }
 
+.cta-title.animate-visible,
+.cta-description.animate-visible,
+.cta-button-wrapper.animate-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.cta-title.animate-visible { transition-delay: 0.1s; }
+.cta-description.animate-visible { transition-delay: 0.2s; }
+.cta-button-wrapper.animate-visible { transition-delay: 0.3s; }
+
 .cta-container {
     max-width: 1600px;
     margin: 0 auto;
@@ -1799,6 +1888,9 @@
     font-weight: 500;
     color: #ffffff;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .cta-description {
@@ -1808,10 +1900,16 @@
     color: #ffffff;
     line-height: 1.6;
     margin: 0;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .cta-button-wrapper {
     flex-shrink: 0;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .cta-button {
@@ -1907,33 +2005,133 @@
 }
 
 /* Add scroll animation classes */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-fade-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-fade-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
+.animate-on-scroll,
+.animate-fade-left,
+.animate-fade-right,
 .animate-fade-up {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
+.animate-fade-left {
+    transform: translateX(-50px);
+}
+
+.animate-fade-right {
+    transform: translateX(50px);
+}
+
+.animate-fade-up {
+    transform: translateY(30px);
+}
+
 .animate-visible {
     opacity: 1;
     transform: translateY(0) translateX(0);
+}
+
+.initial-hidden {
+    opacity: 0;
+}
+
+/* Ensure all elements with animation classes start hidden except stats section content */
+.hero-title,
+.hero-button,
+.about-image-wrapper,
+.about-content,
+.projects-header,
+.why-choose-title,
+.why-choose-subtitle,
+.feature-card,
+.featured-title,
+.featured-subtitle,
+.featured-slider-wrapper,
+.testimonials-section,
+.testimonials-title,
+.testimonials-subtitle,
+.cta-title,
+.cta-description,
+.cta-button-wrapper {
+    opacity: 0;
+}
+
+/* Stats section content should start hidden for scroll animations */
+.stats-title,
+.stats-subtitle,
+.stats-container,
+.stats-image,
+.stats-text-content,
+.stats-grid,
+.stat-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stats-title.animate-visible,
+.stats-subtitle.animate-visible,
+.stats-container.animate-visible,
+.stats-image.animate-visible,
+.stats-text-content.animate-visible,
+.stats-grid.animate-visible,
+.stat-card.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stats-title.animate-visible { transition-delay: 0.1s; }
+.stats-subtitle.animate-visible { transition-delay: 0.2s; }
+.stats-container.animate-visible { transition-delay: 0.3s; }
+.stats-image.animate-visible { transition-delay: 0.5s; }
+.stats-text-content.animate-visible { transition-delay: 0.1s; }
+.stats-grid.animate-visible { transition-delay: 0.2s; }
+.stat-card:nth-child(1).animate-visible { transition-delay: 0.3s; }
+.stat-card:nth-child(2).animate-visible { transition-delay: 0.4s; }
+.stat-card:nth-child(3).animate-visible { transition-delay: 0.5s; }
+.stat-card:nth-child(4).animate-visible { transition-delay: 0.6s; }
+
+/* Add delays for sequential animations */
+.hero-title.animate-visible { transition-delay: 0.1s; }
+.hero-button.animate-visible { transition-delay: 0.3s; }
+
+.about-image-wrapper.animate-visible { transition-delay: 0.1s; }
+.about-content.animate-visible { transition-delay: 0.3s; }
+
+.projects-header.animate-visible { transition-delay: 0.1s; }
+
+.why-choose-title.animate-visible { transition-delay: 0.1s; }
+.why-choose-subtitle.animate-visible { transition-delay: 0.2s; }
+.feature-card:nth-child(1).animate-visible { transition-delay: 0.3s; }
+.feature-card:nth-child(2).animate-visible { transition-delay: 0.4s; }
+.feature-card:nth-child(3).animate-visible { transition-delay: 0.5s; }
+
+.featured-title.animate-visible { transition-delay: 0.1s; }
+.featured-subtitle.animate-visible { transition-delay: 0.2s; }
+.featured-slider-wrapper.animate-visible { transition-delay: 0.3s; }
+
+.testimonials-section.animate-visible { transition-delay: 0.1s; }
+
+.cta-title.animate-visible { transition-delay: 0.1s; }
+.cta-description.animate-visible { transition-delay: 0.2s; }
+.cta-button-wrapper.animate-visible { transition-delay: 0.3s; }
+
+/* Hero Section Animations */
+.hero-title.animate-fade-left,
+.hero-button.animate-fade-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-button.animate-fade-left {
+    transition-delay: 0.3s;
+}
+
+.hero-title.animate-fade-left.animate-visible,
+.hero-button.animate-fade-left.animate-visible {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* About Us Section Animations */
@@ -1969,127 +2167,10 @@
     transform: translateY(0);
 }
 
-/* Stats Section Animations */
-.stats-title {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.stats-subtitle {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.stats-container {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.stats-image {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.stats-title.animate-visible,
-.stats-subtitle.animate-visible,
-.stats-container.animate-visible,
-.stats-image.animate-visible {
-    opacity: 1;
-    transform: translateX(0) translateY(0);
-}
 
-/* Why Choose Us Section Animations */
-.why-choose-title,
-.why-choose-subtitle {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.why-choose-title.animate-visible,
-.why-choose-subtitle.animate-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-.feature-card {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.4s ease;
-    animation-fill-mode: both;
-}
-
-.feature-card.animate-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.feature-card:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.feature-card:nth-child(2) {
-    transition-delay: 0.2s;
-}
-
-.feature-card:nth-child(3) {
-    transition-delay: 0.3s;
-}
-
-/* Featured Projects Section Animations */
-.featured-title,
-.featured-subtitle {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.featured-slider-wrapper {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.featured-title.animate-visible,
-.featured-subtitle.animate-visible,
-.featured-slider-wrapper.animate-visible {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
-}
-
-/* Testimonials Section Animations */
-.testimonials-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.testimonials-section.animate-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* CTA Section Animations */
-.cta-title,
-.cta-description {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.cta-button-wrapper {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.cta-title.animate-visible,
-.cta-description.animate-visible,
-.cta-button-wrapper.animate-visible {
-    opacity: 1;
-    transform: translateX(0);
-}

@@ -49,57 +49,84 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-visible');
+                // Stop observing this element to prevent re-triggering
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    // About Us Section
-    const aboutImage = document.querySelector('.about-image-wrapper');
-    const aboutContent = document.querySelector('.about-content');
-    if (aboutImage) observer.observe(aboutImage);
-    if (aboutContent) observer.observe(aboutContent);
+    // Get all elements that should be animated
+    const animatedElements = document.querySelectorAll(
+        '.hero-title, .hero-button, .about-image-wrapper, .about-content, ' +
+        '.projects-header, .stats-title, .stats-subtitle, .stats-text-content, .stats-container, .stats-image, .stats-grid, ' +
+        '.why-choose-title, .why-choose-subtitle, .feature-card, ' +
+        '.featured-title, .featured-subtitle, .featured-slider-wrapper, ' +
+        '.testimonials-section, .testimonials-title, .testimonials-subtitle, ' +
+        '.cta-title, .cta-description, .cta-button-wrapper'
+    );
 
-    // Ongoing Projects Section
-    const projectsHeader = document.querySelector('.projects-header');
-    if (projectsHeader) observer.observe(projectsHeader);
+    // Also get stat cards, project cards, featured items, and testimonial cards specifically
+    const statCards = document.querySelectorAll('.stat-card');
+    const projectCards = document.querySelectorAll('.project-card');
+    const featuredItems = document.querySelectorAll('.featured-item');
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
 
-    // Stats Section
-    const statsTitle = document.querySelector('.stats-title');
-    const statsSubtitle = document.querySelector('.stats-subtitle');
-    const statsContainer = document.querySelector('.stats-container');
-    const statsImage = document.querySelector('.stats-image');
-    if (statsTitle) observer.observe(statsTitle);
-    if (statsSubtitle) observer.observe(statsSubtitle);
-    if (statsContainer) observer.observe(statsContainer);
-    if (statsImage) observer.observe(statsImage);
+    // Add initial-hidden class to all animated elements to ensure they start hidden
+    animatedElements.forEach(element => {
+        if (!element.classList.contains('animate-visible')) {
+            element.classList.add('initial-hidden');
+        }
+    });
 
-    // Why Choose Us Section
-    const whyChooseTitle = document.querySelector('.why-choose-title');
-    const whyChooseSubtitle = document.querySelector('.why-choose-subtitle');
-    const featureCards = document.querySelectorAll('.feature-card');
-    if (whyChooseTitle) observer.observe(whyChooseTitle);
-    if (whyChooseSubtitle) observer.observe(whyChooseSubtitle);
-    featureCards.forEach(card => observer.observe(card));
+    // Add initial-hidden class to stat cards, project cards, featured items, and testimonial cards as well
+    statCards.forEach(card => {
+        if (!card.classList.contains('animate-visible')) {
+            card.classList.add('initial-hidden');
+        }
+    });
 
-    // Featured Projects Section
-    const featuredTitle = document.querySelector('.featured-title');
-    const featuredSubtitle = document.querySelector('.featured-subtitle');
-    const featuredSlider = document.querySelector('.featured-slider-wrapper');
-    if (featuredTitle) observer.observe(featuredTitle);
-    if (featuredSubtitle) observer.observe(featuredSubtitle);
-    if (featuredSlider) observer.observe(featuredSlider);
+    projectCards.forEach(card => {
+        if (!card.classList.contains('animate-visible')) {
+            card.classList.add('initial-hidden');
+        }
+    });
 
-    // Testimonials Section
-    const testimonialsSection = document.querySelector('.testimonials-section');
-    if (testimonialsSection) observer.observe(testimonialsSection);
+    featuredItems.forEach(item => {
+        if (!item.classList.contains('animate-visible')) {
+            item.classList.add('initial-hidden');
+        }
+    });
 
-    // CTA Section
-    const ctaTitle = document.querySelector('.cta-title');
-    const ctaDescription = document.querySelector('.cta-description');
-    const ctaButton = document.querySelector('.cta-button-wrapper');
-    if (ctaTitle) observer.observe(ctaTitle);
-    if (ctaDescription) observer.observe(ctaDescription);
-    if (ctaButton) observer.observe(ctaButton);
+    testimonialCards.forEach(card => {
+        if (!card.classList.contains('animate-visible')) {
+            card.classList.add('initial-hidden');
+        }
+    });
+
+    // Observe all animated elements
+    animatedElements.forEach(element => {
+        observer.observe(element);
+    });
+
+    // Observe stat cards
+    statCards.forEach(card => {
+        observer.observe(card);
+    });
+
+    // Observe project cards
+    projectCards.forEach(card => {
+        observer.observe(card);
+    });
+
+    // Observe featured items
+    featuredItems.forEach(item => {
+        observer.observe(item);
+    });
+
+    // Observe testimonial cards
+    testimonialCards.forEach(card => {
+        observer.observe(card);
+    });
 });
 
 // Ongoing Projects Slider
