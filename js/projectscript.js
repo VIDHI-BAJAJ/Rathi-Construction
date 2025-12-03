@@ -124,6 +124,38 @@ const projectsPerPage = 6;
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Create observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    // Create observer
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe hero section elements
+    const heroTitle = document.querySelector('.hero-title');
+    const breadcrumb = document.querySelector('.breadcrumb');
+    if (heroTitle) observer.observe(heroTitle);
+    if (breadcrumb) observer.observe(breadcrumb);
+
+    // Observe main content elements
+    const container = document.querySelector('.container');
+    const header = document.querySelector('.header');
+    const headerText = document.querySelector('.header-text');
+    const filterDropdown = document.querySelector('.filter-dropdown');
+    
+    if (container) observer.observe(container);
+    if (header) observer.observe(header);
+    if (headerText) observer.observe(headerText);
+    if (filterDropdown) observer.observe(filterDropdown);
+
     // Toggle dropdown
     const dropdownBtn = document.getElementById('dropdownBtn');
     const dropdownMenu = document.getElementById('dropdownMenu');
@@ -196,7 +228,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Initial render with "Upcoming" as default
-    renderProjects();
+    setTimeout(() => {
+        renderProjects();
+    }, 100);
 });
 
 // Render projects
@@ -301,4 +335,16 @@ function updateNavButtons() {
             nextBtn.style.cursor = 'pointer';
         }
     }
+}
+
+// Function to observe project cards
+function observeProjectCards() {
+    // Use a slight delay to ensure cards are rendered
+    setTimeout(() => {
+        const projectCards = document.querySelectorAll('.project-card');
+        projectCards.forEach((card, index) => {
+            // Add delay based on index for staggered animation
+            card.style.transitionDelay = `${index * 0.1}s`;
+        });
+    }, 50);
 }

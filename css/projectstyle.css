@@ -32,12 +32,24 @@
     font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: 2px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .breadcrumb {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hero-title.animate-visible,
+.breadcrumb.animate-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .breadcrumb a {
@@ -61,6 +73,14 @@
 
         .container {
             margin: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .container.animate-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .header {
@@ -69,6 +89,14 @@
             align-items: flex-start;
             margin-bottom: 40px;
             gap: 40px;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .header.animate-visible {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .header h1 {
@@ -85,12 +113,28 @@
             font-size: 16px;
             line-height: 1.6;
             color: #333;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .header-text.animate-visible {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .filter-dropdown {
             position: relative;
             margin-bottom: 40px;
             max-width: 250px;
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .filter-dropdown.animate-visible {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         .dropdown-button {
