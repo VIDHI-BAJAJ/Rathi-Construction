@@ -534,11 +534,11 @@
             updateCarousel();
         });
 
-        // Scroll-triggered animations for hero section with delay to ensure proper execution
+        // Scroll-triggered animations for hero section with improved timing and conflict prevention
         window.addEventListener('load', function() {
-            // Small delay to ensure all scripts are loaded
+            // Increased delay to ensure all scripts are fully loaded and DOM is ready
             setTimeout(function() {
-                // Scroll-triggered animations for hero section
+                // Create a single observer for hero section elements
                 const observerOptions = {
                     threshold: 0.1,
                     rootMargin: '0px 0px -50px 0px'
@@ -558,7 +558,7 @@
                 const heroTitle = document.querySelector('.hero-title');
                 const breadcrumb = document.querySelector('.breadcrumb');
                 
-                // Remove any existing animate-visible class to ensure clean start
+                // Clean up any existing animation classes and observe elements
                 if (heroTitle) {
                     heroTitle.classList.remove('animate-visible');
                     observer.observe(heroTitle);
@@ -567,7 +567,7 @@
                     breadcrumb.classList.remove('animate-visible');
                     observer.observe(breadcrumb);
                 }
-            }, 100);
+            }, 300); // Increased delay to ensure proper loading
         });
 
         // Add click tracking for project cards
