@@ -882,7 +882,7 @@ html, body {
 
     .carousel-slide {
         width: 90%;
-        max-width: 280px;
+        max-width: 350px;
         height: 260px;
     }
 
@@ -910,7 +910,7 @@ html, body {
 
     .carousel-slide {
         width: 95%;
-        max-width: 250px;
+        max-width: 390px;
         height: 230px;
     }
 

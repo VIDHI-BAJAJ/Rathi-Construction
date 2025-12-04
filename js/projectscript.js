@@ -76,8 +76,8 @@ const projects = [
     },
     {
         id: 13,
-        title: "Sri Tirumala splendar, Silk Board Bangalore.",
-        image: "./Images/Completed/Splendor.jpg",
+        title: "Sri Tirumala Millennium, Mallapur, Hyderabad",
+        image: "./Images/Completed/Millennium.png",
         category: "completed"
     },
     {
@@ -88,8 +88,8 @@ const projects = [
     },
     {
         id: 15,
-        title: "Sri Tirumala Millennium, Mallapur, Hyderabad",
-        image: "./Images/Completed/Millennium.png",
+         title: "Sri Tirumala splendar, Silk Board Bangalore.",
+        image: "./Images/Completed/Sri Tirumala splendar.png",
         category: "completed"
     },
     {
@@ -261,11 +261,11 @@ function renderProjects() {
     const specialProjects = [
         'Sri Tirumala Pranmoksha Pride',
         'Sri Tirumala Sarovar',
-        'Sri Tirumala splendar',
         'Sri Tirumala Prestige',
         'Sri Tirumala Millennium',
         'Sri Tirumala harmony',
-        'Sri Tirumala Hamilton A&B'
+        'Sri Tirumala Hamilton A&B',
+        'Sri Tirumala splendar'
     ];
 
     // Separate special and regular projects
