@@ -196,19 +196,19 @@
                 </div>
 
                 <!-- <div class="carousel-slide" data-index="1">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_08.png" alt="Floor Plan 2">
+                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_08.png" alt="Floor Plan 2" loading="lazy">
                 </div>
 
                 <div class="carousel-slide" data-index="2">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_09.png" alt="Floor Plan 3">
+                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_09.png" alt="Floor Plan 3" loading="lazy">
                 </div>
 
                 <div class="carousel-slide" data-index="3">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_10.png" alt="Floor Plan 4">
-                </div> -->
+                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_10.png" alt="Floor Plan 4" loading="lazy">
+                </div>
             </div>
 
-            <!-- <div class="nav-button prev-btn">
+            <div class="nav-button prev-btn">
                 <i class="fas fa-chevron-left"></i>
             </div>
             <div class="nav-button next-btn">
@@ -442,6 +442,7 @@
     <script src="../js/homescript.js"></script>
     <script src="../js/goldengate.js"></script>
     <script>
+        // Carousel functionality
         document.addEventListener('DOMContentLoaded', function() {
             const slides = document.querySelectorAll('.carousel-slide');
             const prevBtn = document.querySelector('.prev-btn');
@@ -533,6 +534,42 @@
             updateCarousel();
         });
 
+        // Scroll-triggered animations for hero section with delay to ensure proper execution
+        window.addEventListener('load', function() {
+            // Small delay to ensure all scripts are loaded
+            setTimeout(function() {
+                // Scroll-triggered animations for hero section
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-visible');
+                            // Stop observing to prevent re-triggering
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe hero section elements
+                const heroTitle = document.querySelector('.hero-title');
+                const breadcrumb = document.querySelector('.breadcrumb');
+                
+                // Remove any existing animate-visible class to ensure clean start
+                if (heroTitle) {
+                    heroTitle.classList.remove('animate-visible');
+                    observer.observe(heroTitle);
+                }
+                if (breadcrumb) {
+                    breadcrumb.classList.remove('animate-visible');
+                    observer.observe(breadcrumb);
+                }
+            }, 100);
+        });
+
         // Add click tracking for project cards
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.project-card').forEach(card => {
@@ -544,26 +581,6 @@
                         alert('Project page coming soon!');
                     }
                 });
-            });
-
-            // Smooth scroll reveal animation
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all project cards
-            document.querySelectorAll('.project-card').forEach(card => {
-                observer.observe(card);
             });
         });
     </script>

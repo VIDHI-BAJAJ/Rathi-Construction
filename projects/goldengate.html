@@ -448,6 +448,7 @@
     <script src="../js/goldengate.js"></script>
     <script src="../js/mainscript.js"></script>
     <script>
+        // Carousel functionality
         document.addEventListener('DOMContentLoaded', function() {
             const slides = document.querySelectorAll('.carousel-slide');
             const prevBtn = document.querySelector('.prev-btn');
@@ -539,6 +540,42 @@
             updateCarousel();
         });
 
+        // Scroll-triggered animations for hero section with improved timing and conflict prevention
+        window.addEventListener('load', function() {
+            // Increased delay to ensure all scripts are fully loaded and DOM is ready
+            setTimeout(function() {
+                // Create a single observer for hero section elements
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-visible');
+                            // Stop observing to prevent re-triggering
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe hero section elements
+                const heroTitle = document.querySelector('.hero-title');
+                const breadcrumb = document.querySelector('.breadcrumb');
+                
+                // Clean up any existing animation classes and observe elements
+                if (heroTitle) {
+                    heroTitle.classList.remove('animate-visible');
+                    observer.observe(heroTitle);
+                }
+                if (breadcrumb) {
+                    breadcrumb.classList.remove('animate-visible');
+                    observer.observe(breadcrumb);
+                }
+            }, 300); // Increased delay to ensure proper loading
+        });
+
         // Add click tracking for project cards
         document.addEventListener('DOMContentLoaded', function() {
             document.querySelectorAll('.project-card').forEach(card => {
@@ -551,28 +588,7 @@
                     }
                 });
             });
-
-            // Smooth scroll reveal animation
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-
-            // Observe all project cards
-            document.querySelectorAll('.project-card').forEach(card => {
-                observer.observe(card);
-            });
         });
-    </script>
-   
+    </script>   
 </body>
 </html>
