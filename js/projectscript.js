@@ -120,7 +120,7 @@ const projects = [
 
 let currentFilter = 'upcoming';
 let currentPage = 1;
-const projectsPerPage = 6;
+const projectsPerPage = 9;
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -250,13 +250,13 @@ function renderProjects() {
         
     // Apply limits based on category
     if (currentFilter === 'upcoming') {
-        filteredProjects = filteredProjects.slice(0, 6); // Limit to 6 upcoming projects (2 rows of 3)
+        filteredProjects = filteredProjects.slice(0, 9); // Limit to 9 upcoming projects (3 rows of 3)
     } else if (currentFilter === 'completed') {
         filteredProjects = filteredProjects.slice(0, 18); // Limit to 18 completed projects
     } else if (currentFilter === 'all') {
         filteredProjects = filteredProjects.slice(0, 20); // Limit to 20 total projects
     }
-
+    
     // Define special projects that need to be grouped together at the end
     const specialProjects = [
         'Sri Tirumala Pranmoksha Pride',
