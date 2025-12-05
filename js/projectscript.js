@@ -118,6 +118,8 @@ const projects = [
     }
 ];
 
+
+
 let currentFilter = 'upcoming';
 let currentPage = 1;
 const projectsPerPage = 9;
