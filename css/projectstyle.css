@@ -308,7 +308,6 @@
         
         @media (max-width: 768px) {
             .project-card.reduced-height .project-image-container {
-                height: 230px;
                 margin: 0;
                 padding: 0;
                 order: 1;
@@ -492,8 +491,7 @@
             }
             
             .project-image,
-            .projects-grid.special-layout .project-image {
-                height: 230px;
+            .projects-grid.special-layout .project-image {            
                 margin: 0;
                 padding: 0;
                 display: block;

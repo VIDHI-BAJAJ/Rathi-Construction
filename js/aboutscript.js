@@ -6,13 +6,26 @@ document.addEventListener('DOMContentLoaded', function() {
         rootMargin: '0px 0px -50px 0px'
     };
 
+    // Variables to track scroll direction
+    let lastScrollY = window.scrollY;
+    
     // Create observer
     const observer = new IntersectionObserver(function(entries) {
+        const currentScrollY = window.scrollY;
+        const isScrollingDown = currentScrollY > lastScrollY;
+        
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-visible');
+                if (isScrollingDown) {
+                    // Element is entering viewport while scrolling down - add animation class
+                    entry.target.classList.add('animate-visible');
+                }
+                // Note: We don't remove the class when scrolling up, so content stays visible
+                // But we do add it again when scrolling down, allowing animations to replay
             }
         });
+        
+        lastScrollY = currentScrollY;
     }, observerOptions);
 
     // Hero Section
