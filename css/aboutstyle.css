@@ -551,11 +551,13 @@
 }
 
 .leadership-container {
-    max-width: 1400px;
+    max-width: 1600px; /* Increased from 1400px to match desktop standard */
     margin: 0 auto;
     display: flex;
-    height: 500px;
+    height: 600px; /* Increased height to accommodate larger images */
 }
+
+
 
 .leadership-purple-panel {
     width: 30%;
@@ -565,7 +567,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 50px; /* Increased padding */
 }
 
 .purple-content {
@@ -622,7 +624,7 @@
 .leadership-white-panel {
     width: 70%;
     background-color: #ffffff;
-    padding: 40px;
+    padding: 50px; /* Increased padding */
     position: relative;
     overflow: hidden;
 }
@@ -644,7 +646,39 @@
     display: flex;
     flex-direction: column;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    height: 400px;
+    height: 500px; /* Increased height for larger images */
+}
+
+/* Mobile view adjustments */
+@media screen and (max-width: 768px) {
+    .leader-card {
+        min-width: calc(100% - 20px); /* One card takes almost full width */
+        max-width: calc(100% - 20px);
+        margin: 0 10px; /* Add some margin on sides */
+        height: 450px; /* Adjust height for mobile */
+    }
+    
+    /* Show only one card at a time on mobile */
+    .leaders-grid {
+        gap: 0; /* Remove gap to show one card at a time */
+        padding: 0 10px; /* Add padding to center the card */
+    }
+    
+    /* Adjust container for mobile */
+    .leadership-white-panel {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        padding: 20px 0; /* Adjust padding */
+    }
+    
+    /* Adjust container height for mobile */
+    .leadership-container {
+        height: 500px; /* Adjust height for mobile */
+    }
+    
+    /* Adjust purple title for mobile */
+    .purple-title {
+        font-size: 16px; /* Smaller font size for mobile */
+    }
 }
 
 .leader-card:hover {
@@ -665,10 +699,15 @@
     object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
+    transform: scale(1.15); /* Increased scale for larger images */
 }
 
+
+
+
+
 .leader-card:hover .leader-image-wrapper img {
-    transform: scale(1.05);
+    transform: scale(1.25); /* Further increased scale effect for larger images */
 }
 
 .leader-overlay {
@@ -683,11 +722,14 @@
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none; /* Allow clicks to pass through to the image */
 }
 
 .leader-image-wrapper:hover .leader-overlay {
     opacity: 1;
 }
+
+
 
 .leader-info {
     text-align: center;
@@ -712,149 +754,11 @@
 }
 
 /* Responsive Leadership Section */
-@media screen and (max-width: 968px) {
-    .leadership-section {
-        padding: 80px 0px;
-    }
 
-    .leadership-container {
-        height: auto;
-        flex-direction: row;
-    }
 
-    .leadership-purple-panel {
-        width: 30%;
-        height: 200px;
-        padding: 20px;
-    }
 
-    .purple-title {
-        font-size: 28px;
-    }
 
-    .leadership-white-panel {
-        width: 70%;
-        padding: 30px 20px;
-    }
 
-    .leaders-grid {
-        flex-wrap: nowrap;
-    }
-
-    .leader-card {
-        min-width: calc((100% - 30px) / 2);
-        max-width: calc((100% - 30px) / 2);
-        height: 300px;
-    }
-
-    .leader-card:first-child {
-        margin-left: 0;
-    }
-
-    .leader-image-wrapper {
-        height: 70%;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .leadership-section {
-        padding: 60px 0px;
-    }
-
-    .leadership-purple-panel {
-        height: 150px;
-    }
-
-    .purple-title {
-        font-size: 24px;
-    }
-
-    .purple-controls {
-        margin-top: 20px;
-    }
-
-    .control-btn {
-        width: 40px;
-        height: 40px;
-    }
-
-    .control-btn svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .leadership-white-panel {
-        padding: 20px 10px;
-        overflow-x: hidden;
-        margin-left: -20px;
-        margin-right: -20px;
-        padding: 0 20px;
-    }
-
-    .leaders-grid {
-        gap: 20px;
-        flex-wrap: nowrap;
-        padding: 10px 5px;
-    }
-
-    .leader-card {
-        min-width: calc(100vw - 40px);
-        max-width: calc(100vw - 40px);
-        height: 350px;
-        padding: 0;
-    }
-
-    .leader-card:last-child {
-        margin-right: 0;
-    }
-
-    .leader-name {
-        font-size: 18px;
-    }
-
-    .leader-designation {
-        font-size: 12px;
-    }
-
-    .leader-image-wrapper {
-        height: 75%;
-    }
-
-    .leader-info {
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .leadership-section {
-        padding: 50px 0px;
-    }
-
-    .leadership-purple-panel {
-        height: 350px;
-        width: 130px;
-    }
-
-    .purple-title {
-        font-size: 18px;
-    }
-
-    .leadership-white-panel {
-        padding: 15px 5px;
-    }
-
-    .leaders-grid {
-        gap: 10px;
-    }
-
-    .leader-card {
-        height: 320px;
-    }
-
-    .leader-image-wrapper {
-        height: 70%;
-    }   
-}
 
 /* Leadership Section End */
 

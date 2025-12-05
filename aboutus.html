@@ -524,8 +524,8 @@
         const totalLeaderCards = 10; 
         
         function updateLeadersPerView() {
-            if (window.innerWidth <= 640) {
-                leadersPerView = 1;
+            if (window.innerWidth <= 768) { // Changed breakpoint to 768px
+                leadersPerView = 1; // Show only 1 card on mobile
             } else if (window.innerWidth <= 968) {
                 leadersPerView = 2;
             } else {
@@ -580,6 +580,7 @@
             const oneLeaderWidth = 100 / leadersPerView;
             const slideAmount = leaderIndex * oneLeaderWidth;
             leadersSlider.style.transform = `translateX(-${slideAmount}%)`;
+        
         }
         
         if (leaderNext && leadersSlider) {
