@@ -358,11 +358,11 @@ html, body {
     }
 
     .about-image-wrapper {
-        order: 1;
+        order: 2;
     }
 
     .about-content {
-        order: 2;
+        order: 1;
         text-align: center;
     }
 
