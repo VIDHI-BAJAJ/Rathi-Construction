@@ -679,6 +679,10 @@
     .purple-title {
         font-size: 16px; /* Smaller font size for mobile */
     }
+    .control-btn {
+    width: 30px;
+    height: 30px;
+    }
 }
 
 .leader-card:hover {
