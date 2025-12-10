@@ -8,30 +8,10 @@
   <meta name="description" content="Rathi Construction is a premier construction company in Hyderabad delivering high-quality residential, commercial, and industrial construction with trusted workmanship, on-time delivery, and modern design expertise." />
   <meta name="keywords" content="Rathi Construction, construction company, construction company in Hyderabad, builders, residential construction, commercial construction, industrial construction, civil contractor, building contractor, project management, construction services, sustainable construction, on-time delivery, quality workmanship, home builders, infrastructure" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://rathiconstructions.com/">
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Rathi Construction — Trusted Builders for Residential & Commercial Projects" />
   <meta property="og:description" content="Rathi Construction is a trusted construction company specializing in residential, commercial, and industrial projects. We deliver quality, safety, sustainability and timely completion." />
-  
-  <!-- Additional SEO Meta Tags -->
-  <meta name="title" content="Rathi Constructions — Residential & Commercial Construction in Hyderabad">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rathiconstructions.com/">
-  <meta property="og:image" content="https://rathiconstructions.com/Images/Logo.png">
-  
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rathi Constructions — Residential & Commercial Construction">
-  <meta name="twitter:description" content="Quality construction services: homes, villas, apartments and commercial projects in Hyderabad.">
-  <meta name="twitter:image" content="https://rathiconstructions.com/Images/Logo.png">
-  
-  <!-- Google verification placeholder (commented out by default) -->
-  <!-- <meta name="google-site-verification" content="PASTE_VERIFICATION_CODE_HERE" /> -->
-  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -203,7 +183,7 @@
                 
             <!-- <div class="project-card">
                     <div class="project-image">
-                        <img src="./Images/Homepage/Ongoing projects/PADMARAO-ELEVATION.jpg" alt="Royal Heights" loading="lazy">
+                        <img src="./Images/Homepage/Ongoing projects/PADMARAO-ELEVATION.jpg" alt="Royal Heights">
                     </div>
                     <div class="project-info">
                         <h3 class="project-name">Royal Heights</h3>
@@ -772,41 +752,5 @@
     </footer>
 <script src="./js/mainscript.js"></script>
 <script src="./js/homescript.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ConstructionCompany",
-  "name": "Rathi Constructions",
-  "url": "https://rathiconstructions.com/",
-  "logo": "https://rathiconstructions.com/Images/Logo.png",
-  "description": "Rathi Constructions provides residential, commercial, apartment and villa construction services in Hyderabad.",
-  "telephone": "+91-9849021796",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "3-6-1, Liberty Junction",
-    "addressLocality": "Hyderabad",
-    "addressRegion": "Telangana",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.facebook.com/rathiconstructions/",
-    "https://www.instagram.com/rathi.constructions/",
-    "https://www.linkedin.com/company/rathiconstructions"
-  ],
-  "areaServed": "Hyderabad",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Construction Services",
-    "itemListElement": [
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Residential Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Apartment Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Villa Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Farmhouse Construction"}}
-    ]
-  }
-}
-</script>
 </body>
 </html>

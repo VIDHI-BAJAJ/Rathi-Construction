@@ -8,7 +8,7 @@
   <meta name="description" content="Rathi Construction delivers high-quality residential, commercial, and industrial construction with trusted workmanship, on-time delivery, and modern design expertise." />
   <meta name="keywords" content="Rathi Construction, construction company, construction company in Hyderabad, builders, residential construction, commercial construction, industrial construction, civil contractor, building contractor, project management, construction services, sustainable construction, on-time delivery, quality workmanship, home builders, infrastructure" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://rathiconstructions.com/projects/tirumalabliss.html" />
+  <link rel="canonical" href="https://www.example.com/" />
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Rathi Construction — Trusted Builders for Residential & Commercial Projects" />
@@ -38,7 +38,7 @@
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
-            <img src="../Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo" loading="lazy">
+            <img src="../Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo">
         </div>
         <div class="preloader-overlay preloader-left"></div>
         <div class="preloader-overlay preloader-right"></div>
@@ -48,7 +48,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="../index.html">
-                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo">
                 </a>
             </div>
             
@@ -88,7 +88,7 @@
             <section class="about-section">
         <div class="about-container">
             <div class="about-image-wrapper">
-                <img src="../Images/On Going/SriTirumalaBliss.png" alt="Rathi Construction Team" class="about-image" loading="lazy">
+                <img src="../Images/On Going/SriTirumalaBliss.png" alt="Rathi Construction Team" class="about-image">
             </div>
             <div class="about-content">
                 <h2 class="about-title">Sri Tirumala Bliss</h2>
@@ -196,15 +196,15 @@
                 </div>
 
                 <!-- <div class="carousel-slide" data-index="1">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_08.png" alt="Floor Plan 2" loading="lazy">
+                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_08.png" alt="Floor Plan 2">
                 </div>
 
                 <div class="carousel-slide" data-index="2">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_09.png" alt="Floor Plan 3" loading="lazy">
+                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_09.png" alt="Floor Plan 3">
                 </div>
 
                 <div class="carousel-slide" data-index="3">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_10.png" alt="Floor Plan 4" loading="lazy">
+                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_10.png" alt="Floor Plan 4">
                 </div> -->
             </div>
 
@@ -269,7 +269,7 @@
         <div class="projects-grid">
             <a href="./goldengate.html" class="project-card">
                 <div class="project-image">
-                    <img src="../Images/On Going/Golden Gate.png" alt="Sri Tirumala Golden Gate" loading="lazy">
+                    <img src="../Images/On Going/Golden Gate.png" alt="Sri Tirumala Golden Gate">
                 </div>
                 <div class="project-info">
                     <h3 class="project-name">Sri Tirumala Golden Gate</h3>
@@ -285,7 +285,7 @@
 
             <a href="./goldenpride.html" class="project-card">
                 <div class="project-image">
-                    <img src="../Images/On Going/Goldenpride.png" alt="Sri Tirumala Golden Pride" loading="lazy">
+                    <img src="../Images/On Going/Goldenpride.png" alt="Sri Tirumala Golden Pride">
                 </div>
                 <div class="project-info">
                     <h3 class="project-name">Sri Tirumala Golden Pride</h3>
@@ -301,7 +301,7 @@
 
             <a href="./tirumalabliss.html" class="project-card">
                 <div class="project-image">
-                    <img src="../Images/On Going/SriTirumalaBliss.png" alt="Sri Tirumala Bliss" loading="lazy">
+                    <img src="../Images/On Going/SriTirumalaBliss.png" alt="Sri Tirumala Bliss">
                 </div>
                 <div class="project-info">
                     <h3 class="project-name">Sri Tirumala Bliss</h3>
@@ -339,7 +339,7 @@
         <div class="footer-container">
             <div class="footer-column footer-about">
                 <div class="footer-logo">
-                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo">
                 </div>
                 <p class="footer-description">
                     Rathi Constructions has been a trusted name in the real estate industry for over two decades.
@@ -568,41 +568,5 @@
         });
     </script>
    
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ConstructionCompany",
-  "name": "Rathi Constructions",
-  "url": "https://rathiconstructions.com/",
-  "logo": "https://rathiconstructions.com/Images/Logo.png",
-  "description": "Rathi Constructions provides residential, commercial, apartment and villa construction services in Hyderabad.",
-  "telephone": "+91-9849021796",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "3-6-1, Liberty Junction",
-    "addressLocality": "Hyderabad",
-    "addressRegion": "Telangana",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.facebook.com/rathiconstructions/",
-    "https://www.instagram.com/rathi.constructions/",
-    "https://www.linkedin.com/company/rathiconstructions"
-  ],
-  "areaServed": "Hyderabad",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Construction Services",
-    "itemListElement": [
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Residential Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Apartment Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Villa Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Farmhouse Construction"}}
-    ]
-  }
-}
-</script>
 </body>
 </html>

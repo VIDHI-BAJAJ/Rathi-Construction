@@ -8,7 +8,7 @@
   <meta name="description" content="Rathi Construction is a premier construction company in Hyderabad delivering high-quality residential, commercial, and industrial construction with trusted workmanship, on-time delivery, and modern design expertise." />
   <meta name="keywords" content="Rathi Construction, construction company, construction company in Hyderabad, builders, residential construction, commercial construction, industrial construction, civil contractor, building contractor, project management, construction services, sustainable construction, on-time delivery, quality workmanship, home builders, infrastructure" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://rathiconstructions.com/project.html" />
+  <link rel="canonical" href="https://www.example.com/" />
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Rathi Construction — Trusted Builders for Residential & Commercial Projects" />
@@ -37,7 +37,7 @@
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
-            <img src="./Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo" width="100" height="100" loading="lazy">
+            <img src="./Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo" width="100" height="100">
         </div>
         <div class="preloader-overlay preloader-left"></div>
         <div class="preloader-overlay preloader-right"></div>
@@ -47,7 +47,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="./index.html">
-                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo">
                 </a>
             </div>
             
@@ -116,7 +116,7 @@
         <div class="footer-container">
             <div class="footer-column footer-about">
                 <div class="footer-logo">
-                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo">
                 </div>
                 <p class="footer-description">
                     Rathi Constructions has been a trusted name in the real estate industry for over two decades.
@@ -218,41 +218,5 @@
 <script src="./js/mainscript.js"></script>
 <script src="./js/homescript.js"></script>
 <script src="./js/projectscript.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ConstructionCompany",
-  "name": "Rathi Constructions",
-  "url": "https://rathiconstructions.com/",
-  "logo": "https://rathiconstructions.com/Images/Logo.png",
-  "description": "Rathi Constructions provides residential, commercial, apartment and villa construction services in Hyderabad.",
-  "telephone": "+91-9849021796",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "3-6-1, Liberty Junction",
-    "addressLocality": "Hyderabad",
-    "addressRegion": "Telangana",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.facebook.com/rathiconstructions/",
-    "https://www.instagram.com/rathi.constructions/",
-    "https://www.linkedin.com/company/rathiconstructions"
-  ],
-  "areaServed": "Hyderabad",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Construction Services",
-    "itemListElement": [
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Residential Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Apartment Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Villa Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Farmhouse Construction"}}
-    ]
-  }
-}
-</script>
 </body>
 </html>

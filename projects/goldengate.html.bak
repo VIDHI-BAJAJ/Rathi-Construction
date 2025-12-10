@@ -8,7 +8,7 @@
   <meta name="description" content="Rathi Construction delivers high-quality residential, commercial, and industrial construction with trusted workmanship, on-time delivery, and modern design expertise." />
   <meta name="keywords" content="Rathi Construction, construction company, construction company in Hyderabad, builders, residential construction, commercial construction, industrial construction, civil contractor, building contractor, project management, construction services, sustainable construction, on-time delivery, quality workmanship, home builders, infrastructure" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://rathiconstructions.com/projects/tirumalabliss.html" />
+  <link rel="canonical" href="https://www.example.com/" />
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Rathi Construction — Trusted Builders for Residential & Commercial Projects" />
@@ -38,7 +38,7 @@
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
-            <img src="../Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo" loading="lazy">
+            <img src="../Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo">
         </div>
         <div class="preloader-overlay preloader-left"></div>
         <div class="preloader-overlay preloader-right"></div>
@@ -48,7 +48,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="../index.html">
-                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo">
                 </a>
             </div>
             
@@ -70,16 +70,16 @@
   <!-- Main Content Placeholder -->
     <main>
         <!-- Hero Section -->
-<div class="hero-section tirumala-bliss-bg">
+<div class="hero-section golden-gate-bg">
     <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1 class="hero-title">Sri Tirumala Bliss</h1>
+        <h1 class="hero-title">Sri Tirumala Golden Gate</h1>
         <div class="breadcrumb">
             <a href="../index.html">Home</a>
             <span class="separator">/</span>
             <a href="../project.html">Projects</a>
             <span class="separator">/</span>
-            <span class="current">Tirumala Bliss</span>
+            <span class="current">Golden Gate</span>
         </div>
     </div>
 </div>
@@ -88,19 +88,21 @@
             <section class="about-section">
         <div class="about-container">
             <div class="about-image-wrapper">
-                <img src="../Images/On Going/SriTirumalaBliss.png" alt="Rathi Construction Team" class="about-image" loading="lazy">
+                <img src="../Images/golden gate/Golden Gate.jpg" alt="Rathi Construction Team" class="about-image">
             </div>
             <div class="about-content">
-                <h2 class="about-title">Sri Tirumala Bliss</h2>
+                <h2 class="about-title">Sri Tirumala Golden Gate</h2>
          <p class="about-description">
-    Sri Tirumala Bliss is a premium residential project nestled in Raghavendra Colony, Aramghar Circle, Hyderabad, offering an exceptional blend of modern architecture, serene surroundings, and affordable luxury. This thoughtfully planned community is designed to provide peaceful living while maintaining excellent connectivity to the city's key areas.</p>
-
-<p class="about-description" style="margin-top: 10px;">
-    From the strategic layout to the elegant interiors, every aspect has been meticulously crafted to deliver homes that offer true value. The project features spacious 3 BHK apartments ranging from 1650 square feet, each designed with modern amenities and quality finishes.
+    Sri Tirumala Golden Gate is a premium residential project nestled in the heart of Kapra, Hyderabad, offering an exceptional blend of modern architecture, contemporary design, and affordable luxury. This thoughtfully planned community is designed to suit your requirements and conveniences, making it the perfect choice for families seeking quality living.
 </p>
 
 <p class="about-description" style="margin-top: 10px;">
-   Strategically located near Aramghar Circle, the project provides excellent connectivity to educational institutions, healthcare facilities, shopping centers, and major business districts. The area is well-connected to ORR and major highways, ensuring smooth commutes across Hyderabad.</p>
+    From the strategic layout to the stunning interiors, every detail has been meticulously crafted to deliver homes that exceed expectations. The project offers spacious 2 BHK and 3 BHK apartments ranging from 1225 to 1925 square feet, each featuring modern amenities and premium finishes.
+</p>
+
+<p class="about-description" style="margin-top: 10px;">
+    Strategically located near schools, hospitals, shopping centers, and major IT hubs, Sri Tirumala Golden Gate provides excellent connectivity to all parts of the city. With a commitment to quality construction and timely delivery, this project stands as a symbol of trust and architectural brilliance.
+</p>
 
                 
             </div>
@@ -123,7 +125,7 @@
         <div class="amenities-grid">
             <div class="amenity-card white">
                 <div class="icon-circle">
-                    <i class="fas fa-child"></i>
+                   <i class="fa-solid fa-children"></i>
                 </div>
                 <h3>Children's Play Area</h3>
             </div>
@@ -172,7 +174,7 @@
 
             <div class="amenity-card white">
                 <div class="icon-circle">
-                    <i class="fa-solid fa-kit-medical"></i>
+                  <i class="fa-solid fa-kit-medical"></i>
     </div>
     <h3>24/7 Medical Facility</h3>
             </div>
@@ -192,28 +194,32 @@
         <div class="carousel-wrapper">
             <div class="carousel-container">
                 <div class="carousel-slide" data-index="0">
-                    <img src="../Images/Bliss/2bhk.jpg" alt="Floor Plan 1" loading="lazy">
+                    <img src="../Images/golden gate/Parking.png" alt="Floor Plan 1" loading="lazy">
                 </div>
 
-                <!-- <div class="carousel-slide" data-index="1">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_08.png" alt="Floor Plan 2" loading="lazy">
+                <div class="carousel-slide" data-index="1">
+                    <img src="../Images/golden gate/Floor Plan.png" alt="Floor Plan 2" loading="lazy">
                 </div>
 
                 <div class="carousel-slide" data-index="2">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_09.png" alt="Floor Plan 3" loading="lazy">
+                    <img src="../Images/golden gate/2bhk.png" alt="Floor Plan 3" loading="lazy">
                 </div>
 
                 <div class="carousel-slide" data-index="3">
-                    <img src="../Images/golden gate/Golden Gate Booklet 26 09 2img_Page_10.png" alt="Floor Plan 4" loading="lazy">
-                </div> -->
+                    <img src="../Images/golden gate/3Bhk.png" alt="Floor Plan 4" loading="lazy">
+                </div>
+
+                <div class="carousel-slide" data-index="3">
+                    <img src="../Images/golden gate/3Bhk-2.png" alt="Floor Plan 4 " loading="lazy">
+                </div>
             </div>
 
-            <!-- <div class="nav-button prev-btn">
+            <div class="nav-button prev-btn">
                 <i class="fas fa-chevron-left"></i>
             </div>
             <div class="nav-button next-btn">
                 <i class="fas fa-chevron-right"></i>
-            </div> -->
+            </div>
         </div>
     </div>
       </section>
@@ -226,30 +232,29 @@
             <p>Strategically positioned in Kapra with excellent connectivity to IT hubs, schools, hospitals, and entertainment zones across Hyderabad.</p>
         </div>
       <div class="maps">
-     <a 
-    href="https://www.google.com/maps/place/3-6-109%2F1,+Liberty+Rd,+Himayatnagar,+Hyderabad,+Telangana+500029"
-    target="_blank"
-    style="
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      background: transparent;
-    ">
-  </a>    
-  <iframe 
-    class="embed-map-frame"
-    width="100%" 
-    height="400"
-    frameborder="0" 
-    style="border:0;"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.761543867833!2d78.4805778!3d17.4046186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99e0abc134a5%3A0x8940d7134141b61a!2s3-6-109%2F1%2C%20Liberty%20Rd%2C%20Himayatnagar%2C%20Hyderabad%20500029!5e0!3m2!1sen!2sin!4v1732608200000!5m2!1sen!2sin" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+         <a 
+        href="https://www.google.com/maps/place/Shamsheer+Gunj,+Hyderabad/"
+        target="_blank"
+        style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            background: transparent;
+        ">
+    </a>
+    <iframe 
+        class="embed-map-frame" 
+        width="100%" 
+        height="400" 
+        frameborder="0" 
+        style="border:0;" 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15224.342627912706!2d78.4685575!3d17.3404954!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9813f1de9281%3A0x8a8d1d52f26dddb3!2sShamsheer%20Gunj%2C%20Hyderabad!5e0!3m2!1sen!2sin!4v1732605760000!5m2!1sen!2sin" 
+        allowfullscreen 
+        loading="lazy">
+    </iframe>
 </div>
 
       </section>
@@ -269,7 +274,7 @@
         <div class="projects-grid">
             <a href="./goldengate.html" class="project-card">
                 <div class="project-image">
-                    <img src="../Images/On Going/Golden Gate.png" alt="Sri Tirumala Golden Gate" loading="lazy">
+                    <img src="../Images/On Going/Golden Gate.png" alt="Sri Tirumala Golden Gate">
                 </div>
                 <div class="project-info">
                     <h3 class="project-name">Sri Tirumala Golden Gate</h3>
@@ -285,7 +290,7 @@
 
             <a href="./goldenpride.html" class="project-card">
                 <div class="project-image">
-                    <img src="../Images/On Going/Goldenpride.png" alt="Sri Tirumala Golden Pride" loading="lazy">
+                    <img src="../Images/On Going/Goldenpride.png" alt="Sri Tirumala Golden Pride">
                 </div>
                 <div class="project-info">
                     <h3 class="project-name">Sri Tirumala Golden Pride</h3>
@@ -301,7 +306,7 @@
 
             <a href="./tirumalabliss.html" class="project-card">
                 <div class="project-image">
-                    <img src="../Images/On Going/SriTirumalaBliss.png" alt="Sri Tirumala Bliss" loading="lazy">
+                    <img src="../Images/On Going/SriTirumalaBliss.png" alt="Sri Tirumala Bliss">
                 </div>
                 <div class="project-info">
                     <h3 class="project-name">Sri Tirumala Bliss</h3>
@@ -335,11 +340,11 @@
     </main>
 
     <!-- Footer -->
-  <footer class="footer">
+   <footer class="footer">
         <div class="footer-container">
             <div class="footer-column footer-about">
                 <div class="footer-logo">
-                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="../Images/Logo.png" alt="Rathi Constructions Logo">
                 </div>
                 <p class="footer-description">
                     Rathi Constructions has been a trusted name in the real estate industry for over two decades.
@@ -405,7 +410,7 @@
             <div class="footer-column footer-newsletter">
                 <h3>Stay Updated</h3>
                 <p class="newsletter-text">Subscribe to our newsletter for the latest news and project updates.</p>
-                 <form class="newsletter-form" action="https://formspree.io/f/xblevjrq" method="POST">
+                <form class="newsletter-form" action="https://formspree.io/f/xblevjrq" method="POST">
     <input type="email" name="email" placeholder="Enter Email" required>
     <button type="submit">Subscribe</button>
 </form>
@@ -438,9 +443,10 @@
 
         </div>
     </footer>
-<script src="../js/mainscript.js"></script>
+
     <script src="../js/homescript.js"></script>
     <script src="../js/goldengate.js"></script>
+    <script src="../js/mainscript.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const slides = document.querySelectorAll('.carousel-slide');
@@ -568,41 +574,5 @@
         });
     </script>
    
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ConstructionCompany",
-  "name": "Rathi Constructions",
-  "url": "https://rathiconstructions.com/",
-  "logo": "https://rathiconstructions.com/Images/Logo.png",
-  "description": "Rathi Constructions provides residential, commercial, apartment and villa construction services in Hyderabad.",
-  "telephone": "+91-9849021796",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "3-6-1, Liberty Junction",
-    "addressLocality": "Hyderabad",
-    "addressRegion": "Telangana",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.facebook.com/rathiconstructions/",
-    "https://www.instagram.com/rathi.constructions/",
-    "https://www.linkedin.com/company/rathiconstructions"
-  ],
-  "areaServed": "Hyderabad",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Construction Services",
-    "itemListElement": [
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Residential Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Apartment Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Villa Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Farmhouse Construction"}}
-    ]
-  }
-}
-</script>
 </body>
 </html>

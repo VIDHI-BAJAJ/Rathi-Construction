@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Project - Rathi Constructions</title>
+    <title>Contact Us - Rathi Constructions</title>
       <!-- Primary meta -->
-  <meta name="description" content="Rathi Construction is a premier construction company in Hyderabad delivering high-quality residential, commercial, and industrial construction with trusted workmanship, on-time delivery, and modern design expertise." />
+  <meta name="description" content="Rathi Construction delivers high-quality residential, commercial, and industrial construction with trusted workmanship, on-time delivery, and modern design expertise." />
   <meta name="keywords" content="Rathi Construction, construction company, construction company in Hyderabad, builders, residential construction, commercial construction, industrial construction, civil contractor, building contractor, project management, construction services, sustainable construction, on-time delivery, quality workmanship, home builders, infrastructure" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="canonical" href="https://rathiconstructions.com/project.html" />
+  <link rel="canonical" href="https://www.example.com/" />
 
   <!-- Open Graph / Social -->
   <meta property="og:title" content="Rathi Construction — Trusted Builders for Residential & Commercial Projects" />
   <meta property="og:description" content="Rathi Construction is a trusted construction company specializing in residential, commercial, and industrial projects. We deliver quality, safety, sustainability and timely completion." />
  
+    <link rel="stylesheet" href="./css/mainstyle.css">
+    <link rel="stylesheet" href="./css/contactstyle.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/mainstyle.css">
-    <link rel="icon" type="image/png" href="./Images/Logo.png">
-    <link rel = "stylesheet" href="css/projectstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel = "icon" type="image/png" href="./Images/Logo.png">
     <link rel = "icon" href="./Images/favicon/android-chrome-192x192.png" sizes="192x192">
     <link rel = "icon" href="./Images/favicon/android-chrome-512x512.png" sizes="512x512">
@@ -37,28 +37,28 @@
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                 <polyline points="9 22 9 12 15 12 15 22"></polyline>
             </svg>
-            <img src="./Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo" width="100" height="100" loading="lazy">
+            <img src="./Images/Logo.png" alt="Rathi Constructions Logo" class="preloader-logo" width="100" height="100">
         </div>
         <div class="preloader-overlay preloader-left"></div>
         <div class="preloader-overlay preloader-right"></div>
     </div>
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="./index.html">
-                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo">
                 </a>
             </div>
             
             <ul class="nav-menu">
                 <li class="nav-item"><a href="./index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="./aboutus.html" class="nav-link">About Us</a></li>
-                <li class="nav-item"><a href="./project.html" class="nav-link active">Projects</a></li>
-                <li class="nav-item"><a href="./contactus.html" class="nav-link">Contact Us</a></li>
+                <li class="nav-item"><a href="./project.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="./contactus.html" class="nav-link active">Contact Us</a></li>
             <!-- <a href="./contactus.html" class="nav-quote-btn">GET QUOTE</a> -->
-            </ul>
-
+           </ul>
+              
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -66,49 +66,153 @@
             </div>
         </div>
     </nav>
-  <!-- Main Content Placeholder -->
+
     <main>
-            <!-- Hero Section -->
+        <!-- Hero Section -->
         <section class="contact-hero">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1 class="hero-title">Projects</h1>
+                <h1 class="hero-title">Contact Us</h1>
                 <div class="breadcrumb">
                     <a href="./index.html">Home</a>
                     <span class="separator">/</span>
-                    <span class="current">Projects</span>
+                    <span class="current">Contact Us</span>
                 </div>
             </div>
         </section>
 
-        <section>
-                <div class="container">
-        <div class="header">
-            <h1>Transforming Visions Into Reality</h1>
+        <!-- Contact Form Section -->
+        <section class="contact-section">
+             <div class="header">
+            <h1>Let's Build Your Future Together</h1>
             <p class="header-text">
-                Explore our diverse portfolio of residential and commercial masterpieces that showcase our commitment to quality, innovation, and timeless design excellence.
+               Have questions about our projects, pricing, or payment plans? Our expert team is here to provide personalized assistance and turn your housing dreams into reality.
             </p>
         </div>
+  <div class="contact-container">
 
-        <div class="filter-dropdown">
-            <button class="dropdown-button" id="dropdownBtn">
-                Upcoming Projects
-            </button>
-            <div class="dropdown-menu" id="dropdownMenu">
-                <div class="dropdown-item" data-filter="upcoming">Upcoming Projects</div>
-                <div class="dropdown-item" data-filter="completed">Completed Projects</div>
-                <div class="dropdown-item" data-filter="all">All Projects</div>
-            </div>
-        </div>
+    <!-- LEFT SIDE -->
+ <div class="contact-left">
+  <h2>Get In Touch</h2>
 
-        <div class="projects-grid" id="projectsGrid"></div>
-
-        <div class="navigation">
-            <button class="nav-button" id="prevBtn">←</button>
-            <button class="nav-button" id="nextBtn">→</button>
-        </div>
+  <!-- Address -->
+  <div class="contact-item">
+    <div class="icon-circle">
+      <i class="fas fa-map-marker-alt"></i>
     </div>
-        </section>
+    <div>
+      <h4>Head Office</h4>
+      <p>
+        <a href="https://www.google.com/maps/search/?api=1&query=3-6-1,+Liberty+Junction,+Himayatnagar,+Hyderabad+500029" target="_blank">
+          3-6-1, Liberty Junction, Himayatnagar,<br>Hyderabad-500029
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Email -->
+  <div class="contact-item">
+    <div class="icon-circle">
+      <i class="fas fa-envelope"></i>
+    </div>
+    <div>
+      <h4>Email Us</h4>
+      <p>
+        <a href="mailto:rathiconstructions@gmail.com">
+          rathiconstructions@gmail.com
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Phone -->
+  <div class="contact-item">
+    <div class="icon-circle">
+    <i class="fa-solid fa-phone"></i>
+    </div>
+    <div>
+      <h4>Let’s Talk</h4>
+      <p>
+        <a href="tel:+919849021796">+91 9849021796</a><br>
+        <a href="tel:+919848577552">+91 9848577552</a>
+      </p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/rathi.constructions/" target="_blank">
+      <div class="icon-circle"><i class="fab fa-instagram"></i></div>
+    </a>
+
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/rathiconstructions/" target="_blank">
+      <div class="icon-circle"><i class="fab fa-facebook-f"></i></div>
+    </a>
+
+  </div>
+</div>
+
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-right">
+      <h2>Send us a message</h2>
+<form id="contactForm">
+  <div class="two-inputs">
+    <div>
+      <label>Name</label>
+      <input type="text" name="name" placeholder="Full Name" required>
+    </div>
+    <div>
+      <label>Phone Number</label>
+      <input type="text" name="phone" placeholder="+91 XXXXXXXXXX" required>
+    </div>
+  </div>
+
+  <label>Email</label>
+  <input type="email" name="email" placeholder="abc@gmail.com" required>
+
+  <label>Message</label>
+  <textarea name="message" placeholder="Message" required></textarea>
+
+  <button type="submit" class="submit-btn">SUBMIT</button>
+</form>
+
+<!-- Hidden Thank You Message -->
+<div id="thankYouMessage" style="display:none; padding:20px; margin-top:20px; background:#e8ffe8; border-left:5px solid #2ecc71;">
+  <h3 style="margin:0 0 10px;">Thank you!</h3>
+  <p>Your message has been submitted successfully.</p>
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+
+        <!-- Map Section -->
+       <section class="map-section">
+    <a href="https://www.google.com/maps?q=3-5-1084, Street 1, Venkateshwara Colony, King Koti, Narayanguda, Hyderguda, Hyderabad, Telangana 500029"
+       target="_blank" 
+       style="display:block;">
+       
+        <div class="map-container">
+            <iframe class="gmap_iframe" 
+                frameborder="0" 
+                scrolling="no" 
+                marginheight="0" 
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=3-5-1084, Street 1, Venkateshwara Colony, King Koti, Narayanguda, Hyderguda, Hyderabad, Telangana 500029&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
+        </div>
+
+    </a>
+</section>
+
     </main>
 
     <!-- Footer -->
@@ -116,7 +220,7 @@
         <div class="footer-container">
             <div class="footer-column footer-about">
                 <div class="footer-logo">
-                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo" loading="lazy">
+                    <img src="./Images/Logo.png" alt="Rathi Constructions Logo">
                 </div>
                 <p class="footer-description">
                     Rathi Constructions has been a trusted name in the real estate industry for over two decades.
@@ -182,10 +286,11 @@
             <div class="footer-column footer-newsletter">
                 <h3>Stay Updated</h3>
                 <p class="newsletter-text">Subscribe to our newsletter for the latest news and project updates.</p>
-                 <form class="newsletter-form" action="https://formspree.io/f/xnneznan" method="POST">
+             <form class="newsletter-form"method="POST">
     <input type="email" name="email" placeholder="Enter Email" required>
     <button type="submit">Subscribe</button>
 </form>
+
             </div>
         </div>
 
@@ -215,44 +320,66 @@
 
         </div>
     </footer>
-<script src="./js/mainscript.js"></script>
-<script src="./js/homescript.js"></script>
-<script src="./js/projectscript.js"></script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ConstructionCompany",
-  "name": "Rathi Constructions",
-  "url": "https://rathiconstructions.com/",
-  "logo": "https://rathiconstructions.com/Images/Logo.png",
-  "description": "Rathi Constructions provides residential, commercial, apartment and villa construction services in Hyderabad.",
-  "telephone": "+91-9849021796",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "3-6-1, Liberty Junction",
-    "addressLocality": "Hyderabad",
-    "addressRegion": "Telangana",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.facebook.com/rathiconstructions/",
-    "https://www.instagram.com/rathi.constructions/",
-    "https://www.linkedin.com/company/rathiconstructions"
-  ],
-  "areaServed": "Hyderabad",
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Construction Services",
-    "itemListElement": [
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Residential Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Commercial Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Apartment Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Villa Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Home Construction"}},
-      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Farmhouse Construction"}}
-    ]
+    <script src="./js/mainscript.js"></script>
+    <script>
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Create observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    // Create observer
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+            }
+        });
+    }, observerOptions);
+
+    // Observe hero section elements
+    const heroTitle = document.querySelector('.hero-title');
+    const breadcrumb = document.querySelector('.breadcrumb');
+    if (heroTitle) observer.observe(heroTitle);
+    if (breadcrumb) observer.observe(breadcrumb);
+
+    // Observe contact section elements
+    const header = document.querySelector('.header');
+    const headerText = document.querySelector('.header-text');
+    const contactLeft = document.querySelector('.contact-left');
+    const contactRight = document.querySelector('.contact-right');
+    
+    if (header) observer.observe(header);
+    if (headerText) observer.observe(headerText);
+    if (contactLeft) observer.observe(contactLeft);
+    if (contactRight) observer.observe(contactRight);
+
+    // Observe map section
+    const mapSection = document.querySelector('.map-section');
+    if (mapSection) observer.observe(mapSection);
+});
+document.getElementById("contactForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const form = e.target;
+
+  const response = await fetch("https://formspree.io/f/xnneznan", {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    form.style.display = "none"; // hide form
+    document.getElementById("thankYouMessage").style.display = "block"; // show thank you
+    form.reset();
+  } else {
+    alert("Something went wrong. Please try again.");
   }
-}
+});
 </script>
+
 </body>
 </html>
