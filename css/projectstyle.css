@@ -307,21 +307,74 @@
         }
         
         @media (max-width: 768px) {
-            .project-card.reduced-height .project-image-container {
-                margin: 0;
-                padding: 0;
-                order: 1;
+            .container {
+                margin: 20px;
+            }
+            .header {
+                flex-direction: column;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .projects-grid,
+            .projects-grid.special-layout {
+                grid-template-columns: 1fr;
             }
             
-            .project-card.reduced-height .project-image {
-                height: auto;
+            .project-image,
+            .projects-grid.special-layout .project-image {            
                 margin: 0;
                 padding: 0;
                 display: block;
             }
             
-            .project-card.reduced-height .project-info {
-                order: 2;
+            .project-image-container,
+            .projects-grid.special-layout .project-image-container {
+                height: 230px;
+                margin: 0;
+                padding: 0;
+            }
+            
+            /* Mobile override for Hamilton A&B project */
+            .project-card.hamilton-project .project-image-container {
+                height: 300px;
+            }
+            .header-text{
+                text-align: justify;
+            }
+        }
+
+        /* Additional mobile styles for small screens */
+        @media (max-width: 480px) {
+            .project-card {
+                min-height: 320px;
+            }
+            
+            .project-image-container {
+                height: 180px;
+            }
+            
+            .project-info {
+                padding: 15px;
+                min-height: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            
+            .project-name {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            
+            .project-location {
+                margin-top: 5px;
+            }
+            
+            .location-text {
+                font-size: 12px;
             }
         }
 
@@ -470,45 +523,5 @@
             /* Responsive override for Hamilton A&B project */
             .project-card.hamilton-project .project-image-container {
                 height: 300px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                margin: 20px;
-            }
-            .header {
-                flex-direction: column;
-            }
-
-            .header h1 {
-                font-size: 24px;
-            }
-
-            .projects-grid,
-            .projects-grid.special-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            .project-image,
-            .projects-grid.special-layout .project-image {            
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
-            
-            .project-image-container,
-            .projects-grid.special-layout .project-image-container {
-                height: 230px;
-                margin: 0;
-                padding: 0;
-            }
-            
-            /* Mobile override for Hamilton A&B project */
-            .project-card.hamilton-project .project-image-container {
-                height: 300px;
-            }
-            .header-text{
-                text-align: justify;
             }
         }
