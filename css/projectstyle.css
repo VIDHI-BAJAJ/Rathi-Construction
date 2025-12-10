@@ -507,6 +507,38 @@
             color: #333;
         }
 
+        /* Additional mobile styles for small screens */
+        @media (max-width: 480px) {
+            .project-card {
+                min-height: 320px;
+            }
+            
+            .project-image-container {
+                height: 180px;
+            }
+            
+            .project-info {
+                padding: 15px;
+                min-height: 120px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+            
+            .project-name {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+            
+            .project-location {
+                margin-top: 5px;
+            }
+            
+            .location-text {
+                font-size: 12px;
+            }
+        }
+
         @media (max-width: 1024px) and (min-width: 769px) {
             .projects-grid.special-layout {
                 grid-template-columns: 1fr;
