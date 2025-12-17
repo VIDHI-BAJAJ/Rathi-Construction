@@ -1744,8 +1744,8 @@
 }
 
 .testimonial-card {
-    min-width: calc((100% - 90px) / 4);
-    max-width: calc((100% - 90px) / 4);
+    min-width: calc((100% - 10px) / 4);
+    max-width: calc((100% - 0px) / 4);
     background-color: #ffffff;
     border: 2px solid #e0e0e0;
     border-radius: 16px;
