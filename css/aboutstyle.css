@@ -687,6 +687,7 @@
     height: 500px; /* Increased height for larger images */
 }
 
+
 /* Mobile view adjustments */
 @media screen and (max-width: 768px) {
     .leader-card {
