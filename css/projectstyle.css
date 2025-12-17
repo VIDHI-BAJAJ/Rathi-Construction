@@ -359,11 +359,6 @@
                 order: 2;
             }
             
-            .project-info {
-                justify-content: center;
-                align-items: flex-start;
-            }
-            
             .header-text{
                 text-align: justify;
             }
@@ -437,6 +432,8 @@
             flex-direction: column;
             justify-content: center;
             min-height: 100px;
+            z-index: 2;
+            position: relative;
         }
         
         /* Ensure text is below images for reduced height cards */
