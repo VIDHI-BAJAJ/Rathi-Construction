@@ -392,6 +392,14 @@ textarea {
     .contact-section {
         padding: 50px 20px;
     }
+.contact-right h2 {
+  font-size: 28px;
+  margin-bottom: 35px; /* ✔ correct gap */
+}
+.contact-left h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+}
 
     .form-title {
         font-size: 24px;
