@@ -541,6 +541,18 @@
     .plus {
         font-size: 36px;
     }
+    
+    /* Mobile view: alternating white and purple */
+    .stats-grid .stat-card:nth-child(odd) {
+        background-color: #ffffff;
+        border: 2px solid #e0e0e0;
+        color: #000000;
+    }
+
+    .stats-grid .stat-card:nth-child(even) {
+        background-color: #6C1A78;
+        color: #ffffff;
+    }
 }
 
 @media screen and (max-width: 480px) {
