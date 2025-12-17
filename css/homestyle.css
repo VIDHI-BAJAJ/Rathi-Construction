@@ -899,7 +899,9 @@
     margin-top: 150px;
     height: 500px;
 }
-
+.building {
+    margin-top: 20px;
+}
 .stats-image img {
     width: 100%;
     height: 100%;
