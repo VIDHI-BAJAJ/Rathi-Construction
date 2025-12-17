@@ -28,22 +28,74 @@
     <link rel="icon" href="./Images/favicon/favicon.ico">
     <style>
         .privacy-container {
-           
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
             font-family: 'Inter', sans-serif;
         }
         
         .privacy-hero {
-            background-color: #f8f8f8;
-            padding: 60px 20px;
-            text-align: center;
+            position: relative;
+            height: 400px;
+            background-image: url('./Images/Completed/Harmony.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 40px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .privacy-title {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+        
+        .breadcrumb {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .breadcrumb a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .breadcrumb a:hover {
+            color: #fff;
+        }
+        
+        .separator {
+            margin: 0 10px;
+            color: #ffffff;
+        }
+        
+        .current {
+            color: #ffffff;
         }
         
         .privacy-title {
             font-size: 2.5rem;
-            color: #6C1A79;
+            color: #fff;
             margin-bottom: 20px;
             font-weight: 700;
         }
@@ -55,7 +107,6 @@
         }
         
         .privacy-content {
-            
             margin: 0 auto;
         }
         
@@ -106,7 +157,7 @@
         }
         
         .breadcrumb a {
-            color: #6C1A79;
+            color: #fff;
             text-decoration: none;
         }
         
@@ -119,8 +170,6 @@
         }
         
         .contact-details {
-            background-color: #f0f0f0;
-            padding: 25px;
             border-radius: 8px;
             margin-top: 20px;
         }
@@ -191,6 +240,7 @@
     <main>
         <!-- Hero Section -->
         <section class="privacy-hero">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1 class="privacy-title">Privacy Policy</h1>
                 <div class="breadcrumb">
@@ -276,7 +326,6 @@
                     <p>For any privacy-related inquiries, please contact:</p>
                     
                     <div class="contact-details">
-                        <h3>Rathi Construction</h3>
                         <p>📧 Email: rathiconstructions@gmail.com</p>
                         <p>📞 Phone: 9849021796 / 9848577552 </p>
                     </div>
