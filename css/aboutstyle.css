@@ -53,7 +53,7 @@
 }
 
 .breadcrumb a {
-    color: #ffffff;
+    color: #FFF;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -469,6 +469,9 @@
     transform: scale(1.05);
 }
 
+.building{
+    margin-top: 20px;
+}
 /* Animation for Fade In Up */
 @keyframes fadeInUp {
     0% {
