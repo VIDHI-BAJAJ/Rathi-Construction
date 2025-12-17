@@ -1792,7 +1792,7 @@
 
 .testimonial-text {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 400;
     color: #333333;
     text-align: justify;
@@ -1800,7 +1800,6 @@
     line-height: 1.7;
     overflow-wrap: break-word;
     word-break: normal;
-    text-align-last: left;
     margin-bottom: 25px;
     flex-grow: 1;
 }
