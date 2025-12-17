@@ -123,9 +123,13 @@
     font-size: 16px;
     font-weight: 400;
     color: #333333;
-    line-height: 1.8;
+    line-height: 1.7;
     margin-bottom: 35px;
     text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-align-last: left;
 }
 
 .about-button {
@@ -306,10 +310,15 @@
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #333;
     margin-top: 0;
     margin-bottom: 0;
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-align-last: left;
 }
         
 .stats-grid {
@@ -430,7 +439,12 @@
     font-weight: 400;
     margin-top: 10px;
     transition: color 0.4s ease;
-    text-align: left;
+    text-align: justify;
+    hyphens: auto;
+    line-height: 1.7;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-align-last: left;
 }
 
 .stats-image {
@@ -846,12 +860,17 @@
     font-size: 18px;
     font-weight: 400;
     color: #333333;
-    line-height: 1.6;
+    line-height: 1.7;
     max-width: 900px;
     margin: 0 auto 30px;
     animation: fadeInDown 0.8s ease-out;
     animation-delay: 0.2s;
     animation-fill-mode: both;
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-align-last: left;
 }
 
 .features-grid {
@@ -927,7 +946,6 @@
     font-weight: 500;
     margin-bottom: 20px;
     letter-spacing: 1px;
-    text-align: left;
 }
 
 .feature-white .feature-title {
@@ -944,6 +962,10 @@
     font-weight: 400;
     line-height: 1.7;
     text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-align-last: left;
 }
 
 .feature-white .feature-description {
@@ -1077,8 +1099,13 @@
     font-size: 18px;
     font-weight: 400;
     color: #ffffff;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
+    text-align-last: left;
 }
 
 .cta-button-wrapper {

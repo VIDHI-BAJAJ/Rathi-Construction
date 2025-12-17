@@ -289,8 +289,11 @@ html, body {
     font-size: 16px;
     font-weight: 400;
     color: #333333;
-    line-height: 1.8;
+    line-height: 1.7;
     text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .about-button {
@@ -475,7 +478,11 @@ html, body {
         .amenities-header-subtitle p {
             font-size: 18px;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
 
         .amenities-grid {
@@ -680,9 +687,13 @@ html, body {
  font-size: 18px;
  font-weight: 400;
  color: #333333;
- line-height: 1.6;
+ line-height: 1.7;
  max-width: 900px;
  margin: 0 auto;
+ text-align: center;
+ hyphens: auto;
+ overflow-wrap: break-word;
+ word-break: normal;
 }
 
 .carousel-wrapper {
@@ -995,9 +1006,13 @@ html, body {
          font-size: 18px;
          font-weight: 400;
          color: #333333;
-         line-height: 1.6;
+         line-height: 1.7;
          max-width: 900px;
          margin: 0 auto;
+         text-align: center;
+         hyphens: auto;
+         overflow-wrap: break-word;
+         word-break: normal;
         }
 
 
@@ -1103,7 +1118,11 @@ html, body {
         .header-subtitle p {
             font-size: 18px;
             color: #333;
-            line-height: 1.6;
+            line-height: 1.7;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
 
         .projects-grid {
@@ -1304,8 +1323,12 @@ html, body {
     font-size: 18px;
     font-weight: 400;
     color: #ffffff;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    word-break: normal;
 }
 
 .cta-button-wrapper {

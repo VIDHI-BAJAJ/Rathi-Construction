@@ -111,11 +111,15 @@
             font-family: 'Inter', sans-serif;
             max-width: 450px;
             font-size: 16px;
-            line-height: 1.6;
+            line-height: 1.7;
             color: #333;
             opacity: 0;
             transform: translateX(50px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
 
         .header-text.animate-visible {

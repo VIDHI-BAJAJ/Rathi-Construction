@@ -405,8 +405,12 @@
         .footer-description {
             color: #333333;
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.7;
             max-width: 280px;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
 
         .footer-column h3 {
@@ -454,8 +458,12 @@
         .contact-item p {
             color: #333333;
             font-size: 14px;
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
         
         .footer-contact a {
@@ -471,8 +479,12 @@
         .newsletter-text {
             color: #333333;
             font-size: 13px;
-            line-height: 1.5;
+            line-height: 1.7;
             margin-bottom: 16px;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
 
         .newsletter-form {
@@ -528,7 +540,12 @@
         .copyright {
             color: #333333;
             font-size: 14px;
+            line-height: 1.7;
             margin: 0;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
 
         .footer-legal {
@@ -540,7 +557,12 @@
             color: #333333;
             text-decoration: none;
             font-size: 14px;
+            line-height: 1.7;
             transition: color 0.3s ease;
+            text-align: justify;
+            hyphens: auto;
+            overflow-wrap: break-word;
+            word-break: normal;
         }
 
         .footer-legal a:hover {
