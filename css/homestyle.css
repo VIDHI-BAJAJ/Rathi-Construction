@@ -844,6 +844,10 @@
     text-align: left;
 }
 
+.building{
+    padding-top: 20px;
+}
+
 .stat-number {
     font-family: 'Inter', sans-serif;
     font-size: 64px;
