@@ -237,7 +237,6 @@
         .project-image {
             width: 100%;
             height: 390px;
-            object-fit: cover;
             margin: 0;
             padding: 0;
             display: block;
@@ -332,7 +331,7 @@
             
             .project-image-container,
             .projects-grid.special-layout .project-image-container {
-                height: 230px;
+                height: 180px;
                 margin: 0;
                 padding: 0;
             }
@@ -371,7 +370,7 @@
             }
             
             .project-image-container {
-                height: 180px;
+                height: 380px;
             }
             
             .project-info {
@@ -516,7 +515,7 @@
             }
             
             .project-image-container {
-                height: 180px;
+                height: 380px;
             }
             
             .project-info {
