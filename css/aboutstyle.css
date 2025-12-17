@@ -1,3 +1,5 @@
+/* Contact Us Page Styles */
+
 /* Hero Section */
 .contact-hero {
     position: relative;
@@ -32,28 +34,16 @@
     font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: 2px;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .breadcrumb {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.hero-title.animate-visible,
-.breadcrumb.animate-visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .breadcrumb a {
-    color: #FFF;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
