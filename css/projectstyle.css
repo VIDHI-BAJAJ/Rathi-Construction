@@ -201,16 +201,11 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
             margin-bottom: 40px;
             position: relative;
             z-index: 1;
-        }
-        
-        /* Special layout for projects that need full building display */
-        .projects-grid.special-layout {
-            grid-template-columns: repeat(3, 1fr);
         }
 
         .project-card {
@@ -238,173 +233,22 @@
             transform: translateY(-2px);
         }
 
-        .project-image {
-            width: 100%;
-            height: 390px;
-            margin: 0;
-            padding: 0;
-            display: block;
-        }
-        
-        /* Adjust image height for special layout */
-        .projects-grid.special-layout .project-image {
-            height: auto;
-            margin: 0;
-            padding: 0;
-            display: block;
-        }
-        
-        /* Ensure consistent card heights in special layout */
-        .projects-grid.special-layout .project-card {
-            height: 100%;
-        }
-        
-        .projects-grid.special-layout .project-image-container {
-            flex-shrink: 0;
-            height: 320px;
-            margin: 0;
-            padding: 0;
-        }
-        
-        /* Specific projects that need to show full building */
-        .project-image.full-building {
-            object-fit: cover;
-            object-position: center;
-        }
-        
-        /* Special handling for projects in 2-column layout */
-        .projects-grid.special-layout .project-image.full-building {
-            object-fit: contain;
-            background-color: transparent;
-        }
-        
-        /* Specific project cards with reduced height */
-        .project-card.reduced-height .project-image-container {
-            height: 180px;
-            margin: 0;
-            padding: 0;
-            order: 1;
-        }
-        
-    
-        
-        /* Responsive adjustments for reduced height cards */
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .project-card.reduced-height .project-image-container {
-                height: 280px;
-                margin: 0;
-                padding: 0;
-                order: 1;
-            }
-            
-            .project-card.reduced-height .project-image {
-                height: auto;
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
-            
-            .project-card.reduced-height .project-info {
-                order: 2;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                margin: 20px;
-            }
-            .header {
-                flex-direction: column;
-            }
-
-            .header h1 {
-                font-size: 24px;
-            }
-
-            .projects-grid,
-            .projects-grid.special-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            .project-image,
-            .projects-grid.special-layout .project-image {            
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
-            
-            .project-image-container,
-            .projects-grid.special-layout .project-image-container {
-                height: 180px;
-                margin: 0;
-                padding: 0;
-            }
-            
-            /* Mobile override for Hamilton A&B project */
-            .project-card.hamilton-project .project-image-container {
-                height: 300px;
-            }
-            
-            .project-card.reduced-height .project-image-container {
-                margin: 0;
-                padding: 0;
-                order: 1;
-            }
-            
-            .project-card.reduced-height .project-image {
-                height: auto;
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
-            
-            .project-card.reduced-height .project-info {
-                order: 2;
-            }
-            
-            .header-text{
-                text-align: justify;
-            }
-        }
-
-        /* Additional mobile styles for small screens */
-        @media (max-width: 480px) {
-            .project-card {
-                min-height: 320px;
-            }
-            
-            .project-image-container {
-                height: 380px;
-            }
-            
-            .project-info {
-                padding: 15px;
-                min-height: 120px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-            
-            .project-name {
-                font-size: 16px;
-                margin-bottom: 8px;
-            }
-            
-            .project-location {
-                margin-top: 5px;
-            }
-            
-            .location-text {
-                font-size: 12px;
-            }
-        }
-
         .project-image-container {
             position: relative;
             flex-shrink: 0;
-            height: 390px;
+            height: 250px;
             margin: 0;
             padding: 0;
+            width: 100%;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+            display: block;
         }
 
         .project-status {
@@ -434,19 +278,8 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            min-height: 100px;
             z-index: 2;
             position: relative;
-        }
-        
-        /* Ensure text is below images for reduced height cards */
-        .project-card.reduced-height .project-info {
-            order: 2;
-        }
-        
-        /* Specific override for Hamilton A&B project */
-        .project-card.hamilton-project .project-image-container {
-            height: 300px;
         }
 
         .project-name {
@@ -459,7 +292,7 @@
 
         .project-location {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 8px;
             margin-top: 10px;
         }
@@ -467,6 +300,7 @@
         .location-icon {
             flex-shrink: 0;
             color: #6C1A78;
+            margin-top: 3px;
         }
 
         .location-text {
@@ -512,22 +346,30 @@
             color: #333;
         }
 
-        /* Additional mobile styles for small screens */
-        @media (max-width: 480px) {
-            .project-card {
-                min-height: 320px;
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+            }
+            
+            .header {
+                flex-direction: column;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
             }
             
             .project-image-container {
-                height: 380px;
+                height: 200px;
             }
             
             .project-info {
                 padding: 15px;
-                min-height: 120px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
             }
             
             .project-name {
@@ -542,59 +384,22 @@
             .location-text {
                 font-size: 12px;
             }
+            
+            .header-text {
+                text-align: justify;
+            }
         }
 
-        @media (max-width: 1024px) and (min-width: 769px) {
-            .projects-grid.special-layout {
-                grid-template-columns: 1fr;
-            }
-            
-            .projects-grid.special-layout .project-image {
-                height: 280px;
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
-            
-            .project-image {
-                height: 300px;
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
-            
+        @media (max-width: 480px) {
             .project-image-container {
-                height: 300px;
-                margin: 0;
-                padding: 0;
+                height: 180px;
             }
             
-            .projects-grid.special-layout .project-image-container {
-                height: 280px;
-                margin: 0;
-                padding: 0;
+            .project-name {
+                font-size: 16px;
             }
             
-            /* Responsive override for Hamilton A&B project */
-            .project-card.hamilton-project .project-image-container {
-                height: 300px;
-            }
-            
-            .project-card.reduced-height .project-image-container {
-                height: 280px;
-                margin: 0;
-                padding: 0;
-                order: 1;
-            }
-            
-            .project-card.reduced-height .project-image {
-                height: auto;
-                margin: 0;
-                padding: 0;
-                display: block;
-            }
-            
-            .project-card.reduced-height .project-info {
-                order: 2;
+            .location-text {
+                font-size: 12px;
             }
         }

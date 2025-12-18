@@ -259,50 +259,15 @@ function renderProjects() {
         filteredProjects = filteredProjects.slice(0, 20); // Limit to 20 total projects
     }
     
-    // Define special projects that need to be grouped together at the end
-    const specialProjects = [
-        'Sri Tirumala Pranmoksha Pride',
-        'Sri Tirumala Sarovar',
-        'Sri Tirumala Prestige',
-        'Sri Tirumala Millennium',
-        'Sri Tirumala harmony',
-        'Sri Tirumala Hamilton A&B',
-        'Sri Tirumala splendar'
-    ];
-
-    // Separate special and regular projects
-    const specialFilteredProjects = filteredProjects.filter(project => {
-        const projectName = project.title.split(',')[0];
-        return specialProjects.includes(projectName);
-    });
-
-    const regularFilteredProjects = filteredProjects.filter(project => {
-        const projectName = project.title.split(',')[0];
-        return !specialProjects.includes(projectName);
-    });
-
-    // Combine projects with special projects at the end
-    let orderedProjects = [...regularFilteredProjects, ...specialFilteredProjects];
-
-    const totalPages = Math.ceil(orderedProjects.length / projectsPerPage);
+    const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
     const startIndex = (currentPage - 1) * projectsPerPage;
     const endIndex = startIndex + projectsPerPage;
-    const currentProjects = orderedProjects.slice(startIndex, endIndex);
+    const currentProjects = filteredProjects.slice(startIndex, endIndex);
 
     const projectsGrid = document.getElementById('projectsGrid');
     if (projectsGrid) {
-        // Use the specialProjects array defined earlier
-        const hasSpecialProjects = currentProjects.some(project => {
-            const projectName = project.title.split(',')[0];
-            return specialProjects.includes(projectName);
-        });
-        
-        // Apply special layout class if needed
-        if (hasSpecialProjects) {
-            projectsGrid.classList.add('special-layout');
-        } else {
-            projectsGrid.classList.remove('special-layout');
-        }
+        // Remove special layout class
+        projectsGrid.classList.remove('special-layout');
         
         projectsGrid.innerHTML = currentProjects.map(project => {
             // Split the title to extract project name and location
@@ -311,35 +276,14 @@ function renderProjects() {
             const projectName = titleParts[0];
             const location = titleParts.slice(1).join(', ');
             
-            // Preload image to improve loading speed
-            const img = new Image();
-            img.src = project.image;
-            
-            // Check if this project needs full building display
-            const needsFullBuilding = specialProjects.includes(projectName);
-            const imageClass = needsFullBuilding ? 'project-image full-building' : 'project-image';
-            
-            // Check if this is one of the special projects that needs reduced height
-            const needsReducedHeight = specialProjects.includes(projectName);
-            
-            // Check if this is the specific Hamilton A&B project that needs 300px height
-            const isHamiltonProject = projectName === 'Sri Tirumala Hamilton A&B';
-            
-            // Build card class with additional specificity for Hamilton project
-            let cardClass = 'project-card';
-            if (needsReducedHeight) {
-                cardClass += ' reduced-height';
-                if (isHamiltonProject) {
-                    cardClass += ' hamilton-project';
-                }
-            }
-            cardClass += ` ${project.category === 'upcoming' ? 'clickable' : 'not-clickable'}`;
+            // Simple card class
+            const cardClass = `project-card ${project.category === 'upcoming' ? 'clickable' : 'not-clickable'}`;
             
             return `
             <div class="${cardClass}" 
                  onclick="${project.category === 'upcoming' && project.link ? `redirectToProject('${project.link}')` : ''}">
                 <div class="project-image-container">
-                    <img src="${project.image}" alt="${project.title}" class="${imageClass}" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';" loading="eager" decoding="async" width="500" height="400">
+                    <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';" loading="eager" decoding="async" width="500" height="400">
                     <div class="project-status ${project.category}">${project.category === 'upcoming' ? 'Ongoing' : 'Completed'}</div>
                 </div>
                 <div class="project-info">
