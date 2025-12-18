@@ -30,13 +30,13 @@ const projects = [
     {
         id: 5,
         title: "Sri Tirumala Lotus, Shivarampally, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Lotus.jpg",
+        image: "./Images/Completed/Tirumal Lotus.png",
         category: "completed"
     },
     {
         id: 6,
         title: "Sri Tirumala Elite, Shivarampally, Hyderabad",
-        image: "./Images/Homepage/Ongoing projects/Elite.jpg",
+        image: "./Images/Completed/Tirumal Elite.png",
         category: "completed"
     },
     // Moved to end as requested to show full building width
@@ -61,7 +61,7 @@ const projects = [
     {
         id: 10,
         title: "Sri Tirumala Dreams, Shivarampally, Hyderabad",
-        image: "./Images/Completed/Tirumal Dreams.jpg",
+        image: "./Images/Completed/Tirumal Dreams.png",
         category: "completed"
     },
     {
@@ -105,7 +105,7 @@ const projects = [
     {
         id: 17,
         title: "Tirumala Jewels, Gandhinagar, Hyderabad",
-        image: "./Images/Completed/Tirumala Jewels.jpeg",
+        image: "./Images/Completed/Tirumala Jewels.png",
         category: "completed"
     },
     {
@@ -124,13 +124,13 @@ const projects = [
     {
         id: 4,
         title: "Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad",
-        image: "./Images/Completed/Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad.webp",
+        image: "./Images/Completed/Sri Tirumala Pranmoksha.png",
         category: "completed"
     },
     {
         id: 7,
         title: "Sri Tirumala Prestige, Erramanzil, Kahirtabad.",
-        image: "./Images/Completed/Splendor.jpg",
+        image: "./Images/Completed/Prestige.png",
         category: "completed"
     },
     {
