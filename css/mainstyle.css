@@ -206,13 +206,9 @@
             word-break: keep-all !important;
             overflow-wrap: normal !important;
             word-wrap: normal !important;
-            text-align-last: left !important;
         }
 
-        /* Maintain justified text alignment while preventing word breaks */
-        p, .text-justify {
-            text-align: justify !important;
-        }
+       
 
 
         /* Navbar Styles */
