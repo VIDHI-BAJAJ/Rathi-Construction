@@ -238,7 +238,7 @@
         .project-image-container {
             position: relative;
             flex-shrink: 0;
-            height: 250px;
+            height: 350px;
             margin: 0;
             padding: 0;
             width: 100%;
@@ -376,7 +376,7 @@
             }
             
             .project-card {
-                min-height: 300px;
+                min-height: 320px;
             }
             
             .project-image-container {
@@ -425,7 +425,7 @@
 
         @media (max-width: 480px) {
             .project-image-container {
-                height: 180px;
+                height: 280px;
                 padding: 0;
                 display: flex;
                 align-items: center;
