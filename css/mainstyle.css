@@ -197,6 +197,23 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* Global text justification fix - Prevents word breaking and hyphenation */
+        p, li, span, div, td, th, label, .text-justify, .paragraph, .description, .content {
+            hyphens: none !important;
+            -webkit-hyphens: none !important;
+            -moz-hyphens: none !important;
+            -ms-hyphens: none !important;
+            word-break: keep-all !important;
+            overflow-wrap: normal !important;
+            word-wrap: normal !important;
+            text-align-last: left !important;
+        }
+
+        /* Maintain justified text alignment while preventing word breaks */
+        p, .text-justify {
+            text-align: justify !important;
+        }
+
 
         /* Navbar Styles */
         .navbar {
@@ -408,9 +425,9 @@
             line-height: 1.7;
             max-width: 280px;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
         .footer-column h3 {
@@ -461,9 +478,9 @@
             line-height: 1.7;
             margin: 0;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
         
         .footer-contact a {
@@ -482,9 +499,9 @@
             line-height: 1.7;
             margin-bottom: 16px;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
         .newsletter-form {
@@ -543,9 +560,9 @@
             line-height: 1.7;
             margin: 0;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
         .footer-legal {
@@ -560,9 +577,9 @@
             line-height: 1.7;
             transition: color 0.3s ease;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
         .footer-legal a:hover {

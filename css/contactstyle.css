@@ -102,9 +102,9 @@
             line-height: 1.7;
             color: #333;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
 /* LEFT SIDE */

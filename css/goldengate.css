@@ -291,9 +291,9 @@ html, body {
     color: #333333;
     line-height: 1.7;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .about-button {
@@ -479,9 +479,9 @@ html, body {
             color: #333;
             line-height: 1.7;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
         .amenities-grid {
@@ -868,9 +868,9 @@ html, body {
  max-width: 900px;
  margin: 0 auto;
  text-align: center;
- hyphens: auto;
- overflow-wrap: break-word;
- word-break: normal;
+ hyphens: none;
+ overflow-wrap: normal;
+ word-break: keep-all;
 }
 
 .carousel-wrapper {
@@ -1187,9 +1187,9 @@ html, body {
          max-width: 900px;
          margin: 0 auto;
          text-align: center;
-         hyphens: auto;
-         overflow-wrap: break-word;
-         word-break: normal;
+         hyphens: none;
+         overflow-wrap: normal;
+         word-break: keep-all;
         }
 
 
@@ -1297,9 +1297,9 @@ html, body {
             color: #333;
             line-height: 1.7;
             text-align: justify;
-            hyphens: auto;
-            overflow-wrap: break-word;
-            word-break: normal;
+            hyphens: none;
+            overflow-wrap: normal;
+            word-break: keep-all;
         }
 
         .projects-grid {

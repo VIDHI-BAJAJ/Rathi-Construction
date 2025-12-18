@@ -116,10 +116,10 @@
     line-height: 1.7;
     margin-bottom: 35px;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
     text-align-last: left;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .about-button {
@@ -305,10 +305,10 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
     text-align-last: left;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
         
 .stats-grid {
@@ -430,11 +430,11 @@
     margin-top: 10px;
     transition: color 0.4s ease;
     text-align: justify;
-    hyphens: auto;
     line-height: 1.7;
-    overflow-wrap: break-word;
-    word-break: normal;
     text-align-last: left;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .stats-image {
@@ -860,10 +860,10 @@
     animation-delay: 0.2s;
     animation-fill-mode: both;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
     text-align-last: left;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .features-grid {
@@ -955,10 +955,10 @@
     font-weight: 400;
     line-height: 1.7;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
     text-align-last: left;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .feature-white .feature-description {
@@ -1095,10 +1095,10 @@
     line-height: 1.7;
     margin: 0;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
     text-align-last: left;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .cta-button-wrapper {

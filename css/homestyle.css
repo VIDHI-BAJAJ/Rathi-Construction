@@ -233,9 +233,6 @@
     line-height: 1.7;
     margin-bottom: 20px;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
     text-align-last: left;
 }
 
@@ -420,6 +417,7 @@
     font-weight: 500;
     color: #000000;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .projects-subtitle {
@@ -431,9 +429,9 @@
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .projects-slider-container {
@@ -765,9 +763,9 @@
     margin-top: 0;
     margin-bottom: 0;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
     text-align-last: left;
 }
         
@@ -874,7 +872,7 @@
 }
 
 .plus {
-    font-size: 48px;
+    font-size: 55px;
     margin-top: 5px;
 }
 
@@ -885,10 +883,10 @@
     margin-top: 10px;
     transition: color 0.4s ease;
     text-align: justify;
-    hyphens: auto;
+    hyphens: none;
     line-height: 1.7;
-    overflow-wrap: break-word;
-    word-break: normal;
+    overflow-wrap: normal;
+    word-break: keep-all;
     text-align-last: left;
 }
 
@@ -1097,9 +1095,9 @@
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     text-align: center;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 
 }
 
@@ -1194,9 +1192,9 @@
     font-weight: 400;
     line-height: 1.7;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
     text-align-last: left;
 }
 
@@ -1341,9 +1339,9 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .featured-slider-wrapper {
@@ -1728,9 +1726,9 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .testimonials-slider-wrapper {
@@ -1797,10 +1795,10 @@
     font-weight: 400;
     color: #333333;
     text-align: justify;
-    hyphens: auto;
+    hyphens: none;
     line-height: 1.7;
-    overflow-wrap: break-word;
-    word-break: normal;
+    overflow-wrap: normal;
+    word-break: keep-all;
     margin-bottom: 25px;
     flex-grow: 1;
 }
@@ -2005,9 +2003,9 @@
     transform: translateX(-50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
     text-align: justify;
-    hyphens: auto;
-    overflow-wrap: break-word;
-    word-break: normal;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: keep-all;
 }
 
 .cta-button-wrapper {
