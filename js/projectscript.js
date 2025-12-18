@@ -40,7 +40,7 @@ const projects = [
     },
     {
         id: 7,
-        title: "Sri Tirumala Prestige, Erram Manzi, Kahirtabad.",
+        title: "Sri Tirumala Prestige, Erramanzil, Kahirtabad.",
         image: "./Images/Completed/Splendor.jpg",
         category: "completed"
     },
