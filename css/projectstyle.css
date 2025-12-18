@@ -413,7 +413,7 @@
 
         @media (max-width: 480px) {
             .project-image-container {
-                height: 180px;
+                height: 300px;
             }
             
             .project-name {
