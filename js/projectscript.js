@@ -122,7 +122,7 @@ const projects = [
 
 let currentFilter = 'upcoming';
 let currentPage = 1;
-const projectsPerPage = 9;
+const projectsPerPage = 12; // Increased for better distribution on larger screens
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -219,17 +219,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 ? projects 
                 : projects.filter(p => p.category === currentFilter);
                 
-            // Apply limits based on category
-            let limitedProjects = filteredProjects;
-            if (currentFilter === 'upcoming') {
-                limitedProjects = filteredProjects.slice(0, 9); // Limit to 9 upcoming projects (3 rows of 3)
-            } else if (currentFilter === 'completed') {
-                limitedProjects = filteredProjects.slice(0, 18);
-            } else if (currentFilter === 'all') {
-                limitedProjects = filteredProjects.slice(0, 20);
-            }
-                
-            const totalPages = Math.ceil(limitedProjects.length / projectsPerPage);
+            // No artificial limits - calculate totalPages based on all projects in category
+            const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
             
             if (currentPage < totalPages) {
                 currentPage++;
@@ -250,14 +241,8 @@ function renderProjects() {
         ? projects 
         : projects.filter(p => p.category === currentFilter);
         
-    // Apply limits based on category
-    if (currentFilter === 'upcoming') {
-        filteredProjects = filteredProjects.slice(0, 9); // Limit to 9 upcoming projects (3 rows of 3)
-    } else if (currentFilter === 'completed') {
-        filteredProjects = filteredProjects.slice(0, 18); // Limit to 18 completed projects
-    } else if (currentFilter === 'all') {
-        filteredProjects = filteredProjects.slice(0, 20); // Limit to 20 total projects
-    }
+    // Remove artificial limits - show all projects in category
+    // This ensures continuous flow without awkward pagination
     
     const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
     const startIndex = (currentPage - 1) * projectsPerPage;
