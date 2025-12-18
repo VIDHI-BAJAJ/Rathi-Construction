@@ -441,7 +441,6 @@ html, body {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 240px;
             margin-bottom: 60px;
             flex-wrap: wrap;
             width: 100%;
@@ -601,64 +600,105 @@ html, body {
                 font-size: 25px;
             }
             
-            /* Specific color pattern for tablet view: 1st, 4th, 5th, 8th white; 2nd, 3rd, 6th, 7th purple */
-            .amenity-card:nth-child(1),
-            .amenity-card:nth-child(4),
-            .amenity-card:nth-child(5),
-            .amenity-card:nth-child(8) {
-                background: #ffffff;
+            /* Alternate colors for amenity cards on tablet */
+            .amenity-card {
+                background: #ffffff; /* Default to white */
             }
             
-            .amenity-card:nth-child(1) .icon-circle,
-            .amenity-card:nth-child(4) .icon-circle,
-            .amenity-card:nth-child(5) .icon-circle,
-            .amenity-card:nth-child(8) .icon-circle {
+            .amenity-card:nth-child(even) {
+                background: #7b2d8e; /* Purple for even cards */
+            }
+            
+            /* Update text and icon colors for alternating pattern */
+            .amenity-card:nth-child(odd) .icon-circle {
                 background: #b8a1c6;
             }
             
-            .amenity-card:nth-child(1) .icon-circle i,
-            .amenity-card:nth-child(4) .icon-circle i,
-            .amenity-card:nth-child(5) .icon-circle i,
-            .amenity-card:nth-child(8) .icon-circle i {
+            .amenity-card:nth-child(odd) .icon-circle i {
                 color: #000;
             }
             
-            .amenity-card:nth-child(1) h3,
-            .amenity-card:nth-child(4) h3,
-            .amenity-card:nth-child(5) h3,
-            .amenity-card:nth-child(8) h3 {
+            .amenity-card:nth-child(odd) h3 {
                 color: #000;
             }
             
-            .amenity-card:nth-child(2),
-            .amenity-card:nth-child(3),
-            .amenity-card:nth-child(6),
-            .amenity-card:nth-child(7) {
-                background: #7b2d8e;
-            }
-            
-            .amenity-card:nth-child(2) .icon-circle,
-            .amenity-card:nth-child(3) .icon-circle,
-            .amenity-card:nth-child(6) .icon-circle,
-            .amenity-card:nth-child(7) .icon-circle {
+            .amenity-card:nth-child(even) .icon-circle {
                 background: #ffffff;
             }
             
-            .amenity-card:nth-child(2) .icon-circle i,
-            .amenity-card:nth-child(3) .icon-circle i,
-            .amenity-card:nth-child(6) .icon-circle i,
-            .amenity-card:nth-child(7) .icon-circle i {
+            .amenity-card:nth-child(even) .icon-circle i {
                 color: #7b2d8e;
             }
             
-            .amenity-card:nth-child(2) h3,
-            .amenity-card:nth-child(3) h3,
-            .amenity-card:nth-child(6) h3,
-            .amenity-card:nth-child(7) h3 {
+            .amenity-card:nth-child(even) h3 {
                 color: #fff;
             }
         }
+          @media (max-width: 850px) {
+              .amenity-card {
+                padding: 40px 20px;
+                min-height: 220px;
+                width: 100%;
+                max-width: 100%;
+                background: #ffffff; /* Default to white */
+            }
+            
+            .amenity-card:nth-child(1),
+            .amenity-card:nth-child(3),
+            .amenity-card:nth-child(6),
+            .amenity-card:nth-child(8) {
+                background: #ffffff;
+            }
 
+            .amenity-card:nth-child(1) .icon-circle,
+            .amenity-card:nth-child(3) .icon-circle,
+            .amenity-card:nth-child(6) .icon-circle,
+            .amenity-card:nth-child(8) .icon-circle {
+                background: #b8a1c6;
+            }
+
+            .amenity-card:nth-child(1) .icon-circle i,
+            .amenity-card:nth-child(3) .icon-circle i,
+            .amenity-card:nth-child(6) .icon-circle i,
+            .amenity-card:nth-child(8) .icon-circle i {
+                color: #000;
+            }
+
+            .amenity-card:nth-child(1) h3,
+            .amenity-card:nth-child(3) h3,
+            .amenity-card:nth-child(6) h3,
+            .amenity-card:nth-child(8) h3 {
+                color: #000;
+            }
+
+            .amenity-card:nth-child(2),
+            .amenity-card:nth-child(4),
+            .amenity-card:nth-child(5),
+            .amenity-card:nth-child(7) {
+                background: #7b2d8e;
+            }
+
+            .amenity-card:nth-child(2) .icon-circle,
+            .amenity-card:nth-child(4) .icon-circle,
+            .amenity-card:nth-child(5) .icon-circle,
+            .amenity-card:nth-child(7) .icon-circle {
+                background: #ffffff;
+            }
+
+            .amenity-card:nth-child(2) .icon-circle i,
+            .amenity-card:nth-child(4) .icon-circle i,
+            .amenity-card:nth-child(5) .icon-circle i,
+            .amenity-card:nth-child(7) .icon-circle i {
+                color: #7b2d8e;
+            }
+
+            .amenity-card:nth-child(2) h3,
+            .amenity-card:nth-child(4) h3,
+            .amenity-card:nth-child(5) h3,
+            .amenity-card:nth-child(7) h3 {
+                color: #fff;
+            }
+          }
         @media (max-width: 768px) {
             .amenities-header-section {
                 flex-direction: column;
