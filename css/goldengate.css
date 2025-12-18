@@ -507,14 +507,6 @@ html, body {
             border: 1px solid #ddd;
         }
 
-        .amenity-card.white {
-            background: #ffffff;
-        }
-
-        .amenity-card.purple {
-            background: #7b2d8e;
-        }
-
         .icon-circle {
             width: 100px;
             height: 100px;
@@ -526,24 +518,8 @@ html, body {
             transition: all 0.3s ease;
         }
 
-        .amenity-card.white .icon-circle {
-            background: #b8a1c6;
-        }
-
-        .amenity-card.purple .icon-circle {
-            background: #ffffff;
-        }
-
         .icon-circle i {
             font-size: 42px;
-        }
-
-        .amenity-card.white .icon-circle i {
-            color: #000;
-        }
-
-        .amenity-card.purple .icon-circle i {
-            color: #7b2d8e;
         }
 
         .amenity-card h3 {
@@ -552,12 +528,63 @@ html, body {
             line-height: 1.4;
         }
 
-        .amenity-card.white h3 {
-            color: #000;
-        }
+        /* Desktop color pattern: 1st white, 2nd purple, 3rd white, 4th purple, 5th purple, 6th white, 7th purple, 8th white */
+        @media (min-width: 1025px) {
+            .amenity-card:nth-child(1),
+            .amenity-card:nth-child(3),
+            .amenity-card:nth-child(6),
+            .amenity-card:nth-child(8) {
+                background: #ffffff;
+            }
 
-        .amenity-card.purple h3 {
-            color: #fff;
+            .amenity-card:nth-child(1) .icon-circle,
+            .amenity-card:nth-child(3) .icon-circle,
+            .amenity-card:nth-child(6) .icon-circle,
+            .amenity-card:nth-child(8) .icon-circle {
+                background: #b8a1c6;
+            }
+
+            .amenity-card:nth-child(1) .icon-circle i,
+            .amenity-card:nth-child(3) .icon-circle i,
+            .amenity-card:nth-child(6) .icon-circle i,
+            .amenity-card:nth-child(8) .icon-circle i {
+                color: #000;
+            }
+
+            .amenity-card:nth-child(1) h3,
+            .amenity-card:nth-child(3) h3,
+            .amenity-card:nth-child(6) h3,
+            .amenity-card:nth-child(8) h3 {
+                color: #000;
+            }
+
+            .amenity-card:nth-child(2),
+            .amenity-card:nth-child(4),
+            .amenity-card:nth-child(5),
+            .amenity-card:nth-child(7) {
+                background: #7b2d8e;
+            }
+
+            .amenity-card:nth-child(2) .icon-circle,
+            .amenity-card:nth-child(4) .icon-circle,
+            .amenity-card:nth-child(5) .icon-circle,
+            .amenity-card:nth-child(7) .icon-circle {
+                background: #ffffff;
+            }
+
+            .amenity-card:nth-child(2) .icon-circle i,
+            .amenity-card:nth-child(4) .icon-circle i,
+            .amenity-card:nth-child(5) .icon-circle i,
+            .amenity-card:nth-child(7) .icon-circle i {
+                color: #7b2d8e;
+            }
+
+            .amenity-card:nth-child(2) h3,
+            .amenity-card:nth-child(4) h3,
+            .amenity-card:nth-child(5) h3,
+            .amenity-card:nth-child(7) h3 {
+                color: #fff;
+            }
         }
 
         /* Responsive Design */
@@ -572,6 +599,63 @@ html, body {
 
             .amenities-header-content h1{
                 font-size: 25px;
+            }
+            
+            /* Specific color pattern for tablet view: 1st, 4th, 5th, 8th white; 2nd, 3rd, 6th, 7th purple */
+            .amenity-card:nth-child(1),
+            .amenity-card:nth-child(4),
+            .amenity-card:nth-child(5),
+            .amenity-card:nth-child(8) {
+                background: #ffffff;
+            }
+            
+            .amenity-card:nth-child(1) .icon-circle,
+            .amenity-card:nth-child(4) .icon-circle,
+            .amenity-card:nth-child(5) .icon-circle,
+            .amenity-card:nth-child(8) .icon-circle {
+                background: #b8a1c6;
+            }
+            
+            .amenity-card:nth-child(1) .icon-circle i,
+            .amenity-card:nth-child(4) .icon-circle i,
+            .amenity-card:nth-child(5) .icon-circle i,
+            .amenity-card:nth-child(8) .icon-circle i {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(1) h3,
+            .amenity-card:nth-child(4) h3,
+            .amenity-card:nth-child(5) h3,
+            .amenity-card:nth-child(8) h3 {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(2),
+            .amenity-card:nth-child(3),
+            .amenity-card:nth-child(6),
+            .amenity-card:nth-child(7) {
+                background: #7b2d8e;
+            }
+            
+            .amenity-card:nth-child(2) .icon-circle,
+            .amenity-card:nth-child(3) .icon-circle,
+            .amenity-card:nth-child(6) .icon-circle,
+            .amenity-card:nth-child(7) .icon-circle {
+                background: #ffffff;
+            }
+            
+            .amenity-card:nth-child(2) .icon-circle i,
+            .amenity-card:nth-child(3) .icon-circle i,
+            .amenity-card:nth-child(6) .icon-circle i,
+            .amenity-card:nth-child(7) .icon-circle i {
+                color: #7b2d8e;
+            }
+            
+            .amenity-card:nth-child(2) h3,
+            .amenity-card:nth-child(3) h3,
+            .amenity-card:nth-child(6) h3,
+            .amenity-card:nth-child(7) h3 {
+                color: #fff;
             }
         }
 
@@ -599,6 +683,7 @@ html, body {
             .amenities-grid {
                 width: 100%;
                 max-width: 100%;
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .amenity-card {
@@ -606,6 +691,36 @@ html, body {
                 min-height: 220px;
                 width: 100%;
                 max-width: 100%;
+                background: #ffffff; /* Default to white */
+            }
+            
+            .amenity-card:nth-child(even) {
+                background: #7b2d8e; /* Purple for even cards */
+            }
+            
+            /* Update text and icon colors for alternating pattern */
+            .amenity-card:nth-child(odd) .icon-circle {
+                background: #b8a1c6;
+            }
+            
+            .amenity-card:nth-child(odd) .icon-circle i {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(odd) h3 {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(even) .icon-circle {
+                background: #ffffff;
+            }
+            
+            .amenity-card:nth-child(even) .icon-circle i {
+                color: #7b2d8e;
+            }
+            
+            .amenity-card:nth-child(even) h3 {
+                color: #fff;
             }
 
             .icon-circle {
@@ -633,6 +748,40 @@ html, body {
 
             .amenities-header-content h1 {
                 font-size: 28px;
+            }
+            
+            /* Alternate colors for amenity cards on mobile and tablet */
+            .amenity-card {
+                background: #ffffff; /* Default to white */
+            }
+            
+            .amenity-card:nth-child(even) {
+                background: #7b2d8e; /* Purple for even cards */
+            }
+            
+            /* Update text and icon colors for alternating pattern */
+            .amenity-card:nth-child(odd) .icon-circle {
+                background: #b8a1c6;
+            }
+            
+            .amenity-card:nth-child(odd) .icon-circle i {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(odd) h3 {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(even) .icon-circle {
+                background: #ffffff;
+            }
+            
+            .amenity-card:nth-child(even) .icon-circle i {
+                color: #7b2d8e;
+            }
+            
+            .amenity-card:nth-child(even) h3 {
+                color: #fff;
             }
         }
            @media (max-width: 480px) {
