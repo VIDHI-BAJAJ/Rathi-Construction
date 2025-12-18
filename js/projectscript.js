@@ -373,46 +373,7 @@ function updateNavButtons() {
     }
 }
 
-// Function to adjust image display based on aspect ratio
-function adjustImageDisplay(img) {
-    // Get the natural dimensions of the image
-    const naturalWidth = img.naturalWidth;
-    const naturalHeight = img.naturalHeight;
-    
-    // Get the container dimensions
-    const container = img.parentElement;
-    const containerWidth = container.offsetWidth;
-    const containerHeight = container.offsetHeight;
-    
-    // Calculate aspect ratios
-    const imageRatio = naturalWidth / naturalHeight;
-    const containerRatio = containerWidth / containerHeight;
-    
-    // Adjust the image display based on which dimension is limiting
-    if (imageRatio > containerRatio) {
-        // Image is wider than container - fit to height
-        img.style.objectFit = 'cover';
-        img.style.width = 'auto';
-        img.style.height = '100%';
-    } else {
-        // Image is taller than container - fit to width
-        img.style.objectFit = 'cover';
-        img.style.width = '100%';
-        img.style.height = 'auto';
-    }
-}
-
-// Function to adjust all project images
-function adjustAllImages() {
-    const images = document.querySelectorAll('.project-image');
-    images.forEach(img => {
-        if (img.complete) {
-            adjustImageDisplay(img);
-        } else {
-            img.addEventListener('load', () => adjustImageDisplay(img));
-        }
-    });
-}
+// Image adjustment functions removed as we're now using CSS object-fit: contain
 
 // Function to observe project cards
 function observeProjectCards() {
@@ -426,5 +387,4 @@ function observeProjectCards() {
     }, 50);
 }
 
-// Adjust images when window is resized
-window.addEventListener('resize', adjustAllImages);
+// Window resize handling removed as images are now handled with CSS
