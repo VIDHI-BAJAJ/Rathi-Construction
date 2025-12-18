@@ -20,12 +20,13 @@ const projects = [
         category: "upcoming",
         link: "./projects/tirumalabliss.html"
     },
-    {
-        id: 4,
-        title: "Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad",
-        image: "./Images/Completed/Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad.webp",
-        category: "completed"
-    },
+    // Moved to end as requested to show full building width
+    // {
+    //     id: 4,
+    //     title: "Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad",
+    //     image: "./Images/Completed/Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad.webp",
+    //     category: "completed"
+    // },
     {
         id: 5,
         title: "Sri Tirumala Lotus, Shivarampally, Hyderabad",
@@ -38,12 +39,13 @@ const projects = [
         image: "./Images/Homepage/Ongoing projects/Elite.jpg",
         category: "completed"
     },
-    {
-        id: 7,
-        title: "Sri Tirumala Prestige, Erramanzil, Kahirtabad.",
-        image: "./Images/Completed/Splendor.jpg",
-        category: "completed"
-    },
+    // Moved to end as requested to show full building width
+    // {
+    //     id: 7,
+    //     title: "Sri Tirumala Prestige, Erramanzil, Kahirtabad.",
+    //     image: "./Images/Completed/Splendor.jpg",
+    //     category: "completed"
+    // },
     {
         id: 8,
         title: "Sri Tirumala Anmol, Esamiya Bazaar, Hyderabad",
@@ -68,12 +70,13 @@ const projects = [
         image: "./Images/Completed/Tirumal Crest.png",
         category: "completed"
     },
-    {
-        id: 12,
-        title: "Sri Tirumala Sarovar, Hosur Road, Bangalore",
-        image: "./Images/Completed/Sarovar.png",
-        category: "completed"
-    },
+    // Moved to end as requested to show full building width
+    // {
+    //     id: 12,
+    //     title: "Sri Tirumala Sarovar, Hosur Road, Bangalore",
+    //     image: "./Images/Completed/Sarovar.png",
+    //     category: "completed"
+    // },
     {
         id: 13,
         title: "Sri Tirumala Millennium, Mallapur, Hyderabad",
@@ -92,12 +95,13 @@ const projects = [
         image: "./Images/Completed/Sri Tirumala splendar.png",
         category: "completed"
     },
-    {
-        id: 16,
-        title: "Sri Tirumala Hamilton A&B, Musheerabad, Hyderabad",
-        image: "./Images/Completed/Tirumal Hamilton A&B.png",
-        category: "completed"
-    },
+    // Moved to end as requested to show full building width
+    // {
+    //     id: 16,
+    //     title: "Sri Tirumala Hamilton A&B, Musheerabad, Hyderabad",
+    //     image: "./Images/Completed/Tirumal Hamilton A&B.png",
+    //     category: "completed"
+    // },
     {
         id: 17,
         title: "Tirumala Jewels, Gandhinagar, Hyderabad",
@@ -114,6 +118,31 @@ const projects = [
         id: 19,
         title: "Tirumala Orchid, GandhiNagar, Hyderabad",
         image: "./Images/Completed/Tirumala Orchid.png",
+        category: "completed"
+    },
+    // Projects moved to end as requested to show full building width
+    {
+        id: 4,
+        title: "Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad",
+        image: "./Images/Completed/Sri Tirumala Pranmoksha Pride, Kapra, Hyderabad.webp",
+        category: "completed"
+    },
+    {
+        id: 7,
+        title: "Sri Tirumala Prestige, Erramanzil, Kahirtabad.",
+        image: "./Images/Completed/Splendor.jpg",
+        category: "completed"
+    },
+    {
+        id: 12,
+        title: "Sri Tirumala Sarovar, Hosur Road, Bangalore",
+        image: "./Images/Completed/Sarovar.png",
+        category: "completed"
+    },
+    {
+        id: 16,
+        title: "Sri Tirumala Hamilton A&B, Musheerabad, Hyderabad",
+        image: "./Images/Completed/Tirumal Hamilton A&B.png",
         category: "completed"
     }
 ];
@@ -300,6 +329,8 @@ function renderProjects() {
     
     updateNavButtons();
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Images are now handled with CSS object-fit: contain
 }
 
 // Redirect function - REAL NAVIGATION ENABLED
@@ -342,6 +373,47 @@ function updateNavButtons() {
     }
 }
 
+// Function to adjust image display based on aspect ratio
+function adjustImageDisplay(img) {
+    // Get the natural dimensions of the image
+    const naturalWidth = img.naturalWidth;
+    const naturalHeight = img.naturalHeight;
+    
+    // Get the container dimensions
+    const container = img.parentElement;
+    const containerWidth = container.offsetWidth;
+    const containerHeight = container.offsetHeight;
+    
+    // Calculate aspect ratios
+    const imageRatio = naturalWidth / naturalHeight;
+    const containerRatio = containerWidth / containerHeight;
+    
+    // Adjust the image display based on which dimension is limiting
+    if (imageRatio > containerRatio) {
+        // Image is wider than container - fit to height
+        img.style.objectFit = 'cover';
+        img.style.width = 'auto';
+        img.style.height = '100%';
+    } else {
+        // Image is taller than container - fit to width
+        img.style.objectFit = 'cover';
+        img.style.width = '100%';
+        img.style.height = 'auto';
+    }
+}
+
+// Function to adjust all project images
+function adjustAllImages() {
+    const images = document.querySelectorAll('.project-image');
+    images.forEach(img => {
+        if (img.complete) {
+            adjustImageDisplay(img);
+        } else {
+            img.addEventListener('load', () => adjustImageDisplay(img));
+        }
+    });
+}
+
 // Function to observe project cards
 function observeProjectCards() {
     // Use a slight delay to ensure cards are rendered
@@ -351,5 +423,11 @@ function observeProjectCards() {
             // Add delay based on index for staggered animation
             card.style.transitionDelay = `${index * 0.1}s`;
         });
+        
+        // Adjust all images after cards are rendered
+        adjustAllImages();
     }, 50);
 }
+
+// Adjust images when window is resized
+window.addEventListener('resize', adjustAllImages);

@@ -238,16 +238,21 @@
         .project-image-container {
             position: relative;
             flex-shrink: 0;
-            height: 250px;
+            height: 300px;
             margin: 0;
             padding: 0;
             width: 100%;
+            background-color: #f5f5f5; /* Background color for extra space */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .project-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
             margin: 0;
             padding: 0;
             display: block;
@@ -373,7 +378,12 @@
             }
             
             .project-image-container {
-                height: 200px;
+                height: 220px;
+                padding: 0;
+                background-color: #f5f5f5; /* Background color for extra space */
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .project-info {
@@ -413,7 +423,12 @@
 
         @media (max-width: 480px) {
             .project-image-container {
-                height: 300px;
+                height: 250px;
+                padding: 0;
+                background-color: #f5f5f5; /* Background color for extra space */
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .project-name {
