@@ -423,9 +423,6 @@ function observeProjectCards() {
             // Add delay based on index for staggered animation
             card.style.transitionDelay = `${index * 0.1}s`;
         });
-        
-        // Adjust all images after cards are rendered
-        adjustAllImages();
     }, 50);
 }
 
