@@ -46,7 +46,7 @@ const projects = [
     },
     {
         id: 8,
-        title: "Sri Tirumala Anmol, Esamia Bazar, Hyderabad",
+        title: "Sri Tirumala Anmol, Esamiya Bazaar, Hyderabad",
         image: "./Images/Completed/Sri Tirumala Anmol.png",
         category: "completed"
     },
@@ -268,7 +268,7 @@ function renderProjects() {
             <div class="${cardClass}" 
                  onclick="${project.category === 'upcoming' && project.link ? `redirectToProject('${project.link}')` : ''}">
                 <div class="project-image-container">
-                    <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';" loading="eager" decoding="async" width="500" height="400">
+                    <img src="${project.image}" alt="${project.title}" class="project-image" onerror="this.onerror=null;this.src='https://via.placeholder.com/500x400?text=Image+Not+Found';" loading="eager" decoding="async">
                     <div class="project-status ${project.category}">${project.category === 'upcoming' ? 'Ongoing' : 'Completed'}</div>
                 </div>
                 <div class="project-info">
