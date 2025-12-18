@@ -390,7 +390,6 @@
             .project-name {
                 font-size: 16px;
                 margin-bottom: 1px;
-                flex-grow: 1;
             }
             
             .project-location {
