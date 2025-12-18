@@ -88,8 +88,8 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 40px;
-            gap: 40px;
+            margin-bottom: 25px;
+            gap: 30px;
             opacity: 0;
             transform: translateX(-50px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -130,7 +130,7 @@
 
         .filter-dropdown {
             position: relative;
-            margin-bottom: 40px;
+            margin-bottom: 25px;
             max-width: 250px;
             opacity: 0;
             transform: translateX(-50px);
@@ -202,7 +202,7 @@
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
             margin-bottom: 30px;
             position: relative;
@@ -360,12 +360,14 @@
         /* Responsive styles */
         @media (max-width: 768px) {
             .container {
-                margin: 20px 30px;
+                margin: 15px 30px;
                 max-width: 1600px;
             }
             
             .header {
                 flex-direction: column;
+                margin-bottom: 20px;
+                gap: 20px;
             }
 
             .header h1 {
