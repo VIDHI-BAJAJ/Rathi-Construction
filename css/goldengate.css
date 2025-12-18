@@ -441,7 +441,6 @@ html, body {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 240px;
             margin-bottom: 60px;
             flex-wrap: wrap;
             width: 100%;
@@ -528,7 +527,7 @@ html, body {
             line-height: 1.4;
         }
 
-        /* Desktop color pattern: 1st white, 2nd purple, 3rd white, 4th purple, 5th purple, 6th white, 7th purple, 8th white */
+        /* Desktop color pattern: 1,3,6,8 white; 2,4,5,7 purple */
         @media (min-width: 1025px) {
             .amenity-card:nth-child(1),
             .amenity-card:nth-child(3),
@@ -609,14 +608,6 @@ html, body {
                 background: #ffffff;
             }
             
-            .amenity-card:nth-child(2),
-            .amenity-card:nth-child(3),
-            .amenity-card:nth-child(6),
-            .amenity-card:nth-child(7) {
-                background: #7b2d8e;
-            }
-            
-            /* Text and icon colors for white cards */
             .amenity-card:nth-child(1) .icon-circle,
             .amenity-card:nth-child(4) .icon-circle,
             .amenity-card:nth-child(5) .icon-circle,
@@ -638,7 +629,13 @@ html, body {
                 color: #000;
             }
             
-            /* Text and icon colors for purple cards */
+            .amenity-card:nth-child(2),
+            .amenity-card:nth-child(3),
+            .amenity-card:nth-child(6),
+            .amenity-card:nth-child(7) {
+                background: #7b2d8e;
+            }
+            
             .amenity-card:nth-child(2) .icon-circle,
             .amenity-card:nth-child(3) .icon-circle,
             .amenity-card:nth-child(6) .icon-circle,
@@ -688,40 +685,60 @@ html, body {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .amenity-card {
-                padding: 40px 20px;
-                min-height: 220px;
-                width: 100%;
-                max-width: 100%;
-                background: #ffffff; /* Default to white */
-            }
-            
-            .amenity-card:nth-child(even) {
-                background: #7b2d8e; /* Purple for even cards */
-            }
-            
-            /* Update text and icon colors for alternating pattern */
-            .amenity-card:nth-child(odd) .icon-circle {
-                background: #b8a1c6;
-            }
-            
-            .amenity-card:nth-child(odd) .icon-circle i {
-                color: #000;
-            }
-            
-            .amenity-card:nth-child(odd) h3 {
-                color: #000;
-            }
-            
-            .amenity-card:nth-child(even) .icon-circle {
+            /* Specific color pattern for tablet view: 1,4,5,8 white; 2,3,6,7 purple */
+            .amenity-card:nth-child(1),
+            .amenity-card:nth-child(3),
+            .amenity-card:nth-child(5),
+            .amenity-card:nth-child(7) {
                 background: #ffffff;
             }
             
-            .amenity-card:nth-child(even) .icon-circle i {
+            .amenity-card:nth-child(1) .icon-circle,
+            .amenity-card:nth-child(3) .icon-circle,
+            .amenity-card:nth-child(5) .icon-circle,
+            .amenity-card:nth-child(7) .icon-circle {
+                background: #b8a1c6;
+            }
+            
+            .amenity-card:nth-child(1) .icon-circle i,
+            .amenity-card:nth-child(3) .icon-circle i,
+            .amenity-card:nth-child(5) .icon-circle i,
+            .amenity-card:nth-child(7) .icon-circle i {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(1) h3,
+            .amenity-card:nth-child(3) h3,
+            .amenity-card:nth-child(5) h3,
+            .amenity-card:nth-child(7) h3 {
+                color: #000;
+            }
+            
+            .amenity-card:nth-child(2),
+            .amenity-card:nth-child(4),
+            .amenity-card:nth-child(6),
+            .amenity-card:nth-child(8) {
+                background: #7b2d8e;
+            }
+            
+            .amenity-card:nth-child(2) .icon-circle,
+            .amenity-card:nth-child(4) .icon-circle,
+            .amenity-card:nth-child(6) .icon-circle,
+            .amenity-card:nth-child(8) .icon-circle {
+                background: #ffffff;
+            }
+            
+            .amenity-card:nth-child(2) .icon-circle i,
+            .amenity-card:nth-child(4) .icon-circle i,
+            .amenity-card:nth-child(6) .icon-circle i,
+            .amenity-card:nth-child(8) .icon-circle i {
                 color: #7b2d8e;
             }
             
-            .amenity-card:nth-child(even) h3 {
+            .amenity-card:nth-child(2) h3,
+            .amenity-card:nth-child(4) h3,
+            .amenity-card:nth-child(6) h3,
+            .amenity-card:nth-child(8) h3 {
                 color: #fff;
             }
 
@@ -738,8 +755,9 @@ html, body {
                 font-size: 18px;
             }
         }
-
-        @media (max-width: 600px) {
+        
+        /* Mobile view alternating pattern from 680px */
+        @media (max-width: 680px) {
             .amenities-grid {
                 grid-template-columns: 1fr;
             }
@@ -752,7 +770,7 @@ html, body {
                 font-size: 28px;
             }
             
-            /* Alternate colors for amenity cards on mobile and tablet */
+            /* Alternate colors for amenity cards on mobile */
             .amenity-card {
                 background: #ffffff; /* Default to white */
             }
@@ -786,15 +804,23 @@ html, body {
                 color: #fff;
             }
         }
-           @media (max-width: 480px) {
 
+        @media (max-width: 600px) {
             .amenities-container{
                 padding: 10px 15px;
             }
-                .amenities-header-content h3 {
-        font-size: 30px;
-                }
-
+            .amenities-header-content h3 {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .amenities-container{
+                padding: 10px 15px;
+            }
+            .amenities-header-content h3 {
+                font-size: 30px;
+            }
         }
 
         /* Animation on load */
