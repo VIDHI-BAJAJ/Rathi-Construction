@@ -300,7 +300,7 @@ function slideTestimonialNext() {
     // Add fade-up animation to the new testimonial card
     setTimeout(() => {
         animateNewTestimonialCard();
-    }, 100);
+    }, 150); // Increased delay to sync better with slider transition
     
     // Reset to beginning when reaching the duplicate set
     if (testimonialIndex >= totalTestimonials) {
@@ -341,7 +341,7 @@ function slideTestimonialPrev() {
             // Add fade-up animation to the new testimonial card
             setTimeout(() => {
                 animateNewTestimonialCard();
-            }, 100);
+            }, 150); // Increased delay to sync better with slider transition
         }, 10);
         return;
     }
@@ -354,7 +354,7 @@ function slideTestimonialPrev() {
     // Add fade-up animation to the new testimonial card
     setTimeout(() => {
         animateNewTestimonialCard();
-    }, 100);
+    }, 150); // Increased delay to sync better with slider transition
 }
 
 function animateNewTestimonialCard() {
@@ -384,7 +384,7 @@ function animateNewTestimonialCard() {
         setTimeout(() => {
             newCard.style.animation = '';
             newCard.classList.add('fade-up-animation');
-        }, 50);
+        }, 30); // Reduced delay for smoother start
     }
 }
 
@@ -428,7 +428,7 @@ window.addEventListener('load', function() {
             setTimeout(() => {
                 firstCard.style.animation = '';
                 firstCard.classList.add('fade-up-animation');
-            }, 50);
+            }, 30); // Reduced delay for smoother start
         }
-    }, 100);
+    }, 150); // Increased delay for better page load sync
 });
