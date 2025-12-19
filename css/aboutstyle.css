@@ -966,9 +966,12 @@
     line-height: 1.7;
     text-align: justify;
     text-align-last: left;
+    text-justify: inter-word;
+    word-spacing: -0.50px;
+    /* letter-spacing: 0.2px; */
     word-break: normal;
     overflow-wrap: break-word;
-    /* letter-spacing: 0.15px; */
+    hyphens: none;
 }
 
 

@@ -1196,6 +1196,8 @@
     overflow-wrap: normal;
     word-break: keep-all;
     text-align-last: left;
+    word-spacing: -0.5px;
+    letter-spacing: 0.2px;
 }
 
 .feature-white .feature-description {
