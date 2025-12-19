@@ -117,7 +117,6 @@
             transform: translateX(50px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
             text-align: justify;
-            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;
@@ -412,7 +411,6 @@
             
             .header-text {
                 text-align: justify;
-                text-align-last: left;
             }
             
             .contact-hero {

@@ -291,7 +291,6 @@ html, body {
     color: #333333;
     line-height: 1.7;
     text-align: justify;
-    text-align-last: left;
     hyphens: none;
     overflow-wrap: normal;
     word-break: keep-all;
@@ -419,10 +418,6 @@ html, body {
         font-size: 13px;
         line-height: 1.7;
         text-align: justify;
-        text-align-last: left;
-        hyphens: none;
-        overflow-wrap: normal;
-        word-break: keep-all;
     }
 
     .about-button {
@@ -484,7 +479,6 @@ html, body {
             color: #333;
             line-height: 1.7;
             text-align: justify;
-            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;

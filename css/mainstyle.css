@@ -208,6 +208,9 @@
             word-wrap: normal !important;
         }
 
+       
+
+
         /* Navbar Styles */
         .navbar {
             display: flex;
@@ -418,7 +421,6 @@
             line-height: 1.7;
             max-width: 280px;
             text-align: justify;
-            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;
@@ -472,7 +474,6 @@
             line-height: 1.7;
             margin: 0;
             text-align: justify;
-            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;
@@ -494,7 +495,6 @@
             line-height: 1.7;
             margin-bottom: 16px;
             text-align: justify;
-            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;
@@ -556,7 +556,6 @@
             line-height: 1.7;
             margin: 0;
             text-align: justify;
-            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;
@@ -574,7 +573,6 @@
             line-height: 1.7;
             transition: color 0.3s ease;
             text-align: justify;
-            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;
