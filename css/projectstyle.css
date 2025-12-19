@@ -89,7 +89,7 @@
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 25px;
-            gap: 30px;
+            gap: 40px;
             opacity: 0;
             transform: translateX(-50px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -105,19 +105,19 @@
             font-size: 40px;
             font-weight: 700;
             line-height: 1.2;
-            max-width: 500px;
+           
         }
 
         .header-text {
             font-family: 'Inter', sans-serif;
-            max-width: 450px;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 1.7;
             color: #333;
             opacity: 0;
             transform: translateX(50px);
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
             text-align: justify;
+            text-align-last: left;
             hyphens: none;
             overflow-wrap: normal;
             word-break: keep-all;
@@ -412,6 +412,7 @@
             
             .header-text {
                 text-align: justify;
+                text-align-last: left;
             }
             
             .contact-hero {
