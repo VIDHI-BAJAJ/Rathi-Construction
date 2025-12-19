@@ -1755,10 +1755,9 @@
     transition: all 0.4s ease;
     display: flex;
     flex-direction: column;
-    opacity: 0;
-    transform: translateY(30px);
+    opacity: 1;
+    transform: translateY(0);
 }
-
 .testimonial-card:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border-color: #6C1A78;
@@ -1949,10 +1948,14 @@
     }
 }
 
+
+/* Add fade-up animation class */
+.fade-up-animation {
+    animation: fadeInUp 0.6s ease forwards;
+}
 /* Testimonials Section End */
 
-/* CTA Section Styles */
-.cta-section {
+/* CTA Section Styles */.cta-section {
     background: #6C1A78;
     padding: 80px 50px;
     margin: 0;

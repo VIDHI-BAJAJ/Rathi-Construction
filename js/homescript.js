@@ -274,6 +274,9 @@ let testimonialsPerView = 4;
 // For infinite loop, we now have duplicated testimonials
 const totalTestimonialCards = 10; 
 
+// Store the previous testimonial index to determine which card is new
+let previousTestimonialIndex = 0;
+
 function updateTestimonialsPerView() {
     if (window.innerWidth <= 640) {
         testimonialsPerView = 1;
@@ -287,11 +290,17 @@ function updateTestimonialsPerView() {
 }
 
 function slideTestimonialNext() {
+    previousTestimonialIndex = testimonialIndex;
     testimonialIndex++;
     // Calculate the percentage to move based on one testimonial width
     const oneTestimonialWidth = 100 / testimonialsPerView;
     const slideAmount = testimonialIndex * oneTestimonialWidth;
     testimonialsSlider.style.transform = `translateX(-${slideAmount}%)`;
+    
+    // Add fade-up animation to the new testimonial card
+    setTimeout(() => {
+        animateNewTestimonialCard();
+    }, 100);
     
     // Reset to beginning when reaching the duplicate set
     if (testimonialIndex >= totalTestimonials) {
@@ -303,11 +312,14 @@ function slideTestimonialNext() {
             // Force reflow
             testimonialsSlider.offsetHeight;
             testimonialsSlider.style.transition = 'transform 0.5s ease';
+            // Update previous index after reset
+            previousTestimonialIndex = testimonialIndex;
         }, 500);
     }
 }
 
 function slideTestimonialPrev() {
+    previousTestimonialIndex = testimonialIndex;
     if (testimonialIndex > 0) {
         testimonialIndex--;
     } else {
@@ -322,9 +334,14 @@ function slideTestimonialPrev() {
         testimonialsSlider.style.transition = 'transform 0.5s ease';
         // Then move to the correct position
         setTimeout(() => {
+            previousTestimonialIndex = testimonialIndex;
             testimonialIndex--;
             const slideAmount = testimonialIndex * oneTestimonialWidth;
             testimonialsSlider.style.transform = `translateX(-${slideAmount}%)`;
+            // Add fade-up animation to the new testimonial card
+            setTimeout(() => {
+                animateNewTestimonialCard();
+            }, 100);
         }, 10);
         return;
     }
@@ -333,6 +350,42 @@ function slideTestimonialPrev() {
     const oneTestimonialWidth = 100 / testimonialsPerView;
     const slideAmount = testimonialIndex * oneTestimonialWidth;
     testimonialsSlider.style.transform = `translateX(-${slideAmount}%)`;
+    
+    // Add fade-up animation to the new testimonial card
+    setTimeout(() => {
+        animateNewTestimonialCard();
+    }, 100);
+}
+
+function animateNewTestimonialCard() {
+    // Get all testimonial cards
+    const allTestimonialCards = document.querySelectorAll('.testimonial-card');
+    
+    // Calculate which card is new based on the direction of movement
+    let newIndex;
+    if (testimonialIndex > previousTestimonialIndex) {
+        // Moving forward, the new card is at the end of the visible set
+        newIndex = testimonialIndex + testimonialsPerView - 1;
+    } else {
+        // Moving backward, the new card is at the beginning of the visible set
+        newIndex = testimonialIndex;
+    }
+    
+    // Make sure the index is valid
+    if (newIndex >= 0 && newIndex < allTestimonialCards.length) {
+        const newCard = allTestimonialCards[newIndex];
+        
+        // Reset animation state
+        newCard.classList.remove('fade-up-animation');
+        newCard.style.animation = 'none';
+        void newCard.offsetWidth; // Trigger reflow
+        
+        // Apply animation after a small delay
+        setTimeout(() => {
+            newCard.style.animation = '';
+            newCard.classList.add('fade-up-animation');
+        }, 50);
+    }
 }
 
 if (testimonialNext && testimonialsSlider) {
@@ -358,3 +411,24 @@ window.addEventListener('resize', () => {
 
 // Initialize testimonials
 updateTestimonialsPerView();
+
+// Animate the first testimonial card on page load
+window.addEventListener('load', function() {
+    setTimeout(() => {
+        // For the initial load, we'll animate the first card
+        const allTestimonialCards = document.querySelectorAll('.testimonial-card');
+        if (allTestimonialCards.length > 0) {
+            const firstCard = allTestimonialCards[0];
+            // Reset animation state
+            firstCard.classList.remove('fade-up-animation');
+            firstCard.style.animation = 'none';
+            void firstCard.offsetWidth; // Trigger reflow
+            
+            // Apply animation after a small delay
+            setTimeout(() => {
+                firstCard.style.animation = '';
+                firstCard.classList.add('fade-up-animation');
+            }, 50);
+        }
+    }, 100);
+});
