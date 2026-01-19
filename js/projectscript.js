@@ -20,6 +20,22 @@ const projects = [
         category: "upcoming",
         link: "./projects/tirumalabliss.html"
     },
+    {
+        id: 20,
+        title: " Sri Tirumala Fortune,Srinagar Village, Maheshwaram Mandal, Hyderabad",
+        image: "./Images/On Going/st-fortune.jpg",
+        category: "upcoming",
+        link: "./projects/fortune.html"
+    },
+
+    {
+        id: 21,
+        title: "Need3,Kapra, Hyderabad",
+        image: "./Images/On Going/Needs 3.png",
+        category: "upcoming",
+        link: "./projects/need3.html"
+    },
+
     // Moved to end as requested to show full building width
     // {
     //     id: 4,

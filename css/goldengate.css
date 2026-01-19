@@ -39,6 +39,14 @@ html, body {
     background-image: url('../Images/Bliss/Home\ Elevation.jpg');
 }
 
+.need3-gate-bg{
+    background-image: url('../Images/Need3/Banner.jpg');
+}
+
+.fortune-bg{
+    background-image: url('../Images/St Fortune/banner.jpg');
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
