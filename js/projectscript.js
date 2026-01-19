@@ -30,7 +30,7 @@ const projects = [
 
     {
         id: 21,
-        title: "Need3,Hoyasala Nagar Main Road, Horamavu, Bengaluru",
+        title: "Needs 3,Hoyasala Nagar Main Road, Horamavu, Bengaluru",
         image: "./Images/On Going/Needs 3.png",
         category: "upcoming",
         link: "./projects/need3.html"
